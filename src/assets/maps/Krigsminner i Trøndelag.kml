@@ -1,0 +1,1124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Krigsminner i Trøndelag</name>
+    <description><![CDATA[Underlagskart til vesentlige trønderske krigsminner  ifbm "Historiske Trøndelag".]]></description>
+    <Style id="icon-1502-FF5252-normal">
+      <IconStyle>
+        <color>ff5252ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1502-FF5252-highlight">
+      <IconStyle>
+        <color>ff5252ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1502-FF5252">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1502-FF5252-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1502-FF5252-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1504-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1504-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1504-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1504-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1504-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1523-0F9D58-normal">
+      <IconStyle>
+        <color>ff589d0f</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1523-0F9D58-highlight">
+      <IconStyle>
+        <color>ff589d0f</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1523-0F9D58">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1523-0F9D58-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1523-0F9D58-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1523-0F9D58-nodesc-normal">
+      <IconStyle>
+        <color>ff589d0f</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1523-0F9D58-nodesc-highlight">
+      <IconStyle>
+        <color>ff589d0f</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1523-0F9D58-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1523-0F9D58-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1523-0F9D58-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1595-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1595-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1595-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1595-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1595-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1596-673AB7-normal">
+      <IconStyle>
+        <color>ffb73a67</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1596-673AB7-highlight">
+      <IconStyle>
+        <color>ffb73a67</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1596-673AB7">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1596-673AB7-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1596-673AB7-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1598-097138-normal">
+      <IconStyle>
+        <color>ff387109</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1598-097138-highlight">
+      <IconStyle>
+        <color>ff387109</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1598-097138">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1598-097138-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1598-097138-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1598-0F9D58-normal">
+      <IconStyle>
+        <color>ff589d0f</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1598-0F9D58-highlight">
+      <IconStyle>
+        <color>ff589d0f</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1598-0F9D58">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1598-0F9D58-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1598-0F9D58-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1599-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1599-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1599-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1599-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1599-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1604-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1604-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1604-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1604-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1604-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1608-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1608-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1608-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1608-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1608-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1636-FFD600-normal">
+      <IconStyle>
+        <color>ff00d6ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1636-FFD600-highlight">
+      <IconStyle>
+        <color>ff00d6ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1636-FFD600">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1636-FFD600-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1636-FFD600-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1636-FFEA00-normal">
+      <IconStyle>
+        <color>ff00eaff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1636-FFEA00-highlight">
+      <IconStyle>
+        <color>ff00eaff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1636-FFEA00">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1636-FFEA00-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1636-FFEA00-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1729-FFEA00-normal">
+      <IconStyle>
+        <color>ff00eaff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1729-FFEA00-highlight">
+      <IconStyle>
+        <color>ff00eaff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1729-FFEA00">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1729-FFEA00-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1729-FFEA00-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1750-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1750-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1750-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1750-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1750-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1750-673AB7-normal">
+      <IconStyle>
+        <color>ffb73a67</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1750-673AB7-highlight">
+      <IconStyle>
+        <color>ffb73a67</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1750-673AB7">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1750-673AB7-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1750-673AB7-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1838-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1838-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1838-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1838-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1838-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1864-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1864-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1864-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1864-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1864-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1864-9C27B0-normal">
+      <IconStyle>
+        <color>ffb0279c</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1864-9C27B0-highlight">
+      <IconStyle>
+        <color>ffb0279c</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1864-9C27B0">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1864-9C27B0-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1864-9C27B0-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Synlige/eksisterende minner</name>
+      <Placemark>
+        <name>SS Strafgefangenenlager Falstad</name>
+        <description>www.falstadsenteret.no</description>
+        <styleUrl>#icon-1636-FFEA00</styleUrl>
+        <Point>
+          <coordinates>
+            11.0415781,63.6913426,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hegra Festning</name>
+        <description>https://www.forsvarsbygg.no/hegra/</description>
+        <styleUrl>#icon-1598-0F9D58</styleUrl>
+        <Point>
+          <coordinates>
+            11.1626144,63.4508339,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Utvorda kystfort</name>
+        <description><![CDATA[http://www.flatanger.kommune.no/index.php?id=4597125<br><br>https://www.trondelag.com/attraksjoner/Utvorda_Kystfort/1150865/]]></description>
+        <styleUrl>#icon-1598-0F9D58</styleUrl>
+        <Point>
+          <coordinates>
+            10.9664166,64.6008118,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fredriksberg bunkersanlegg</name>
+        <description>https://www.namdalsavisa.no/arkiv/2013/06/07/Fant-hemmelig-rom-under-bakken-13379695.ece</description>
+        <styleUrl>#icon-1596-673AB7</styleUrl>
+        <Point>
+          <coordinates>
+            11.4975756,64.4702295,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Gravminne, Verdal - russiske fanger</name>
+        <description>http://www.verdal-historielag.no/gatebilder/russergravene.htm</description>
+        <styleUrl>#icon-1523-0F9D58</styleUrl>
+        <Point>
+          <coordinates>
+            11.4546997,63.7934608,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Stabben fort, Frøya</name>
+        <description>https://www.kak.net/2015/09/19/stabben-fort-pa-titran-og-oyene-froya-og-hitra/</description>
+        <styleUrl>#icon-1598-0F9D58</styleUrl>
+        <Point>
+          <coordinates>
+            8.3110243,63.6632749,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bandeklosteret, Rinnanbanden</name>
+        <description>http://www.rinnanbanden.no/?s=jonsvannsveien%2046</description>
+        <styleUrl>#icon-1502-FF5252</styleUrl>
+        <Point>
+          <coordinates>
+            10.4189066,63.4170319,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Misjonshotellet, Gestapo-kvarter</name>
+        <description>http://rinnanbanden.no/?s=Prinsens%20gate%2037</description>
+        <styleUrl>#icon-1502-FF5252</styleUrl>
+        <Point>
+          <coordinates>
+            10.3923097,63.4308454,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kristiansten festning</name>
+        <description>https://no.wikipedia.org/wiki/Kristiansten_festning</description>
+        <styleUrl>#icon-1523-0F9D58</styleUrl>
+        <Point>
+          <coordinates>
+            10.4107847,63.4270466,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Dora, ubåtbunker</name>
+        <description>https://www.side3.no/historie/kriegsmarinewerft-drontheim-hitlers-ubatbase-i-trondheim-6705766</description>
+        <styleUrl>#icon-1502-FF5252</styleUrl>
+        <Point>
+          <coordinates>
+            10.4215368,63.4399374,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Jørstad bru, Snåsa</name>
+        <description>https://www.t-a.no/nyheter/article10664432.ece</description>
+        <styleUrl>#icon-1636-FFEA00</styleUrl>
+        <Point>
+          <coordinates>
+            12.2798363,64.1943487,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Austrått fort</name>
+        <description>https://orlandkultursenter.no/turistinfo/attraksjoner-i-%C3%B8rland/austraatt-fort/</description>
+        <styleUrl>#icon-1729-FFEA00</styleUrl>
+        <Point>
+          <coordinates>
+            9.7221092,63.7084133,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hysnes fort</name>
+        <description>https://no.wikipedia.org/wiki/Hysnes_fort</description>
+        <styleUrl>#icon-1598-097138</styleUrl>
+        <Point>
+          <coordinates>
+            9.8183356,63.6306252,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fosdalen, Malm - Operasjon Jaktfalk</name>
+        <description>https://www.t-a.no/nyheter/2017/12/20/Operasjon-Jaktfalk-15786672.ece</description>
+        <styleUrl>#icon-1523-0F9D58</styleUrl>
+        <Point>
+          <coordinates>
+            11.2213628,64.0809033,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Thamshavnbanen, Løkken</name>
+        <description>https://oi.no/besok/thamshavnbanen/historie</description>
+        <styleUrl>#icon-1636-FFEA00</styleUrl>
+        <Point>
+          <coordinates>
+            9.704916,63.1249003,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Gravminne, Oppdal - russiske fanger</name>
+        <description><![CDATA[https://www.krigsgraver.no/nb/graveSite?id=77&page=2&configure%5BhitsPerPage%5D=20]]></description>
+        <styleUrl>#icon-1523-0F9D58</styleUrl>
+        <Point>
+          <coordinates>
+            9.6453335,62.6072702,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kanonstilling</name>
+        <description>https://www.arkitektur.no/ladeparken?pid1=228450</description>
+        <styleUrl>#icon-1523-0F9D58</styleUrl>
+        <Point>
+          <coordinates>
+            10.4406275,63.4456961,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Flyvrak, Heinkel HE 111 H5</name>
+        <description><![CDATA[Heinkel He 111 H-5 som nødlandet i Skarvan 20.01.1941.<br>https://historier.no/historier/1941-tysk-flyhavari-pa-skarvan/?fbclid=IwAR3shpTu6l-O6dZFJJyUNjTApgu33_WH7JNpzqkTaL37M2gUrQ_LfUMP51Q<br><br>Mulig korrekt GPS 63.313092, 11.477238 ?<br><br>https://ktsorens.tihlde.org/flyvrak/skarvan.html<br>file:///C:/Users/gauhau/Downloads/Turtips%20Skarvan%20og%20flyvrak.pdf]]></description>
+        <styleUrl>#icon-1750-673AB7</styleUrl>
+        <Point>
+          <coordinates>
+            11.4756211,63.3122877,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Havstein kirkegård, krigsgraver</name>
+        <styleUrl>#icon-1523-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            10.3677614000001,63.4037863,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Skatval krigshistoriske museum</name>
+        <description>Skatval Krigshistoriske museum ønsker å formidle norsk militærhistorie med hovedvekt på andre verdenskrig. Det vil gi både lokale besøkende og tilreisende et lærerikt og omfattende innblikk i lokal okkupasjonshistorie. Museet har en innholdsrik samling av både små og store gjenstander, uniformer, dokumenter og bilder som illustrerer og konkretiserer aktiviteter og drama som foregikk i området rundt indre del av Trondheimsfjorden og spesielt Åsenfjord under andre verdenskrig. Det tyske slagskipet Tirpitz lå fortøyd like i nærheten, og nesten hele den tyske marineflåte lå her i en lengre periode. Royal Air Force (RAF) sine forsøk på å utslette marineflåten, og okkupasjonsmaktens anstrengelser for å forsvare sitt okkuperte territorium, har satt sine spor i form av mange etablerte forsvarsanlegg, mengder av etterlatt utstyr og gjenstander, dramatiske historier og minner.</description>
+        <styleUrl>#icon-1636-FFD600</styleUrl>
+        <Point>
+          <coordinates>
+            10.8302098,63.5399489,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sørviknes torpedobatteri</name>
+        <description>https://www.forsvarsbygg.no/no/verneplaner/landsverneplan-for-forsvaret/trondelag/sorviknes/</description>
+        <styleUrl>#icon-1598-097138</styleUrl>
+        <Point>
+          <coordinates>
+            9.8248844,63.6095265,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Forsvarsmuseet Rustkammeret</name>
+        <description>http://forsvaretsmuseer.no/Rustkammeret</description>
+        <styleUrl>#icon-1636-FFEA00</styleUrl>
+        <Point>
+          <coordinates>
+            10.3953383,63.4257442,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Jødisk museum</name>
+        <description>https://www.jodiskmuseum.org/</description>
+        <styleUrl>#icon-1636-FFEA00</styleUrl>
+        <Point>
+          <coordinates>
+            10.3929565,63.4263921,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Justismuseet</name>
+        <description>https://justismuseet.no/</description>
+        <styleUrl>#icon-1636-FFEA00</styleUrl>
+        <Point>
+          <coordinates>
+            10.3783041,63.429884,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cretejoist</name>
+        <description><![CDATA[<img src="https://doc-0o-0g-mymaps.googleusercontent.com/untrusted/hostedimage/f6u64nodcabo26320jjaagdfpc/bmo76asjmj1ifvcpta0eopjnbo/1576163700000/LRjp94Dpg_OeiCPS7sGpIkwIloXXsrrA/*/2AF2TALqCOFTE0RG3n8MtLpqKKuIco3Mep6YiDxO12dG4Opu0Esma1x2BdOVmNd89OCq7tTdJE7t79PO08HIHxCLOWzjqh7J7vGS6OlihdVbBrFLgwyUWn4eGOexh04FjZ_X2scLzMlNIJLuTaBqp3AdwH4xE0Y4T9A7EHRg8MhSEQ13qav_nnA8EcF7nIqaBGn-UDq4ev3l-NxBQ-VFcYgXjXjQJBjS-8PqrTNMeieo3w8-6t0KGinaL1MrnbsdHen6InXqdusHHI3hR0DUz0sVSzZr1B1wpwA?fife" height="200" width="auto" /><br><br>Betonglekter PD121 Cretejoist [1920-1943]<br><br>Den 20. Februar 1943 var betonglekteren Crete Joist på vei til Vingvågen i Snillfjord kommune for å søke nødhavn da den kom ute av kontroll. Det er sagt at båten gikk fullastet på en mine før den forsøkte å søke nødhavn. På vei inn til nødhavna røk slepet og Crete Joist begynte å drive.<br><br>Kilde:<br>https://www.nrk.no/trondelag/lekter-har-statt-pa-grunn-i-70-ar-1.11275573<br>http://www.mareud.com/Ferro-Concrete/blackettconcrete1.html<br><br>https://www.google.com/maps/d/viewer?mid=1y1jvX6tsuN5ZT-E2IW3p1T1We8g&ll=60.27410864600127%2C6.3406840471834585&z=10]]></description>
+        <styleUrl>#icon-1864-9C27B0</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://doc-0o-0g-mymaps.googleusercontent.com/untrusted/hostedimage/f6u64nodcabo26320jjaagdfpc/bmo76asjmj1ifvcpta0eopjnbo/1576163700000/LRjp94Dpg_OeiCPS7sGpIkwIloXXsrrA/*/2AF2TALqCOFTE0RG3n8MtLpqKKuIco3Mep6YiDxO12dG4Opu0Esma1x2BdOVmNd89OCq7tTdJE7t79PO08HIHxCLOWzjqh7J7vGS6OlihdVbBrFLgwyUWn4eGOexh04FjZ_X2scLzMlNIJLuTaBqp3AdwH4xE0Y4T9A7EHRg8MhSEQ13qav_nnA8EcF7nIqaBGn-UDq4ev3l-NxBQ-VFcYgXjXjQJBjS-8PqrTNMeieo3w8-6t0KGinaL1MrnbsdHen6InXqdusHHI3hR0DUz0sVSzZr1B1wpwA?fife</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            9.8310696,63.6906317,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>HMS Bittern</name>
+        <description><![CDATA[<img src="https://doc-08-0g-mymaps.googleusercontent.com/untrusted/hostedimage/f6u64nodcabo26320jjaagdfpc/f7tkb90cv4nj1q9225nf1rgg94/1576163700000/LRjp94Dpg_OeiCPS7sGpIkwIloXXsrrA/*/2AF2TALp_Fv2asmrjPZatploCH8Jajh_vB50e5iFhdzwKxBscLYOxpMBxi7Jx9npC4c_ozyaabGJMXF3uVWwOH6oXI_PE28GiHbqUYifZO5OcKklEYS4ycpXjcrVIpl7AYGCCTpipf88IzUsYu7WcnQZ1f8vISZgu2CNVPuNsjghwQVwLVKuaBmCxJCTms44vJZSOW11ssZ5znyGqzLNz_1CEadi6JwX-EgjeTlKERhJG1lCbZdxIICZ_HamwOwzx_ErNbz6w9R5WRU0Hr38YijN5bJ9QMXdwXw?fife" height="200" width="auto" /><br><br>HMS Bittern [1937-1940]<br><br>HMS Bittern ble angrepet av tyske JU 87 Stuka bombefly utenfor Namsos 30. April 1940. Bittern ble truffet i akterskipet, som bokstavelig talt ble revet i fillebiter. Skadene var så store etter angrepene at man måtte forlate skipet, og kort tid etter ble hun senket av HMS Janus. <br><br>Her ble vraket liggende urørt frem til 1996 da HMS Bittern ble funnet på 150 meters dyp utenfor Namsos.<br>Kilder: http://www.havsport.com/dykkekart/<br>http://dykkepedia.com/wiki/HMS_Bittern<br>https://en.wikipedia.org/wiki/HMS_Bittern_(L07)<br><br>https://www.google.com/maps/d/viewer?mid=1y1jvX6tsuN5ZT-E2IW3p1T1We8g&usp=sharing]]></description>
+        <styleUrl>#icon-1864-9C27B0</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://doc-08-0g-mymaps.googleusercontent.com/untrusted/hostedimage/f6u64nodcabo26320jjaagdfpc/f7tkb90cv4nj1q9225nf1rgg94/1576163700000/LRjp94Dpg_OeiCPS7sGpIkwIloXXsrrA/*/2AF2TALp_Fv2asmrjPZatploCH8Jajh_vB50e5iFhdzwKxBscLYOxpMBxi7Jx9npC4c_ozyaabGJMXF3uVWwOH6oXI_PE28GiHbqUYifZO5OcKklEYS4ycpXjcrVIpl7AYGCCTpipf88IzUsYu7WcnQZ1f8vISZgu2CNVPuNsjghwQVwLVKuaBmCxJCTms44vJZSOW11ssZ5znyGqzLNz_1CEadi6JwX-EgjeTlKERhJG1lCbZdxIICZ_HamwOwzx_ErNbz6w9R5WRU0Hr38YijN5bJ9QMXdwXw?fife</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            11.4680609,64.4428664,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Hvalbåten "Sloggen"]]></name>
+        <description><![CDATA[navn<br>Hvalbåten "Sloggen"<br>beskrivelse<br>D/S Hvalbåten", i mangelen av noe bedre, er omlag 120 fot lang og 23 fot bred kullfyrt dampbåt med en tresylindret motor og enkel kjele. Båten står på kjølen med nærmere 30 graders slagside til babord og harpunkanonen er fjernet.<br><br>Man antar at det er vrak av en gammel fiskebåt som egentlig ble senket i Trondheim, men hevet av tyskerene og brukt til å legge torpedonett for Tirpitz, noe fastmonterte bøyler på skroget vitner om.<br><br>Navnet Sloggen har blitt nevnt, uten at noen har noen bevis på det. Rederimerket, en stor K på skorsteinen, er i ferd med å ramle av.<br><br>Vraket er merket med en stor blåse som er festet til et massivt betongblokk på vestre siden av vraket.<br><br>Dybde 20-35 meter.<br><br>Kilder: <br><br>https://www.youtube.com/watch?v=Hs5SR1H01oU&feature=youtu.be<br><br>http://www.havsport.com/dykkekart/<br><br>http://dykkepedia.com/wiki/Kvalb%C3%A5ten_og_ammunisjonslekteren]]></description>
+        <styleUrl>#icon-1864-9C27B0</styleUrl>
+        <Point>
+          <coordinates>
+            10.8876579,63.5868296,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Desertørhytta, Slakken</name>
+        <description>http://kulmin.no/gallery/desertorhytta-og-kystgravroysene-pa-slakken/</description>
+        <styleUrl>#icon-1523-0F9D58</styleUrl>
+        <Point>
+          <coordinates>
+            10.0222913,63.500269,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Minnebauta, engelske soldater</name>
+        <description><![CDATA[Et minne over elleve britiske soldater som falt under kampene i Steinkjer i april 1940.<br><br>Minnestein over britiske soldater som falt i kampene i Steinkjerdistriktet den 21. og 22. april 1940. Reist på Sannan 21. april 2010, ved siden av Bjørnfjellbautaen. Flyttet til Kroghbakkenparken 8. mai 2019.<br><br>Inskripsjon<br><br>In memory of the British soldiers who died defending the freedom of Norway 21.–22. April 1940.<br><br>The Lincolnshire regiment: Ronald S. Ballaam (20), Edward Harrison (21), George Humphrey (20), Harry Prike (21), George F. Roe (22), Ronald M. Smith (19), Frederick W. Tibbs (37), Alick Toyne (20)<br><br>The king’s own Yorkshire light infantry: William A. Dean (26), Thomas F. Doran (21), John Nightingale (22).<br><br><br>Avduket<br>Bautaen ble avduket 21. april 2010, i forbindelse med 70-års markering av bombingen av Steinkjer. Varaordfører Aud Gaundal foretok avdukingen. Steinkjer skolekorps spilte. Paul Kiddell minnet soldatene og la ned krans.<br><br>Flere krigsveteraner var til stede under seremonien.<br><br>De falne soldatene<br><br> <br><br>Ronald S. Ballaam (20) fra Grantham. Falt på Sannan 22. april 1940 under det britiske tilbaketoget. Gravlagt på Stave soldatkirkegård i Trondheim.<br>Edward Harrison (21) fra Lincoln. Drept under bombingen av By gård. Ble foreløpig begravd på By. Flyttet og gravlagt på Egge kirkegård 17. mai 1940. Senere flyttet til Stave soldatkirkegård i Trondheim.<br>George Humphrey (20) fra Harlaxton. Såret i kamp ved Krogs gård 21. april 1940. Døde 27. april 1940. Gravlagt på Stave soldatkirkegård i Trondheim.<br>Harry Prike (21) fra Grimsby. Døde i kampene ved Krogs gård 21. april 1940. Ble gravlagt på Hustad kirkegård. Senere flyttet til Stave soldatkirkegård i Trondheim.<br>George F. Roe (22) fra Scunthorpe. Døde i kampene ved Krogs gård 21. april 1940. Gravlagt på Hustad kirkegård. Senere flyttet til Stave soldatkirkegård i Trondheim.<br>Ronald M. Smith (19) fra Lincoln. Døde i kampene ved Krogs gård 21. april 1940. Gravlagt på Hustad kirkegård. Senere flyttet til Stave soldatkirkegård i Trondheim.<br>Frederick W. Tibbs (37) fra Lincoln. Drept i kamp ved Korsen 22. april 1940. Gravlagt på Mære kirkegård. Senere flyttet til Stave soldatkirkegård i Trondheim.<br>Alick Toyne (20) fra Lincoln. Drept i kamp ved Korsen 22. april 1940. Gravlagt på Mære kirkegård. Senere flyttet til Stave soldatkirkegård i Trondheim.<br>William A. Dean (26) fra Staffonshire. Drept i kampene ved Rambergsmyrene og Røskje 22. april 1940. Gravlagt på Mære kirkegård. Senere flyttet til Stave soldatkirkegård i Trondheim.<br>Thomas F. Doran (21) fra Horbury. Drept i kampene ved Rambergsmyrene og Røskje 22. april 1940. Gravlagt på Mære kirkegård. Senere flyttet til Stave soldatkirkegård i Trondheim.<br>John Nightingale (22) fra Yourkshire. Drept i kampene ved Rambergsmyrene og Røskje 22. april 1940. Gravlagt på Mære kirkegård. Senere flyttet til Stave soldatkirkegård i Trondheim.]]></description>
+        <styleUrl>#icon-1599-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            11.505179,64.0042833,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Ikke synlige minner</name>
+      <Placemark>
+        <name>U-622</name>
+        <description><![CDATA[U-622 [1942-1943]<br><br>U-622 was sunk on 24 July 1943 near Trondheim in position 63°27′N 10°23′ECoordinates: 63°27′N 10°23′E, by American B-17 bombers of the 95th Bomb Group. It was one of the only U-boats sunk by high-level bombing during World War II.<br><br>Denne ubåten er ikke funnet enda, til tross for iherdige forsøk fra Kaj Magnar Sjølie hos Havsport Dykkersenter i Trondheim.<br><br>Kilder: <br>https://en.wikipedia.org/wiki/German_submarine_U-622<br>https://www.nrk.no/trondelag/jakter-pa-forsvunnet-ubat-fra-andre-verdenskrig-1.12480117<br><br>https://www.google.com/maps/d/viewer?mid=1y1jvX6tsuN5ZT-E2IW3p1T1We8g&ll=60.27410864600127%2C6.3406840471834585&z=10]]></description>
+        <styleUrl>#icon-1864-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            10.3820831,63.4503333,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Heinkel 115</name>
+        <description><![CDATA[https://www.youtube.com/watch?v=H1hDmQUfZK4&feature=youtu.be<br><br>I Illsvikøra i Trondheimsfjorden ligger det tre vrak av den tyske flytypen Heinkel 115 sjøfly i dypet. Dette flyet var en typisk to-motors torpedobomber av middels størrelse som tyskerne produserte som standard både før og under den andre verdenskrig. Det er antatt at disse tre flyene sank under et alliert flyangrep mot Dora i 1943. To av disse vrakene er i dårlig forfatning hvor de hviler på en dybde av tretti til trettiseks meter, mens det mest intakte flyet hviler i en akseptabel tilstand på en dybde av rundt førti meter. Ytterligere rapporter indikerer at det burde være tretten tyske fly til som burde være mulig å finne, men så langt har dykkere ikke sett noen spor av disse. For å nå dette vrakstedet trenger man en båt...]]></description>
+        <styleUrl>#icon-1750-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            10.3595661,63.4346775,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lade flyplass</name>
+        <description>https://no.wikipedia.org/wiki/Lade_flyplass</description>
+        <styleUrl>#icon-1504-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            10.4555964,63.4418822,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Øysand leir</name>
+        <description>http://www.sno.no/files/documents/111902.pdf</description>
+        <styleUrl>#icon-1504-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            10.2238494,63.3291491,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>NS-bautaen, Stiklestad</name>
+        <description>https://digitaltmuseum.no/021095816426/vidkun-quisling-nasjonal-samling-og-riksmotene-pa-stiklestad</description>
+        <styleUrl>#icon-1599-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            11.5651643,63.7958095,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Værnes flyplass</name>
+        <description>https://www.nrk.no/trondelag/da-tyskerne-tok-vaernes-1.7076589</description>
+        <styleUrl>#icon-1504-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            10.932104,63.4643386,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Nordstern</name>
+        <description><![CDATA[Neue Drontheim.<br>https://www.dagbladet.no/magasinet/trondheim-om-hitler-hadde-vunnet/66096461]]></description>
+        <styleUrl>#icon-1608-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            10.30724,63.3251777,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Tirpitz</name>
+        <description>https://no.wikipedia.org/wiki/%C2%ABTirpitz%C2%BB_i_%C3%85senfjorden</description>
+        <styleUrl>#icon-1864-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            10.9361328,63.5638626,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Namsos, bombing</name>
+        <description>http://www.kildenett.no/portal/artikler/2007/Bombingen%20av%20Namsos%20og%20Steinkjer</description>
+        <styleUrl>#icon-1608-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            11.493842,64.4639773,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Steinkjer, bombing</name>
+        <description>http://www.kildenett.no/portal/artikler/2007/Bombingen%20av%20Namsos%20og%20Steinkjer</description>
+        <styleUrl>#icon-1608-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            11.4957841,64.0147843,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Selbu, AT-leir</name>
+        <description><![CDATA[http://selbuboka.no/wordpress/?page_id=712&page=2]]></description>
+        <styleUrl>#icon-1604-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            11.0337508,63.2235269,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Selbu, kampene ved Garberg bru</name>
+        <description>https://no.wikipedia.org/wiki/Kampene_ved_Garberg_bru</description>
+        <styleUrl>#icon-1608-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            11.0918104,63.2525464,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA["Verdalsruta", fluktrute]]></name>
+        <description>https://www.fosna-folket.no/nyheter/2017/03/09/%E2%80%93-Det-betyr-mye-%C3%A5-f%C3%A5-g%C3%A5-min-s%C3%B8sters-fluktrute-14416709.ece</description>
+        <styleUrl>#icon-1595-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            11.9165983,63.6376486,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lofjorden, leiranlegg mv</name>
+        <description>https://www.nrk.no/trondelag/_-roykla-fjorden-for-a-skjule-tirpitz-1.12040294</description>
+        <styleUrl>#icon-1604-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            10.9064171,63.589979,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lyder Hassel, agenten som forsvant</name>
+        <description>http://www.tommyhassel.no/lyder.html</description>
+        <styleUrl>#icon-1838-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            10.9547921,64.0028759,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Peder Morset, motstandsmannen</name>
+        <description>https://no.wikipedia.org/wiki/Peder_Morset</description>
+        <styleUrl>#icon-1608-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            11.027521,63.2064756,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
