@@ -58,8 +58,8 @@ export class EsriMapComponent implements OnInit {
 
         this.mapView = new MapView({
           container: this.viewNode.nativeElement,
-          center: [-12.287, -37.114],
-          zoom: 12,
+          center: [9.7221092, 63.7084133],
+          zoom: 8,
           map: map
         });
       })

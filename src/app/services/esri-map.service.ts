@@ -23,8 +23,8 @@ export class EsriMapService {
     {id: 0, name: 'Strafgefangenenlager Falstad', coordinates: [11.0415781, 63.6913426]},
     {id: 1, name: 'Dora, ubåtbunker', coordinates: [10.4215368, 63.4399374]},
     {id: 2, name: 'Austrått fort', coordinates: [9.7221092, 63.7084133]},
-    {id: 3, name: 'Skatval krigshistoriske museum', coordinates: [10.9361328, 63.5638626]},
-    {id: 4, name: 'Tirpitz', coordinates: [-88.568611, 20.683056]}
+    {id: 3, name: 'Skatval krigshistoriske museum', coordinates: [10.8302098,63.5399489]},
+    {id: 4, name: 'Tirpitz', coordinates: [10.9361328,63.5638626]}
   ];
 
   destinationCoordinates;
