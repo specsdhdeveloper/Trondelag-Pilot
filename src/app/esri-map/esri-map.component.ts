@@ -13,7 +13,7 @@
 
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { loadModules } from 'esri-loader';
-import { EsriMapService } from '../../services/esri-map.service';
+import { EsriMapService } from '../services/esri-map.service';
 
 @Component({
   selector: 'app-esri-map',

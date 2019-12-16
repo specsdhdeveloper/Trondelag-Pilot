@@ -15,11 +15,11 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 
 import { PresentationModule } from './presentation/presentation.module';
 
-import { EsriMapComponent } from './components/esri-map/esri-map.component';
+import { EsriMapComponent } from './esri-map/esri-map.component';
 import { EsriMapService } from './services/esri-map.service';
-import { HeaderComponent } from './components/header/header.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { ControlPanelComponent } from './components/control-panel/control-panel.component';
+import { HeaderComponent } from './header/header.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ControlPanelComponent } from './control-panel/control-panel.component';
 
 @NgModule({
     declarations: [

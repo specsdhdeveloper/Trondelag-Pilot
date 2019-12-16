@@ -12,7 +12,7 @@
 */
 
 import { Component, OnInit } from '@angular/core';
-import { EsriMapService } from '../../services/esri-map.service';
+import { EsriMapService } from '../services/esri-map.service';
 
 @Component({
   selector: 'app-control-panel',

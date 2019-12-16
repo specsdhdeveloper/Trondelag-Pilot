@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EsriMapComponent } from './esri-map.component';
-import { AppComponent } from '../../app.component';
+import { AppComponent } from '../app.component';
 
 describe('EsriMapComponent', () => {
   let component: EsriMapComponent;
