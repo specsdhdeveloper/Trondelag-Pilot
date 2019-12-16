@@ -20,6 +20,7 @@ import { EsriMapService } from './services/esri-map.service';
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ControlPanelComponent } from './control-panel/control-panel.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
     declarations: [
@@ -28,7 +29,8 @@ import { ControlPanelComponent } from './control-panel/control-panel.component';
         EsriMapComponent,
         HeaderComponent,
         DashboardComponent,
-        ControlPanelComponent
+        ControlPanelComponent,
+        LandingPageComponent
     ],
     imports: [
         BrowserAnimationsModule,

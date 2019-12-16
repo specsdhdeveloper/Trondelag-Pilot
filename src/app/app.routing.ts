@@ -19,8 +19,10 @@ import { RegisterComponent } from './examples/register/register.component';
 import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.component';
 import { PricingComponent } from './examples/pricing/pricing.component';
 
+import {LandingPageComponent} from './landing-page/landing-page.component';
+
 const routes: Routes =[
-    { path: '', redirectTo: 'presentation', pathMatch: 'full' },
+    { path: '',                     component: LandingPageComponent},
     { path: 'presentation',         component: PresentationComponent },
     { path: 'components',           component: ComponentsComponent },
     { path: 'sections',             component: SectionsComponent },
