@@ -19,24 +19,22 @@ export class EsriMapService {
   panRequest = new Subject<void>();
   panComplete = new Subject<void>();
 
-  sevenWonders = [
-    {id: 0, name: 'Great Wall of China', coordinates: [117.23, 40.68]},
-    {id: 1, name: 'Petra', coordinates: [35.44194444, 30.32861111]},
-    {id: 2, name: 'Christ the Redeemer', coordinates: [-43.210556, -22.951944]},
-    {id: 3, name: 'Machu Picchu', coordinates: [-72.545556, -13.163333]},
-    {id: 4, name: 'Chichen Itza', coordinates: [-88.568611, 20.683056]},
-    {id: 5, name: 'Colosseum', coordinates: [12.492269, 41.890169]},
-    {id: 6, name: 'Taj Mahal', coordinates: [78.041944, 27.175]},
+  destinations = [
+    {id: 0, name: 'Strafgefangenenlager Falstad', coordinates: [11.0415781, 63.6913426]},
+    {id: 1, name: 'Dora, ubåtbunker', coordinates: [10.4215368, 63.4399374]},
+    {id: 2, name: 'Austrått fort', coordinates: [9.7221092, 63.7084133]},
+    {id: 3, name: 'Skatval krigshistoriske museum', coordinates: [10.8302098,63.5399489]},
+    {id: 4, name: 'Tirpitz', coordinates: [10.9361328,63.5638626]}
   ];
 
-  wonderCoordinates;
+  destinationCoordinates;
 
-  panToWonder(wonder_coordinates){
-    this.wonderCoordinates = wonder_coordinates;
+  panToDestination(coordinates){
+    this.destinationCoordinates = coordinates;
     this.panRequest.next();
   }
 
-  panToWonderComplete(){
+  panToDestinationComplete(){
     this.panComplete.next();
   }
 

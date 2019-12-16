@@ -23,10 +23,10 @@ export class ControlPanelComponent implements OnInit {
 
   feedback;
   selectorDisabled = false;
-  sevenWonders = this.mapService.sevenWonders;
+  sevenWonders = this.mapService.destinations;
   panCompleteSubscription: any;
 
-  selectedWonder = (ev) => {
+  selectedDestination = (ev) => {
     // verify that a wonder is selected
     if (ev.target.value === '') {
       return;
@@ -36,7 +36,7 @@ export class ControlPanelComponent implements OnInit {
     this.disablePanel(this.sevenWonders[ev.target.value].name);
 
     // call the panMap method of the child map component
-    this.mapService.panToWonder(this.sevenWonders[ev.target.value].coordinates);
+    this.mapService.panToDestination(this.sevenWonders[ev.target.value].coordinates);
 
   }
 

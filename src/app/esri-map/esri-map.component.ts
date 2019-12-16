@@ -33,7 +33,7 @@ export class EsriMapComponent implements OnInit {
     .then(() => {
       this.mapView.zoom = 18;
       setTimeout(() => {
-        this.mapService.panToWonderComplete();
+        this.mapService.panToDestinationComplete();
       }, 2000);
     });
   }
@@ -41,7 +41,7 @@ export class EsriMapComponent implements OnInit {
   public ngOnInit() {
 
     this.panRequestSubscription = this.mapService.panRequest.subscribe(() => {
-      this.panMap(this.mapService.wonderCoordinates);
+      this.panMap(this.mapService.destinationCoordinates);
     });
 
     // use esri-loader to load JSAPI modules
@@ -58,8 +58,8 @@ export class EsriMapComponent implements OnInit {
 
         this.mapView = new MapView({
           container: this.viewNode.nativeElement,
-          center: [-12.287, -37.114],
-          zoom: 12,
+          center: [9.7221092, 63.7084133],
+          zoom: 8,
           map: map
         });
       })
