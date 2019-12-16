@@ -25,7 +25,12 @@
     <property name="nodejs.protractor.protractor_package" value="$PROJECT_DIR$/node_modules/protractor" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.4\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="C:\Users\Eodyne\Documents\Git\Trondelag-Pilot\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Eodyne\Documents\Git\Trondelag-Pilot\src\app\components" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -86,6 +91,7 @@
       <workItem from="1576163905291" duration="7596000" />
       <workItem from="1576231099117" duration="1121000" />
       <workItem from="1576238314915" duration="4947000" />
+      <workItem from="1576487718784" duration="1936000" />
     </task>
     <servers />
   </component>
@@ -124,7 +130,7 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/esri-map/esri-map.component.ts</url>
+          <url>file://$PROJECT_DIR$/src/app/components/esri-map/esri-map.component.ts</url>
           <line>30</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
