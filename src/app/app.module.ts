@@ -21,6 +21,7 @@ import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ControlPanelComponent } from './control-panel/control-panel.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { BackgroundVideoComponent } from './background-video/background-video.component';
 
 @NgModule({
     declarations: [
@@ -30,7 +31,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
         HeaderComponent,
         DashboardComponent,
         ControlPanelComponent,
-        LandingPageComponent
+        LandingPageComponent,
+        BackgroundVideoComponent
     ],
     imports: [
         BrowserAnimationsModule,
