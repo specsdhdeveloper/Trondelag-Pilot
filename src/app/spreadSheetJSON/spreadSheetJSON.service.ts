@@ -1,14 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Observable, Subscription  } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute } from "@angular/router";
 
 @Injectable({
     providedIn: 'root'
   })
-
-@Injectable()
 export class spreadSheetJSONService{
     
+    fieldsCards = 6;
+    fieldsArtilces = 8;
+    public cardsArray : any;
+    public articlesArray : any;
+
     public loadDB = false;
     public cards = new Array<Card>();
     public articles = new Array<Article>();
@@ -25,11 +29,84 @@ export class spreadSheetJSONService{
         return this.articles[id];
     }
 
-    public getJSON(url_basic): Observable<any> {
-        return this.http.get(url_basic);
+    public getArticlesJSON(): Observable<any> {
+        return this.http.get(this._jsonURLArticles);
     }
 
-    constructor(private http: HttpClient) {}
+    public getCardsJSON(): Observable<any> {
+        return this.http.get(this._jsonURLCards);
+    }
+
+    //CARDS
+    public callJSONCards()
+    {
+        this.getCardsJSON().subscribe(data => {
+            //console.log(data);     
+            this.cardsArray = data.feed.entry;
+            this.saveCards();
+            });
+    }
+
+    public createCard(ID, title, abstract, text, media, pageAsoc)
+    {
+        this.cards.push(new Card(ID, title, abstract, text, media, pageAsoc));
+    }
+
+    public saveCards()
+    {
+        var aux = 0;
+
+        for(let i = this.fieldsCards; i < this.cardsArray.length; i++)
+        {
+            aux++;
+            if(aux == 6)
+            {
+                this.createCard(this.cardsArray[i-5].gs$cell.inputValue, this.cardsArray[i-4].gs$cell.inputValue, this.cardsArray[i-3].gs$cell.inputValue, this.cardsArray[i-2].gs$cell.inputValue, this.cardsArray[i-1].gs$cell.inputValue, this.cardsArray[i].gs$cell.inputValue);
+                aux = 0;
+            }
+        }
+
+        console.log(this.cards);
+    }
+
+    //Articles
+    public callJSONArticles()
+    {
+        this.getArticlesJSON().subscribe(data => {
+            //console.log(data);     
+            this.articlesArray = data.feed.entry;
+            this.saveArticles();
+            this.loadDB = true;
+            });
+    }
+
+    public createArticle(ID, title, abstract, text1, text2, text3, text4, media)
+    {
+        this.articles.push(new Article(ID, title, abstract, text1, text2, text3, text4, media));
+    }
+
+    public saveArticles()
+    {
+        var aux = 0;
+
+        for(let i = this.fieldsArtilces; i < this.articlesArray.length; i++)
+        {
+            aux++;
+            if(aux == 8)
+            {
+                this.createArticle(this.articlesArray[i-7].gs$cell.inputValue, this.articlesArray[i-6].gs$cell.inputValue, this.articlesArray[i-5].gs$cell.inputValue, this.articlesArray[i-4].gs$cell.inputValue, this.articlesArray[i-3].gs$cell.inputValue, this.articlesArray[i-2].gs$cell.inputValue, this.articlesArray[i-1].gs$cell.inputValue, this.articlesArray[i].gs$cell.inputValue);
+                aux = 0;
+            }
+        }
+
+        console.log(this.articles);
+    }
+
+    constructor(private http: HttpClient, private route: ActivatedRoute) {
+
+        //this.callJSONCards();
+        //this.callJSONArticles();
+    }
 }
 
 class Card {

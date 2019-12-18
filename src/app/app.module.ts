@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app.routing';
 import { SectionsModule } from './sections/sections.module';
 import { ComponentsModule } from './components/components.module';
 import { ExamplesModule } from './examples/examples.module';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { PresentationComponent } from './presentation/presentation.component';
@@ -20,6 +21,10 @@ import { EsriMapService } from './services/esri-map.service';
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ControlPanelComponent } from './control-panel/control-panel.component';
+import { SpreadSheetJSON } from './spreadSheetJSON/spreadSheetJSON.component';
+import { spreadSheetJSONService } from './spreadSheetJSON/spreadSheetJSON.service';
+import { classResolve } from './spreadSheetJSON/spreadSheetJSON.resolve';
+import { Prueba } from './prueba/prueba.component';
 
 @NgModule({
     declarations: [
@@ -28,7 +33,9 @@ import { ControlPanelComponent } from './control-panel/control-panel.component';
         EsriMapComponent,
         HeaderComponent,
         DashboardComponent,
-        ControlPanelComponent
+        ControlPanelComponent,
+        SpreadSheetJSON,
+        Prueba
     ],
     imports: [
         BrowserAnimationsModule,
@@ -40,9 +47,10 @@ import { ControlPanelComponent } from './control-panel/control-panel.component';
         PresentationModule,
         SectionsModule,
         ComponentsModule,
-        ExamplesModule
+        ExamplesModule,
+        HttpClientModule
     ],
-    providers: [EsriMapService],
+    providers: [EsriMapService, spreadSheetJSONService, classResolve],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
