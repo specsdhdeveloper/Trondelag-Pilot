@@ -20,9 +20,10 @@ import { EsriMapService } from './services/esri-map.service';
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ControlPanelComponent } from './control-panel/control-panel.component';
-import { CarouselComponent } from './landing-page/carousel.component';
+import { CarouselComponent } from './carousel/carousel.component';
 import { BackgroundVideoComponent } from './background-video/background-video.component';
 import { ModelViewerComponent } from './model-viewer/model-viewer.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
     declarations: [
@@ -34,7 +35,8 @@ import { ModelViewerComponent } from './model-viewer/model-viewer.component';
         ControlPanelComponent,
         CarouselComponent,
         BackgroundVideoComponent,
-        ModelViewerComponent
+        ModelViewerComponent,
+        LandingPageComponent
     ],
     imports: [
         BrowserAnimationsModule,
