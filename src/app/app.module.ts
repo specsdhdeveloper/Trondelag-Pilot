@@ -22,6 +22,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ControlPanelComponent } from './control-panel/control-panel.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { BackgroundVideoComponent } from './background-video/background-video.component';
+import { ModelViewerComponent } from './model-viewer/model-viewer.component';
 
 @NgModule({
     declarations: [
@@ -32,7 +33,8 @@ import { BackgroundVideoComponent } from './background-video/background-video.co
         DashboardComponent,
         ControlPanelComponent,
         LandingPageComponent,
-        BackgroundVideoComponent
+        BackgroundVideoComponent,
+        ModelViewerComponent
     ],
     imports: [
         BrowserAnimationsModule,
