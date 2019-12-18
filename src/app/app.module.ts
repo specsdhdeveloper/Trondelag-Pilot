@@ -23,6 +23,7 @@ import { ControlPanelComponent } from './control-panel/control-panel.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { BackgroundVideoComponent } from './background-video/background-video.component';
 import { ModelViewerComponent } from './model-viewer/model-viewer.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
     declarations: [
@@ -34,7 +35,8 @@ import { ModelViewerComponent } from './model-viewer/model-viewer.component';
         ControlPanelComponent,
         CarouselComponent,
         BackgroundVideoComponent,
-        ModelViewerComponent
+        ModelViewerComponent,
+        LandingPageComponent
     ],
     imports: [
         BrowserAnimationsModule,
