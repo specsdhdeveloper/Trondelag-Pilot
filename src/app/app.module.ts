@@ -20,7 +20,7 @@ import { EsriMapService } from './services/esri-map.service';
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ControlPanelComponent } from './control-panel/control-panel.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
+import { CarouselComponent } from './landing-page/carousel.component';
 import { BackgroundVideoComponent } from './background-video/background-video.component';
 import { ModelViewerComponent } from './model-viewer/model-viewer.component';
 
@@ -32,7 +32,7 @@ import { ModelViewerComponent } from './model-viewer/model-viewer.component';
         HeaderComponent,
         DashboardComponent,
         ControlPanelComponent,
-        LandingPageComponent,
+        CarouselComponent,
         BackgroundVideoComponent,
         ModelViewerComponent
     ],

@@ -19,10 +19,10 @@ import { RegisterComponent } from './examples/register/register.component';
 import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.component';
 import { PricingComponent } from './examples/pricing/pricing.component';
 
-import {LandingPageComponent} from './landing-page/landing-page.component';
+import {CarouselComponent} from './landing-page/carousel.component';
 
 const routes: Routes =[
-    { path: '',                     component: LandingPageComponent},
+    { path: '',                     component: CarouselComponent},
     { path: 'presentation',         component: PresentationComponent },
     { path: 'components',           component: ComponentsComponent },
     { path: 'sections',             component: SectionsComponent },
