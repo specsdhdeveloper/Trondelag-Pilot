@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { spreadSheetJSONService } from '../HomePage/spreadSheetJSON.service';
+import { SpreadsheetService} from '../HomePage/spreadsheet.service';
 import { ActivatedRoute } from "@angular/router";
 
 @Component({
@@ -16,7 +16,7 @@ export class TourComponent implements OnInit {
     public articlesArray : any;
     article : any;
 
-    constructor(private spreadSheetJSONServiceVariable: spreadSheetJSONService, private route: ActivatedRoute) {
+    constructor(private spreadSheetJSONServiceVariable: SpreadsheetService, private route: ActivatedRoute) {
 
     }
 

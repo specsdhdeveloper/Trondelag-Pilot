@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import * as Rellax from 'rellax';
-import { spreadSheetJSONService } from '../HomePage/spreadSheetJSON.service';
+import { SpreadsheetService } from '../HomePage/spreadsheet.service';
 
 @Component({
     selector: 'app-presentation',
@@ -17,7 +17,7 @@ export class PresentationComponent implements OnInit, OnDestroy, AfterViewInit {
     date : Date = new Date();
     cards = this.spreadSheetJSONServiceVariable.cards;
     
-    constructor(private spreadSheetJSONServiceVariable: spreadSheetJSONService) { 
+    constructor(private spreadSheetJSONServiceVariable: SpreadsheetService) {
 
     }
 

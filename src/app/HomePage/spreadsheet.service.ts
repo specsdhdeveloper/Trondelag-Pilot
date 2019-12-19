@@ -7,21 +7,14 @@ import { map } from 'rxjs/operators';
 @Injectable({
     providedIn: 'root'
   })
-export class spreadSheetJSONService{
-    
-    fieldsArtilces = 9;
-    public articlesArray : any;
+export class SpreadsheetService{
 
-    public loadDB = false;
+    fieldsArtilces = 9;
+    public articlesArray: any;
+
     public cards = new Array<Card>();
     public articles = new Array<Article>();
-    public _jsonURLCards = 'https://spreadsheets.google.com/feeds/cells/1uaOLwfifJWMhi3L0IJfkzvhwc8o4cukutJV0t3dcsAk/1/public/full?alt=json';
     public _jsonURLArticles = 'https://spreadsheets.google.com/feeds/list/1uaOLwfifJWMhi3L0IJfkzvhwc8o4cukutJV0t3dcsAk/2/public/full?alt=json';
-
-    public GetArticleByCard(id)
-    {
-        return this.articles[id];
-    }
 
     public GetArticleByID(id)
     {
@@ -50,17 +43,6 @@ export class spreadSheetJSONService{
           return returnArray;
         })
       );
-    }
-
-    //Articles
-    public callJSONArticles()
-    {
-        this.getArticlesJSON().subscribe(data => {
-            console.log(data);     
-            this.articlesArray = data.feed.entry;
-            this.saveArticles();
-            this.loadDB = true;
-            });
     }
 
     public createArticle(ID, title, abstract, text1, text2, text3, text4, media, campo)

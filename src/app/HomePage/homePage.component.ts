@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { spreadSheetJSONService } from './spreadSheetJSON.service';
+import { SpreadsheetService } from './spreadsheet.service';
 import { ActivatedRoute } from "@angular/router";
 
 @Component({
@@ -17,7 +17,7 @@ export class HomePage implements OnInit {
 
     article : any;
 
-    constructor(private spreadSheetJSONServiceVariable: spreadSheetJSONService, private route: ActivatedRoute) {
+    constructor(private spreadSheetJSONServiceVariable: SpreadsheetService, private route: ActivatedRoute) {
 
     }
 

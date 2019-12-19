@@ -21,7 +21,7 @@ import { PricingComponent } from './examples/pricing/pricing.component';
 
 import {CarouselComponent} from './carousel/carousel.component';
 import {LandingPageComponent} from './landing-page/landing-page.component';
-import { classResolve } from './HomePage/spreadSheetJSON.resolve';
+import { SpreadsheetResolver } from './HomePage/spreadsheet.resolve';
 import { HomePage } from './HomePage/homePage.component';
 import { DestinationComponent } from './destinations/destination.component';
 import { StoryComponent } from './Story/story.component';
@@ -29,11 +29,11 @@ import { TourComponent } from './Tour/tour.component';
 
 const routes: Routes =[
     { path: '', redirectTo: 'home', pathMatch: 'full'},
-    { path: 'home',                 component: HomePage,                resolve: { homePage : classResolve}},
-    { path: 'home/:id',             component: HomePage,                resolve: { homePage : classResolve}},
-    { path: 'destination/:id',      component: DestinationComponent,             resolve: { destination : classResolve}},
-    { path: 'story/:id',            component: StoryComponent,                   resolve: { story : classResolve}},
-    { path: 'tour/:id',             component: TourComponent,                    resolve: { tour : classResolve}},
+    { path: 'home',                 component: HomePage,                resolve: { homePage : SpreadsheetResolver}},
+    { path: 'home/:id',             component: HomePage,                resolve: { homePage : SpreadsheetResolver}},
+    { path: 'destination/:id',      component: DestinationComponent,    resolve: { destination : SpreadsheetResolver}},
+    { path: 'story/:id',            component: StoryComponent,          resolve: { story : SpreadsheetResolver}},
+    { path: 'tour/:id',             component: TourComponent,           resolve: { tour : SpreadsheetResolver}},
     { path: 'landing',              component: LandingPageComponent},
     { path: 'presentation',         component: PresentationComponent },
     { path: 'components',           component: ComponentsComponent },

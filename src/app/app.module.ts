@@ -26,8 +26,8 @@ import { BackgroundVideoComponent } from './background-video/background-video.co
 import { ModelViewerComponent } from './model-viewer/model-viewer.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HomePage } from './HomePage/homePage.component';
-import { spreadSheetJSONService } from './HomePage/spreadSheetJSON.service';
-import { classResolve } from './HomePage/spreadSheetJSON.resolve';
+import { SpreadsheetService } from './HomePage/spreadsheet.service';
+import { SpreadsheetResolver } from './HomePage/spreadsheet.resolve';
 import { DestinationComponent } from './destinations/destination.component';
 import { StoryComponent } from './Story/story.component';
 import { TourComponent } from './Tour/tour.component';
@@ -62,7 +62,7 @@ import { TourComponent } from './Tour/tour.component';
         ExamplesModule,
         HttpClientModule
     ],
-    providers: [EsriMapService, spreadSheetJSONService, classResolve],
+    providers: [EsriMapService, SpreadsheetService, SpreadsheetResolver],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
