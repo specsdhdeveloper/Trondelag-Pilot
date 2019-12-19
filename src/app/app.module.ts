@@ -28,7 +28,9 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HomePage } from './HomePage/homePage.component';
 import { spreadSheetJSONService } from './HomePage/spreadSheetJSON.service';
 import { classResolve } from './HomePage/spreadSheetJSON.resolve';
-import { Prueba } from './prueba/prueba.component';
+import { Destination } from './destinations/destination.component';
+import { Story } from './Story/story.component';
+import { Tour } from './Tour/tour.component';
 
 @NgModule({
     declarations: [
@@ -43,7 +45,9 @@ import { Prueba } from './prueba/prueba.component';
         ModelViewerComponent,
         LandingPageComponent,
         HomePage,
-        Prueba
+        Destination,
+        Story,
+        Tour
     ],
     imports: [
         BrowserAnimationsModule,
