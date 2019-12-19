@@ -18,12 +18,14 @@ import { ProfileComponent } from './examples/profile/profile.component';
 import { RegisterComponent } from './examples/register/register.component';
 import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.component';
 import { PricingComponent } from './examples/pricing/pricing.component';
-import { spreadSheetJSONService } from './spreadSheetJSON/spreadSheetJSON.service';
-import { classResolve } from './spreadSheetJSON/spreadSheetJSON.resolve';
-import { SpreadSheetJSON } from './spreadSheetJSON/spreadSheetJSON.component';
+import { spreadSheetJSONService } from './HomePage/spreadSheetJSON.service';
+import { classResolve } from './HomePage/spreadSheetJSON.resolve';
+import { HomePage } from './HomePage/homePage.component';
 
 const routes: Routes =[
-    { path: 'home',                 component: SpreadSheetJSON,         resolve: { spreadSheetJSON : classResolve}},
+    { path: '', redirectTo: 'home', pathMatch: 'full'},
+    { path: 'home',                 component: HomePage,         resolve: { homePage : classResolve}},
+    { path: 'home/:id',                 component: HomePage,         resolve: { homePage : classResolve}},
     { path: 'presentation',         component: PresentationComponent },
     { path: 'components',           component: ComponentsComponent },
     { path: 'sections',             component: SectionsComponent },

@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { spreadSheetJSONService } from '../spreadSheetJSON/spreadSheetJSON.service';
+import { spreadSheetJSONService } from './spreadSheetJSON.service';
 import { ActivatedRoute } from "@angular/router";
 
 @Component({
-  selector: 'app-spreadSheetJSON',
-  templateUrl: './spreadSheetJSON.component.html',
-  styleUrls: ['./spreadSheetJSON.component.css']
+  selector: 'app-homePage',
+  templateUrl: './homePage.component.html',
+  styleUrls: ['./homePage.component.css']
 })
 
-export class SpreadSheetJSON implements OnInit {
+export class HomePage implements OnInit {
 
     fieldsCards = 6;
     fieldsArtilces = 8;
@@ -26,6 +26,8 @@ export class SpreadSheetJSON implements OnInit {
         console.log(this.articlesArray);
 
         this.spreadSheetJSONServiceVariable.saveArticles();
+
+        
     }
 }
 

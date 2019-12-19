@@ -21,9 +21,9 @@ import { EsriMapService } from './services/esri-map.service';
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ControlPanelComponent } from './control-panel/control-panel.component';
-import { SpreadSheetJSON } from './spreadSheetJSON/spreadSheetJSON.component';
-import { spreadSheetJSONService } from './spreadSheetJSON/spreadSheetJSON.service';
-import { classResolve } from './spreadSheetJSON/spreadSheetJSON.resolve';
+import { HomePage } from './HomePage/homePage.component';
+import { spreadSheetJSONService } from './HomePage/spreadSheetJSON.service';
+import { classResolve } from './HomePage/spreadSheetJSON.resolve';
 import { Prueba } from './prueba/prueba.component';
 
 @NgModule({
@@ -34,7 +34,7 @@ import { Prueba } from './prueba/prueba.component';
         HeaderComponent,
         DashboardComponent,
         ControlPanelComponent,
-        SpreadSheetJSON,
+        HomePage,
         Prueba
     ],
     imports: [

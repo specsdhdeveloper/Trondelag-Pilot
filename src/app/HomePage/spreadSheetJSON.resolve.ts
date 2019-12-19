@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";  
 import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot  } from "@angular/router";  
 import { Observable } from "rxjs";
-import { spreadSheetJSONService } from '../spreadSheetJSON/spreadSheetJSON.service';
+import { spreadSheetJSONService } from './spreadSheetJSON.service';
   
 @Injectable()  
 export class classResolve implements Resolve<any> {

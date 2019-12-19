@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 import { take, map } from 'rxjs/operators'; 
-import { spreadSheetJSONService } from '../spreadSheetJSON/spreadSheetJSON.service';
+import { spreadSheetJSONService } from '../HomePage/spreadSheetJSON.service';
 
 @Component({
   selector: 'app-prueba',
@@ -25,11 +25,9 @@ export class Prueba implements OnInit {
 
     ngOnInit() {
         
-        console.log('prueba');
-        this.article = this.spreadSheetJSONServiceVariable.GetArticleByID(0);
-        //this.cardsArray$ = this.route.snapshot.data.spreadSheetJSON;
-        //this.article = this.spreadSheetJSONServiceVariable.articlesArray[0];
+        this.article = this.spreadSheetJSONServiceVariable.GetArticleByID(this.route.snapshot.paramMap.get('id'));
         console.log(this.article);
+        console.log(this.route.snapshot.paramMap.get('id'));
         
     }
 }
