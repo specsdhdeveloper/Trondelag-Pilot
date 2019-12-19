@@ -28,9 +28,9 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HomePage } from './HomePage/homePage.component';
 import { spreadSheetJSONService } from './HomePage/spreadSheetJSON.service';
 import { classResolve } from './HomePage/spreadSheetJSON.resolve';
-import { Destination } from './destinations/destination.component';
-import { Story } from './Story/story.component';
-import { Tour } from './Tour/tour.component';
+import { DestinationComponent } from './destinations/destination.component';
+import { StoryComponent } from './Story/story.component';
+import { TourComponent } from './Tour/tour.component';
 
 @NgModule({
     declarations: [
@@ -45,9 +45,9 @@ import { Tour } from './Tour/tour.component';
         ModelViewerComponent,
         LandingPageComponent,
         HomePage,
-        Destination,
-        Story,
-        Tour
+        DestinationComponent,
+        StoryComponent,
+        TourComponent
     ],
     imports: [
         BrowserAnimationsModule,

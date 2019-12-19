@@ -8,7 +8,7 @@ import { ActivatedRoute } from "@angular/router";
   styleUrls: ['./destination.component.css']
 })
 
-export class Destination implements OnInit {
+export class DestinationComponent implements OnInit {
 
     fieldsCards = 6;
     fieldsArtilces = 8;

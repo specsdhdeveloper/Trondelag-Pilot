@@ -23,17 +23,17 @@ import {CarouselComponent} from './carousel/carousel.component';
 import {LandingPageComponent} from './landing-page/landing-page.component';
 import { classResolve } from './HomePage/spreadSheetJSON.resolve';
 import { HomePage } from './HomePage/homePage.component';
-import { Destination } from './destinations/destination.component';
-import { Story } from './Story/story.component';
-import { Tour } from './Tour/tour.component';
+import { DestinationComponent } from './destinations/destination.component';
+import { StoryComponent } from './Story/story.component';
+import { TourComponent } from './Tour/tour.component';
 
 const routes: Routes =[
     { path: '', redirectTo: 'home', pathMatch: 'full'},
     { path: 'home',                 component: HomePage,                resolve: { homePage : classResolve}},
     { path: 'home/:id',             component: HomePage,                resolve: { homePage : classResolve}},
-    { path: 'destination/:id',      component: Destination,             resolve: { destination : classResolve}},
-    { path: 'story/:id',            component: Story,                   resolve: { story : classResolve}},
-    { path: 'tour/:id',             component: Tour,                    resolve: { tour : classResolve}},
+    { path: 'destination/:id',      component: DestinationComponent,             resolve: { destination : classResolve}},
+    { path: 'story/:id',            component: StoryComponent,                   resolve: { story : classResolve}},
+    { path: 'tour/:id',             component: TourComponent,                    resolve: { tour : classResolve}},
     { path: 'landing',              component: LandingPageComponent},
     { path: 'presentation',         component: PresentationComponent },
     { path: 'components',           component: ComponentsComponent },
