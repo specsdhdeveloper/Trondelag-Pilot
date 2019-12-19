@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, Subscription  } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router, NavigationEnd } from "@angular/router";
+import { map } from 'rxjs/operators';
 
 @Injectable({
     providedIn: 'root'
@@ -15,7 +16,7 @@ export class spreadSheetJSONService{
     public cards = new Array<Card>();
     public articles = new Array<Article>();
     public _jsonURLCards = 'https://spreadsheets.google.com/feeds/cells/1uaOLwfifJWMhi3L0IJfkzvhwc8o4cukutJV0t3dcsAk/1/public/full?alt=json';
-    public _jsonURLArticles = 'https://spreadsheets.google.com/feeds/cells/1uaOLwfifJWMhi3L0IJfkzvhwc8o4cukutJV0t3dcsAk/2/public/full?alt=json';
+    public _jsonURLArticles = 'https://spreadsheets.google.com/feeds/list/1uaOLwfifJWMhi3L0IJfkzvhwc8o4cukutJV0t3dcsAk/2/public/full?alt=json';
 
     public GetArticleByCard(id)
     {
@@ -28,7 +29,27 @@ export class spreadSheetJSONService{
     }
 
     public getArticlesJSON(): Observable<any> {
-        return this.http.get(this._jsonURLArticles);
+        return this.http.get(this._jsonURLArticles)
+      .pipe(
+        map((res: any) => {
+          const data = res.feed.entry;
+          const returnArray: Array<any> = [];
+          if (data && data.length > 0) {
+            data.forEach(entry => {
+              const obj = {};
+              for (const x in entry) {
+                if (x.includes('gsx$') && entry[x].$t) {
+                  obj[x.split('$')[1]] = entry[x]['$t'];
+                }
+              }
+              returnArray.push(obj);
+            });
+          }
+
+          this.articlesArray = returnArray;
+          return returnArray;
+        })
+      );
     }
 
     //Articles

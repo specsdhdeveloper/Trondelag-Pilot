@@ -22,7 +22,10 @@ export class HomePage implements OnInit {
     }
 
     ngOnInit() {
-        console.log('spreadSheetJSON');
+
+        //this.spreadSheetJSONServiceVariable.getArticlesJSON();
+
+        /*console.log('spreadSheetJSON');
         this.spreadSheetJSONServiceVariable.articlesArray = this.route.snapshot.data.homePage.feed.entry;
         console.log(this.articlesArray);
 
@@ -30,7 +33,7 @@ export class HomePage implements OnInit {
 
         this.article = this.spreadSheetJSONServiceVariable.GetArticleByID(this.route.snapshot.paramMap.get('id'));
         console.log(this.article);
-        console.log(this.route.snapshot.paramMap.get('id')); 
+        console.log(this.route.snapshot.paramMap.get('id')); */
     }
 }
 
