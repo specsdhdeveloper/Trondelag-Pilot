@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import * as Rellax from 'rellax';
-
+import { spreadSheetJSONService } from '../HomePage/spreadSheetJSON.service';
 
 @Component({
     selector: 'app-presentation',
@@ -15,8 +15,11 @@ export class PresentationComponent implements OnInit, OnDestroy, AfterViewInit {
         right: false
     };
     date : Date = new Date();
+    cards = this.spreadSheetJSONServiceVariable.cards;
+    
+    constructor(private spreadSheetJSONServiceVariable: spreadSheetJSONService) { 
 
-     constructor() { }
+    }
 
     ngOnInit() {
         var body = document.getElementsByTagName('body')[0];
@@ -25,6 +28,7 @@ export class PresentationComponent implements OnInit, OnDestroy, AfterViewInit {
         navbar.classList.add('navbar-transparent');
     }
     ngAfterViewInit(){
+        
       setTimeout(function(){
         if (window.innerWidth >= 991) {
             var rellax = new Rellax('.rellax', {

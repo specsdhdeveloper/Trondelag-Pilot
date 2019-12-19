@@ -6,6 +6,7 @@ import { DOCUMENT } from '@angular/platform-browser';
 import { LocationStrategy, PlatformLocation, Location } from '@angular/common';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import {load} from '@angular/core/src/render3';
+import { mapChildrenIntoArray } from '@angular/router/src/url_tree';
 
 @Component({
     selector: 'app-root',
@@ -18,6 +19,7 @@ export class AppComponent implements OnInit {
 
     constructor( private renderer : Renderer, private router: Router, @Inject(DOCUMENT,) private document: any, private element : ElementRef, public location: Location) {}
     ngOnInit() {
+
         var navbar : HTMLElement = this.element.nativeElement.children[0].children[0];
         this._router = this.router.events.filter(event => event instanceof NavigationEnd).subscribe((event: NavigationEnd) => {
             if (this.location.path() !== '/sections') {
