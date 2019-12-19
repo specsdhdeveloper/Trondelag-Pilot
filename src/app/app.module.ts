@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app.routing';
 import { SectionsModule } from './sections/sections.module';
 import { ComponentsModule } from './components/components.module';
 import { ExamplesModule } from './examples/examples.module';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { PresentationComponent } from './presentation/presentation.component';
@@ -24,6 +25,10 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { BackgroundVideoComponent } from './background-video/background-video.component';
 import { ModelViewerComponent } from './model-viewer/model-viewer.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { HomePage } from './HomePage/homePage.component';
+import { spreadSheetJSONService } from './HomePage/spreadSheetJSON.service';
+import { classResolve } from './HomePage/spreadSheetJSON.resolve';
+import { Prueba } from './prueba/prueba.component';
 
 @NgModule({
     declarations: [
@@ -36,7 +41,9 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
         CarouselComponent,
         BackgroundVideoComponent,
         ModelViewerComponent,
-        LandingPageComponent
+        LandingPageComponent,
+        HomePage,
+        Prueba
     ],
     imports: [
         BrowserAnimationsModule,
@@ -48,9 +55,10 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
         PresentationModule,
         SectionsModule,
         ComponentsModule,
-        ExamplesModule
+        ExamplesModule,
+        HttpClientModule
     ],
-    providers: [EsriMapService],
+    providers: [EsriMapService, spreadSheetJSONService, classResolve],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

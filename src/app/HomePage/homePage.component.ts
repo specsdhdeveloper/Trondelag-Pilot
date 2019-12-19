@@ -22,7 +22,7 @@ export class HomePage implements OnInit {
 
     ngOnInit() {
         console.log('spreadSheetJSON');
-        this.spreadSheetJSONServiceVariable.articlesArray = this.route.snapshot.data.spreadSheetJSON.feed.entry;
+        this.spreadSheetJSONServiceVariable.articlesArray = this.route.snapshot.data.homePage.feed.entry;
         console.log(this.articlesArray);
 
         this.spreadSheetJSONServiceVariable.saveArticles();

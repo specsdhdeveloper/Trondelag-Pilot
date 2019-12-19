@@ -21,9 +21,14 @@ import { PricingComponent } from './examples/pricing/pricing.component';
 
 import {CarouselComponent} from './carousel/carousel.component';
 import {LandingPageComponent} from './landing-page/landing-page.component';
+import { classResolve } from './HomePage/spreadSheetJSON.resolve';
+import { HomePage } from './HomePage/homePage.component';
 
 const routes: Routes =[
-    { path: '',                     component: LandingPageComponent},
+    { path: '', redirectTo: 'home', pathMatch: 'full'},
+    { path: 'home',                 component: HomePage,         resolve: { homePage : classResolve}},
+    { path: 'home/:id',             component: HomePage,         resolve: { homePage : classResolve}},
+    { path: 'landing',              component: LandingPageComponent},
     { path: 'presentation',         component: PresentationComponent },
     { path: 'components',           component: ComponentsComponent },
     { path: 'sections',             component: SectionsComponent },
