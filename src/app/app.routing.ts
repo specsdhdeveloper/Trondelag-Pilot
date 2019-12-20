@@ -21,7 +21,7 @@ import { PricingComponent } from './examples/pricing/pricing.component';
 
 import {CarouselComponent} from './carousel/carousel.component';
 import {LandingPageComponent} from './landing-page/landing-page.component';
-import { SpreadsheetResolver } from './HomePage/spreadsheet.resolve';
+import { SpreadsheetResolver } from './resolveComponents/spreadsheet.resolve';
 import { HomePage } from './HomePage/homePage.component';
 import { DestinationComponent } from './destinations/destination.component';
 import { StoryComponent } from './Story/story.component';

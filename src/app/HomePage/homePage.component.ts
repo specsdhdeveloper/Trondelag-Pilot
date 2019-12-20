@@ -10,12 +10,7 @@ import { ActivatedRoute } from "@angular/router";
 
 export class HomePage implements OnInit {
 
-    fieldsCards = 6;
-    fieldsArtilces = 8;
-    public cardsArray : any;
-    public articlesArray : any;
-
-    article : any;
+    row : any;
 
     constructor(private spreadSheetServiceVariable: SpreadsheetService, private route: ActivatedRoute) {
 
@@ -23,8 +18,8 @@ export class HomePage implements OnInit {
 
     ngOnInit() {
 
-        this.article = this.spreadSheetServiceVariable.GetArticleByID(this.route.snapshot.paramMap.get('id'));
-        console.log(this.article.media);
+        this.row = this.spreadSheetServiceVariable.GetRowByID(this.route.snapshot.paramMap.get('id'));
+        console.log(this.row);
         console.log(this.route.snapshot.paramMap.get('id'));
     }
 }

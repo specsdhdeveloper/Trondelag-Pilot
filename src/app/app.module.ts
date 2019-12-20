@@ -27,7 +27,7 @@ import { ModelViewerComponent } from './model-viewer/model-viewer.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HomePage } from './HomePage/homePage.component';
 import { SpreadsheetService } from './HomePage/spreadsheet.service';
-import { SpreadsheetResolver } from './HomePage/spreadsheet.resolve';
+import { SpreadsheetResolver } from './resolveComponents/spreadsheet.resolve';
 import { DestinationComponent } from './destinations/destination.component';
 import { StoryComponent } from './Story/story.component';
 import { TourComponent } from './Tour/tour.component';
