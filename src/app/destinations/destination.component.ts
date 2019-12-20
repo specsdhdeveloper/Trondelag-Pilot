@@ -22,10 +22,6 @@ export class DestinationComponent implements OnInit {
 
     ngOnInit() {
         console.log('destination');
-        this.spreadSheetJSONServiceVariable.articlesArray = this.route.snapshot.data.destination.feed.entry;
-        console.log(this.articlesArray);
-
-        this.spreadSheetJSONServiceVariable.saveArticles();
 
         this.article = this.spreadSheetJSONServiceVariable.GetArticleByID(this.route.snapshot.paramMap.get('id'));
         console.log(this.article);

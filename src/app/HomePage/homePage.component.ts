@@ -17,23 +17,15 @@ export class HomePage implements OnInit {
 
     article : any;
 
-    constructor(private spreadSheetJSONServiceVariable: SpreadsheetService, private route: ActivatedRoute) {
+    constructor(private spreadSheetServiceVariable: SpreadsheetService, private route: ActivatedRoute) {
 
     }
 
     ngOnInit() {
 
-        //this.spreadSheetJSONServiceVariable.getArticlesJSON();
-
-        /*console.log('spreadSheetJSON');
-        this.spreadSheetJSONServiceVariable.articlesArray = this.route.snapshot.data.homePage.feed.entry;
-        console.log(this.articlesArray);
-
-        this.spreadSheetJSONServiceVariable.saveArticles();
-
-        this.article = this.spreadSheetJSONServiceVariable.GetArticleByID(this.route.snapshot.paramMap.get('id'));
-        console.log(this.article);
-        console.log(this.route.snapshot.paramMap.get('id')); */
+        this.article = this.spreadSheetServiceVariable.GetArticleByID(this.route.snapshot.paramMap.get('id'));
+        console.log(this.article.media);
+        console.log(this.route.snapshot.paramMap.get('id'));
     }
 }
 

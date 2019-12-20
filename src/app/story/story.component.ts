@@ -22,15 +22,9 @@ export class StoryComponent implements OnInit {
 
     ngOnInit() {
         console.log('story');
-        this.spreadSheetJSONServiceVariable.articlesArray = this.route.snapshot.data.story.feed.entry;
-        console.log(this.articlesArray);
-
-        this.spreadSheetJSONServiceVariable.saveArticles();
 
         this.article = this.spreadSheetJSONServiceVariable.GetArticleByID(this.route.snapshot.paramMap.get('id'));
         console.log(this.article);
         console.log(this.route.snapshot.paramMap.get('id'));  
-
-        
     }
 }

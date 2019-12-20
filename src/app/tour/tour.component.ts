@@ -22,15 +22,9 @@ export class TourComponent implements OnInit {
 
     ngOnInit() {
         console.log('tour');
-        this.spreadSheetJSONServiceVariable.articlesArray = this.route.snapshot.data.tour.feed.entry;
-        console.log(this.articlesArray);
-
-        this.spreadSheetJSONServiceVariable.saveArticles();
 
         this.article = this.spreadSheetJSONServiceVariable.GetArticleByID(this.route.snapshot.paramMap.get('id'));
         console.log(this.article);
-        console.log(this.route.snapshot.paramMap.get('id'));  
-
-        
+        console.log(this.route.snapshot.paramMap.get('id'));
     }
 }

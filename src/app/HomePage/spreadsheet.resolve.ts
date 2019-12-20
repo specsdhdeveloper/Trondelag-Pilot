@@ -9,6 +9,6 @@ export class SpreadsheetResolver implements Resolve<any> {
 
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
 
-        return this.spreadSheetJSONServiceVariable.getArticlesJSON();
+        return this.spreadSheetJSONServiceVariable.getJSON();
     }
 } 
