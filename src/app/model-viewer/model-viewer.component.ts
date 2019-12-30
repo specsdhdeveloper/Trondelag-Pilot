@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-model-viewer',
@@ -7,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModelViewerComponent implements OnInit {
 
-  constructor() { }
+  @Input() sketchfab_id: string;
+
+  constructor(public sanitizer: DomSanitizer){}
 
   ngOnInit() {
   }
