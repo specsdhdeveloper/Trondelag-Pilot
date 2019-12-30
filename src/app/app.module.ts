@@ -35,6 +35,7 @@ import { ActivityPageComponent } from './activities-page/activity-page.component
 import { DestinationComponentLandingPage } from './landing-page/destinationComponent/destinationComponent.component';
 import { StoryComponentLandingPage } from './landing-page/storyComponent/storyComponent.component';
 import { ActivityComponentLandingPage } from './landing-page/activityComponent/activityComponent.component';
+import { SafePipe } from './safe.pipe';
 
 @NgModule({
     declarations: [
@@ -55,7 +56,8 @@ import { ActivityComponentLandingPage } from './landing-page/activityComponent/a
         StoryComponentLandingPage,
         DestinationComponentLandingPage,
         ActivityComponentLandingPage,
-        FooterComponent
+        FooterComponent,
+	    SafePipe
     ],
     imports: [
         BrowserAnimationsModule,
