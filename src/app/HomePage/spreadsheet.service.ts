@@ -23,7 +23,7 @@ export class SpreadsheetService{
         .pipe(
           map((res: any) => {
             const data = res.feed.entry;
-            //const returnArray: Array<any> = [];
+            this.DBArray = new Array;
             if (data && data.length > 0) {
               data.forEach(entry => {
                 const obj = {};
