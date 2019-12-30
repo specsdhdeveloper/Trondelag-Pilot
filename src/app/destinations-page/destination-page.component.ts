@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { SpreadsheetService} from '../HomePage/spreadsheet.service';
+import { SpreadsheetService } from '../HomePage/spreadsheet.service';
 import { ActivatedRoute } from "@angular/router";
 
 @Component({
-  selector: 'app-tour',
-  templateUrl: './tour.component.html',
-  styleUrls: ['./tour.component.css']
+  selector: 'app-destination-page',
+  templateUrl: './destination-page.component.html',
+  styleUrls: ['./destination-page.component.css']
 })
 
-export class TourComponent implements OnInit {
+export class DestinationPageComponent implements OnInit {
 
     row : any;
+    table : Array<any> = [];
 
     constructor(private spreadSheetJSONServiceVariable: SpreadsheetService, private route: ActivatedRoute) {
 
@@ -18,6 +19,7 @@ export class TourComponent implements OnInit {
 
     ngOnInit() {
 
+        this.table = this.spreadSheetJSONServiceVariable.DBArray;
         this.row = this.spreadSheetJSONServiceVariable.GetRowByID(this.route.snapshot.paramMap.get('id'));
     }
 }

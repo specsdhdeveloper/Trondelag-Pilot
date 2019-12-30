@@ -28,9 +28,12 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HomePage } from './HomePage/homePage.component';
 import { SpreadsheetService } from './HomePage/spreadsheet.service';
 import { SpreadsheetResolver } from './resolveComponents/spreadsheet.resolve';
-import { DestinationComponent } from './destinations/destination.component';
-import { StoryComponent } from './Story/story.component';
-import { TourComponent } from './Tour/tour.component';
+import { DestinationPageComponent } from './destinations-page/destination-page.component';
+import { StoryPageComponent } from './story-page/story-page.component';
+import { ActivityPageComponent } from './activities-page/activity-page.component';
+import { DestinationComponentLandingPage } from './landing-page/destinationComponent/destinationComponent.component';
+import { TourComponentLandingPage } from './landing-page/tourComponent/tourComponent.component';
+import { ActivityComponentLandingPage } from './landing-page/activityComponent/activityComponent.component';
 
 @NgModule({
     declarations: [
@@ -45,9 +48,12 @@ import { TourComponent } from './Tour/tour.component';
         ModelViewerComponent,
         LandingPageComponent,
         HomePage,
-        DestinationComponent,
-        StoryComponent,
-        TourComponent
+        DestinationPageComponent,
+        StoryPageComponent,
+        ActivityPageComponent,
+        TourComponentLandingPage,
+        DestinationComponentLandingPage,
+        ActivityComponentLandingPage
     ],
     imports: [
         BrowserAnimationsModule,

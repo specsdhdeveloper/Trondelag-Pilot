@@ -23,18 +23,18 @@ import {CarouselComponent} from './carousel/carousel.component';
 import {LandingPageComponent} from './landing-page/landing-page.component';
 import { SpreadsheetResolver } from './resolveComponents/spreadsheet.resolve';
 import { HomePage } from './HomePage/homePage.component';
-import { DestinationComponent } from './destinations/destination.component';
-import { StoryComponent } from './Story/story.component';
-import { TourComponent } from './Tour/tour.component';
+import { DestinationPageComponent } from './destinations-page/destination-page.component';
+import { StoryPageComponent } from './story-page/story-page.component';
+import { ActivityPageComponent } from './activities-page/activity-page.component';
 
 const routes: Routes =[
-    { path: '', redirectTo: 'home', pathMatch: 'full'},
-    { path: 'home',                 component: HomePage,                resolve: { homePage : SpreadsheetResolver}},
-    { path: 'home/:id',             component: HomePage,                resolve: { homePage : SpreadsheetResolver}},
-    { path: 'destination/:id',      component: DestinationComponent,    resolve: { destination : SpreadsheetResolver}},
-    { path: 'story/:id',            component: StoryComponent,          resolve: { story : SpreadsheetResolver}},
-    { path: 'tour/:id',             component: TourComponent,           resolve: { tour : SpreadsheetResolver}},
-    { path: 'landing',              component: LandingPageComponent},
+    { path: '', redirectTo: 'landing', pathMatch: 'full'},
+    { path: 'home',                 component: HomePage,                        resolve: { homePage : SpreadsheetResolver}},
+    { path: 'home/:id',             component: HomePage,                        resolve: { homePage : SpreadsheetResolver}},
+    { path: 'destination/:id',      component: DestinationPageComponent,        resolve: { destination : SpreadsheetResolver}},
+    { path: 'story/:id',            component: StoryPageComponent,              resolve: { story : SpreadsheetResolver}},
+    { path: 'activity/:id',         component: ActivityPageComponent,           resolve: { activity : SpreadsheetResolver}},
+    { path: 'landing',              component: LandingPageComponent,            resolve: { landing : SpreadsheetResolver}},
     { path: 'presentation',         component: PresentationComponent },
     { path: 'components',           component: ComponentsComponent },
     { path: 'sections',             component: SectionsComponent },

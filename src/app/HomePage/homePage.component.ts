@@ -19,8 +19,6 @@ export class HomePage implements OnInit {
     ngOnInit() {
 
         this.row = this.spreadSheetServiceVariable.GetRowByID(this.route.snapshot.paramMap.get('id'));
-        console.log(this.row);
-        console.log(this.route.snapshot.paramMap.get('id'));
     }
 }
 
