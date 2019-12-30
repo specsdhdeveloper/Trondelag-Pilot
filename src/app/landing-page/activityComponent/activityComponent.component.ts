@@ -20,6 +20,5 @@ export class ActivityComponentLandingPage implements OnInit {
   ngOnInit() {
 
       this.table = this.spreadSheetJSONServiceVariable.DBArray;
-      this.row = this.spreadSheetJSONServiceVariable.GetRowByID(this.route.snapshot.paramMap.get('id'));
   }
 }

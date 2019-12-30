@@ -3,12 +3,12 @@ import { SpreadsheetService } from '../../HomePage/spreadsheet.service';
 import { ActivatedRoute } from "@angular/router";
 
 @Component({
-  selector: 'app-tourComponent',
-  templateUrl: './tourComponent.component.html',
-  styleUrls: ['./tourComponent.component.scss']
+  selector: 'app-storyComponent',
+  templateUrl: './storyComponent.component.html',
+  styleUrls: ['./storyComponent.component.scss']
 })
 
-export class TourComponentLandingPage implements OnInit {
+export class StoryComponentLandingPage implements OnInit {
 
   row : any;
   table : Array<any> = [];
@@ -20,6 +20,5 @@ export class TourComponentLandingPage implements OnInit {
   ngOnInit() {
 
       this.table = this.spreadSheetJSONServiceVariable.DBArray;
-      this.row = this.spreadSheetJSONServiceVariable.GetRowByID(this.route.snapshot.paramMap.get('id'));
   }
 }

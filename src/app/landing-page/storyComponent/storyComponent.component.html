@@ -6,18 +6,18 @@
           <div class="col-md-4" *ngFor="let item of table">
             <div class="card card-plain card-blog">
               <div class="card-image">
-                <a [routerLink]="['/destination/', item.ID]">
+                <a [routerLink]="['/destination/', item.id]">
                   <img class="img rounded img-raised" src="{{item.media}}" />
                 </a>
               </div>
               <div class="card-body">
                 <h6 class="category text-info">{{item.abstract}}</h6>
                 <h4 class="card-title">
-                  <a [routerLink]="['/destination/', item.ID]">{{item.p1}}</a>
+                  <a [routerLink]="['/story/', item.ID]">{{item.p1}}</a>
                 </h4>
                 <p class="card-description">
                   {{item.p1}}
-                  <a [routerLink]="['/destination/', item.ID]">Read More</a>
+                  <a [routerLink]="['/story/', item.id]">Read More</a>
                 </p>
                 <div class="author">
                   <img src="assets/img/olivia.jpg" alt="..." class="avatar img-raised" />

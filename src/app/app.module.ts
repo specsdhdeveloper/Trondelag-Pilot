@@ -32,7 +32,7 @@ import { DestinationPageComponent } from './destinations-page/destination-page.c
 import { StoryPageComponent } from './story-page/story-page.component';
 import { ActivityPageComponent } from './activities-page/activity-page.component';
 import { DestinationComponentLandingPage } from './landing-page/destinationComponent/destinationComponent.component';
-import { TourComponentLandingPage } from './landing-page/tourComponent/tourComponent.component';
+import { StoryComponentLandingPage } from './landing-page/storyComponent/storyComponent.component';
 import { ActivityComponentLandingPage } from './landing-page/activityComponent/activityComponent.component';
 
 @NgModule({
@@ -51,7 +51,7 @@ import { ActivityComponentLandingPage } from './landing-page/activityComponent/a
         DestinationPageComponent,
         StoryPageComponent,
         ActivityPageComponent,
-        TourComponentLandingPage,
+        StoryComponentLandingPage,
         DestinationComponentLandingPage,
         ActivityComponentLandingPage
     ],
