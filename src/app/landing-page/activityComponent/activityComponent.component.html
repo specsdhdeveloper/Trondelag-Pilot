@@ -1,31 +1,33 @@
 <div class="main">
-    <div class="container">
-      <div class="section">
-        <h4 _ngcontent-c1="">activities</h4>
-        <br />
-        <div class="row">
-          <div class="col-md-4" *ngFor="let item of table">
-            <div class="card card-plain card-blog">
-              <div class="card-image">
-                <a [routerLink]="['/activity/', item.id]">
-                  <img class="img rounded img-raised" src="{{item.media}}" />
-                </a>
-              </div>
-              <div class="card-body">
-                <h6 class="category text-info">{{item.abstract}}</h6>
-                <h4 class="card-title">
-                  <a [routerLink]="['/activity/', item.id]">{{item.p1}}</a>
-                </h4>
-                <p class="card-description">
-                  {{item.p1}}
-                  <a [routerLink]="['/activity/', item.id]">Read More</a>
-                </p>
-                <div class="author">
-                  <img src="assets/img/olivia.jpg" alt="..." class="avatar img-raised" />
-                  <span>Anna Spark</span>
-                </div>
+  <div class="container">
+    <div class="section">
+      <h4 _ngcontent-c1="">Stories</h4>
+      <br />
+      <div class="row">
+        <div class="col-md-4" *ngFor="let item of table">
+          <div class="card card-plain card-blog">
+            <div class="card-image">
+              <a [routerLink]="['/activity/', item.id]">
+                <img class="img rounded img-raised" src="{{item.media}}" />
+              </a>
+            </div>
+            <div class="card-body">
+              <h6 class="category text-info">{{item.abstract}}</h6>
+              <h4 class="card-title">
+                <a [routerLink]="['/activity/', item.id]">{{item.p1}}</a>
+              </h4>
+              <p class="card-description">
+                {{item.p1}}
+                <a [routerLink]="['/activity/', item.id]">Read More</a>
+              </p>
+              <div class="author">
+                <img src="assets/img/olivia.jpg" alt="..." class="avatar img-raised" />
+                <span>Anna Spark</span>
               </div>
             </div>
           </div>
+        </div>
       </div>
+    </div>
   </div>
+</div>

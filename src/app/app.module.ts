@@ -19,6 +19,7 @@ import { PresentationModule } from './presentation/presentation.module';
 import { EsriMapComponent } from './esri-map/esri-map.component';
 import { EsriMapService } from './services/esri-map.service';
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ControlPanelComponent } from './control-panel/control-panel.component';
 import { CarouselComponent } from './carousel/carousel.component';
@@ -53,7 +54,8 @@ import { ActivityComponentLandingPage } from './landing-page/activityComponent/a
         ActivityPageComponent,
         StoryComponentLandingPage,
         DestinationComponentLandingPage,
-        ActivityComponentLandingPage
+        ActivityComponentLandingPage,
+        FooterComponent
     ],
     imports: [
         BrowserAnimationsModule,
