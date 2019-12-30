@@ -3,7 +3,7 @@ import { SpreadsheetService } from '../HomePage/spreadsheet.service';
 import { ActivatedRoute } from "@angular/router";
 
 @Component({
-  selector: 'app-landing-page',
+  selector: 'app-landinghome-page',
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.scss']
 })

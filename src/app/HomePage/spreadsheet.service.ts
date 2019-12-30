@@ -15,7 +15,7 @@ export class SpreadsheetService{
 
     public GetRowByID(id)
     {
-      return this.DBArray[id];
+      return this.DBArray[id-1];
     }
 
     public getJSON(): Observable<any> {
