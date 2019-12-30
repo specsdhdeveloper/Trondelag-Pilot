@@ -1,4 +1,4 @@
-<!--<div >
+<div >
     <div class="cards">
         <div class="card card-blog">
             <div class="card-image">
@@ -25,36 +25,5 @@
         </div>
     </div>
     <a [routerLink]="['/destination/6']">Contacts</a>
-</div>-->
-
-<div class="main">
-  <div class="container">
-    <div class="section">
-      <br />
-      <div class="row">
-        <div class="col-md-4" *ngFor="let item of table">
-          <div class="card card-plain card-blog">
-            <div class="card-image">
-              <a [routerLink]="['/destination/', item.ID]">
-                <img class="img rounded img-raised" src="{{item.media}}" />
-              </a>
-            </div>
-            <div class="card-body">
-              <h6 class="category text-info">{{item.abstract}}</h6>
-              <h4 class="card-title">
-                <a [routerLink]="['/destination/', item.ID]">{{item.p1}}</a>
-              </h4>
-              <p class="card-description">
-                {{item.p1}}
-                <a [routerLink]="['/destination/', item.ID]">Read More</a>
-              </p>
-              <div class="author">
-                <img src="assets/img/olivia.jpg" alt="..." class="avatar img-raised" />
-                <span>Anna Spark</span>
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
 </div>
 
