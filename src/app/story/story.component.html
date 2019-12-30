@@ -2,6 +2,10 @@
     <app-model-viewer></app-model-viewer>
 </div>
 
+<div *ngIf="row.teasertype == 'video'">
+    <app-background-video></app-background-video>
+</div>
+
 <div >
     <div class="cards">
         <div class="card card-blog">

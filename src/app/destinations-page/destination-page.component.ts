@@ -17,6 +17,9 @@ export class DestinationPageComponent implements OnInit {
     @ViewChild(ModelViewerComponent, {static: false} as any)
     private modelViewerComponent: ModelViewerComponent;
 
+    @ViewChild(BackgroundVideoComponent, {static: false} as any)
+    private backgroundVideoComponent: BackgroundVideoComponent;
+
     row: any;
     table : Array<any> = [];
 
@@ -37,5 +40,8 @@ export class DestinationPageComponent implements OnInit {
         this.modelViewerComponent.sketchfab_id = this.row.sketchfabid;
     });
 
+      setTimeout(() => {
+          this.backgroundVideoComponent.file = this.row.videofile;
+      });
     }
 }

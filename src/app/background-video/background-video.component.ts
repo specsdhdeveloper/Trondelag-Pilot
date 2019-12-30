@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-background-video',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./background-video.component.scss']
 })
 export class BackgroundVideoComponent implements OnInit {
+
+  @Input() file: string;
 
   constructor() { }
 
