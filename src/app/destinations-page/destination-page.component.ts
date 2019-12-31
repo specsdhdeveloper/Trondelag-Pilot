@@ -20,6 +20,9 @@ export class DestinationPageComponent implements OnInit {
     @ViewChild(BackgroundVideoComponent, {static: false} as any)
     private backgroundVideoComponent: BackgroundVideoComponent;
 
+    @ViewChild(EsriMapComponent, {static: false} as any)
+    private mapComponent: EsriMapComponent;
+
     row: any;
     table : Array<any> = [];
 
@@ -43,5 +46,9 @@ export class DestinationPageComponent implements OnInit {
       setTimeout(() => {
           this.backgroundVideoComponent.file = this.row.videofile;
       });
+
+      setTimeout(() => {
+          this.mapComponent.panMap(new Array(this.row.latitud, this.row.long));
+      })
     }
 }
