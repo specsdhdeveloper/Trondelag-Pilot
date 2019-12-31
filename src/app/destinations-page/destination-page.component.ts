@@ -4,7 +4,7 @@ import { ActivatedRoute } from "@angular/router";
 import { BackgroundVideoComponent } from 'app/background-video/background-video.component';
 import { EsriMapComponent } from 'app/esri-map/esri-map.component';
 import { ModelViewerComponent } from 'app/model-viewer/model-viewer.component';
-import {CarouselComponent} from '../carousel/carousel.component';
+import { CarouselComponent } from '../carousel/carousel.component';
 
 @Component({
   selector: 'app-destination-page',
@@ -12,7 +12,7 @@ import {CarouselComponent} from '../carousel/carousel.component';
   styleUrls: ['./destination-page.component.css']
 })
 
-export class DestinationPageComponent implements OnInit {
+export class DestinationPageComponent implements OnInit, AfterViewInit {
 
     @ViewChild(ModelViewerComponent, {static: false} as any)
     private modelViewerComponent: ModelViewerComponent;
@@ -25,32 +25,33 @@ export class DestinationPageComponent implements OnInit {
 
     @ViewChild(CarouselComponent, {static: false} as any)
     private carouselComponent: CarouselComponent;
+
     row: any;
     table : Array<any> = [];
 
-    constructor(private spreadSheetJSONServiceVariable: SpreadsheetService, private route: ActivatedRoute) {
+    constructor(private spreadSheetJSONServiceVariable: SpreadsheetService,
+                private route: ActivatedRoute) {
     }
 
     ngOnInit() {
-      this.row = this.spreadSheetJSONServiceVariable.GetRowByID(this.route.snapshot.paramMap.get('id'))
+        this.table = this.spreadSheetJSONServiceVariable.DBArray;
+        this.row = this.spreadSheetJSONServiceVariable.GetRowByID(this.route.snapshot.paramMap.get('id'));
+        console.log(this.route.snapshot.paramMap.get('id'));
+        console.log(this.row);
     }
-    
-    this.table = this.spreadSheetJSONServiceVariable.DBArray;
-	this.row = this.spreadSheetJSONServiceVariable.GetRowByID(this.route.snapshot.paramMap.get('id'));
-    console.log(this.route.snapshot.paramMap.get('id'));
-    console.log(this.row);
 
-	ngAfterViewInit(){
-    	setTimeout(() => {
-        this.modelViewerComponent.sketchfab_id = this.row.sketchfabid;
-    });
 
-      setTimeout(() => {
-          this.backgroundVideoComponent.file = this.row.videofile;
-      });
+    ngAfterViewInit(){
+        setTimeout(() => {
+            this.modelViewerComponent.sketchfab_id = this.row.sketchfabid;
+        });
 
-      setTimeout(() => {
-          this.mapComponent.panMap(new Array(this.row.latitud, this.row.long));
-      })
+        setTimeout(() => {
+            this.backgroundVideoComponent.file = this.row.videofile;
+        });
+
+        setTimeout(() => {
+            this.mapComponent.panMap(new Array(this.row.latitud, this.row.long));
+        })
     }
 }

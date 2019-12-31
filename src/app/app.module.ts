@@ -11,7 +11,6 @@ import { ExamplesModule } from './examples/examples.module';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { PresentationComponent } from './presentation/presentation.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 
 import { PresentationModule } from './presentation/presentation.module';
@@ -57,7 +56,7 @@ import { CarouselComponent } from './carousel/carousel.component';
         DestinationComponentLandingPage,
         ActivityComponentLandingPage,
         FooterComponent,
-	    SafePipe
+        SafePipe
     ],
     imports: [
         BrowserAnimationsModule,

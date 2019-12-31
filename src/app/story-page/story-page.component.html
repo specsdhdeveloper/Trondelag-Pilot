@@ -1,5 +1,21 @@
 <app-header></app-header>
 
+<div *ngIf="row.teasertype == 'sketchfab'">
+    <app-model-viewer></app-model-viewer>
+</div>
+
+<div *ngIf="row.teasertype == 'video'">
+    <app-background-video></app-background-video>
+</div>
+
+<div *ngIf="row.teasertype == 'map'">
+    <app-esri-map></app-esri-map>
+</div>
+
+<div *ngIf="row.teasertype == 'carousel'">
+    <app-carousel></app-carousel>
+</div>
+
 <div class="main">
     <div class="container">
         <div class="section">
