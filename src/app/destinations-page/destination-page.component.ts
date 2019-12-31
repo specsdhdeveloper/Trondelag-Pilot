@@ -3,8 +3,8 @@ import { SpreadsheetService } from '../HomePage/spreadsheet.service';
 import { ActivatedRoute } from "@angular/router";
 import { BackgroundVideoComponent } from 'app/background-video/background-video.component';
 import { EsriMapComponent } from 'app/esri-map/esri-map.component';
-import { CarouselComponent } from 'app/carousel/carousel.component';
 import { ModelViewerComponent } from 'app/model-viewer/model-viewer.component';
+import {CarouselComponent} from '../carousel/carousel.component';
 
 @Component({
   selector: 'app-destination-page',
@@ -23,6 +23,8 @@ export class DestinationPageComponent implements OnInit {
     @ViewChild(EsriMapComponent, {static: false} as any)
     private mapComponent: EsriMapComponent;
 
+    @ViewChild(CarouselComponent, {static: false} as any)
+    private carouselComponent: CarouselComponent;
     row: any;
     table : Array<any> = [];
 

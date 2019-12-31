@@ -22,7 +22,6 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ControlPanelComponent } from './control-panel/control-panel.component';
-import { CarouselComponent } from './carousel/carousel.component';
 import { BackgroundVideoComponent } from './background-video/background-video.component';
 import { ModelViewerComponent } from './model-viewer/model-viewer.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
@@ -36,6 +35,7 @@ import { DestinationComponentLandingPage } from './landing-page/destinationCompo
 import { StoryComponentLandingPage } from './landing-page/storyComponent/storyComponent.component';
 import { ActivityComponentLandingPage } from './landing-page/activityComponent/activityComponent.component';
 import { SafePipe } from './safe.pipe';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
     declarations: [
