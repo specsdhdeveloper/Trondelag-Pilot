@@ -19,8 +19,8 @@ export class DestinationPageComponent implements OnInit {
 
     ngOnInit() {
 
-        this.table = this.spreadSheetJSONServiceVariable.DBArray;
-        this.row = this.spreadSheetJSONServiceVariable.GetRowByID(this.route.snapshot.paramMap.get('id'));
+        this.table = this.spreadSheetJSONServiceVariable.DBArray1;
+        this.row = this.spreadSheetJSONServiceVariable.GetRowByID(this.route.snapshot.paramMap.get('id'));        
         console.log(this.route.snapshot.paramMap.get('id'));
         console.log(this.row);
     }

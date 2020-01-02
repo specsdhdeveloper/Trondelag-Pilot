@@ -1,10 +1,10 @@
 <div class="main">
   <div class="container">
     <div class="section">
-      <h2 _ngcontent-c4="">Destinations</h2>
+      <h3 _ngcontent-c4="">Destinations</h3>
       <br />
       <div class="row">
-        <div class="col-md-3" *ngFor="let item of table">
+        <div class="col-md-3" *ngFor="let item of tableDestinations">
           <div class="card card-plain card-blog">
             <div class="card-image">
               <a [routerLink]="['/destination/', item.id]">
@@ -12,18 +12,18 @@
               </a>
             </div>
             <div class="card-body">
-              <h6 class="category text-info">{{item.abstract}}</h6>
+              <!--<h6 class="category text-info">{{item.title}}</h6>-->
               <h4 class="card-title">
-                <a [routerLink]="['/destination/', item.id]">{{item.p1}}</a>
+                <a [routerLink]="['/destination/', item.id]">{{item.title}}</a>
               </h4>
               <p class="card-description">
-                {{item.p1}}
+                {{item.abstract}}
                 <a [routerLink]="['/destination/', item.id]">Read More</a>
               </p>
-              <div class="author">
+              <!--<div class="author">
                 <img src="assets/img/olivia.jpg" alt="..." class="avatar img-raised" />
                 <span>Anna Spark</span>
-              </div>
+              </div>-->
             </div>
           </div>
         </div>

@@ -9,20 +9,12 @@ import { ActivatedRoute } from "@angular/router";
 })
 export class LandingPageComponent implements OnInit {
 
-  row : any;
-  table : Array<any> = [];
-
   constructor(private spreadSheetServiceVariable: SpreadsheetService, private route: ActivatedRoute) {
 
   }
 
   ngOnInit() {
 
-      this.table = this.spreadSheetServiceVariable.DBArray;
-      console.log(this.table);
-      this.row = this.spreadSheetServiceVariable.GetRowByID(this.route.snapshot.paramMap.get('id'));
-      console.log(this.row);
-      console.log(this.route.snapshot.paramMap.get('id'));
   }
 
 }

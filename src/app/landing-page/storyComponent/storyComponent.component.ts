@@ -11,7 +11,7 @@ import { ActivatedRoute } from "@angular/router";
 export class StoryComponentLandingPage implements OnInit {
 
   row : any;
-  table : Array<any> = [];
+  tableStories : Array<any> = [];
 
   constructor(private spreadSheetJSONServiceVariable: SpreadsheetService, private route: ActivatedRoute) {
 
@@ -19,6 +19,6 @@ export class StoryComponentLandingPage implements OnInit {
 
   ngOnInit() {
 
-      this.table = this.spreadSheetJSONServiceVariable.DBArray;
+      this.tableStories = this.spreadSheetJSONServiceVariable.DBArray3;
   }
 }

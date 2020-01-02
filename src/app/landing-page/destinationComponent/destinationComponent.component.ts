@@ -11,7 +11,7 @@ import { ActivatedRoute } from "@angular/router";
 export class DestinationComponentLandingPage implements OnInit {
 
   row : any;
-  table : Array<any> = [];
+  tableDestinations : Array<any> = [];
 
   constructor(private spreadSheetJSONServiceVariable: SpreadsheetService, private route: ActivatedRoute) {
 
@@ -19,6 +19,6 @@ export class DestinationComponentLandingPage implements OnInit {
 
   ngOnInit() {
 
-      this.table = this.spreadSheetJSONServiceVariable.DBArray;
+      this.tableDestinations = this.spreadSheetJSONServiceVariable.DBArray1;
   }
 }

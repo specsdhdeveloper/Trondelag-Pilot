@@ -15,7 +15,7 @@ export class PresentationComponent implements OnInit, OnDestroy, AfterViewInit {
         right: false
     };
     date : Date = new Date();
-    cards = this.spreadSheetJSONServiceVariable._jsonURLArticles;
+    //cards = this.spreadSheetJSONServiceVariable._jsonURLArticles;
     
     constructor(private spreadSheetJSONServiceVariable: SpreadsheetService) {
 
