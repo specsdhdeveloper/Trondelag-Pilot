@@ -14,7 +14,7 @@
 import { Component, OnInit, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
 import { loadModules } from 'esri-loader';
 import { EsriMapService } from '../services/esri-map.service';
-import { SpreadsheetService } from '../HomePage/spreadsheet.service';
+import { SpreadsheetService } from '../services/spreadsheet.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({

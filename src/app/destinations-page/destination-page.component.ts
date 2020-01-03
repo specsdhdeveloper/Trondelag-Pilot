@@ -1,5 +1,5 @@
 import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
-import { SpreadsheetService } from '../HomePage/spreadsheet.service';
+import { SpreadsheetService } from '../services/spreadsheet.service';
 import { ActivatedRoute } from "@angular/router";
 import { BackgroundVideoComponent } from 'app/background-video/background-video.component';
 import { EsriMapComponent } from 'app/esri-map/esri-map.component';

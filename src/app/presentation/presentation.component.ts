@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import * as Rellax from 'rellax';
-import { SpreadsheetService } from '../HomePage/spreadsheet.service';
+import { SpreadsheetService } from '../services/spreadsheet.service';
 
 @Component({
     selector: 'app-presentation',

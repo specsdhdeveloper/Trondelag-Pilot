@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {SpreadsheetService} from '../HomePage/spreadsheet.service';
+import {SpreadsheetService} from '../services/spreadsheet.service';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({
