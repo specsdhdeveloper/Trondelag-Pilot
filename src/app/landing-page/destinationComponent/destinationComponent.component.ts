@@ -19,6 +19,6 @@ export class DestinationComponentLandingPage implements OnInit {
 
   ngOnInit() {
 
-      this.tableDestinations = this.spreadSheetJSONServiceVariable.DBArray1;
+      this.tableDestinations = this.spreadSheetJSONServiceVariable.DBDestination;
   }
 }

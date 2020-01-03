@@ -73,6 +73,6 @@ export class SpreadsheetService{
     }
 
     constructor(private http: HttpClient, private route: ActivatedRoute) {
-      console.log(route.url);
+      route.data.subscribe((data:any) => console.log(data));
     }
 }

@@ -19,6 +19,6 @@ export class ActivityComponentLandingPage implements OnInit {
 
   ngOnInit() {
 
-      this.tableActivities = this.spreadSheetJSONServiceVariable.DBArray3;
+      this.tableActivities = this.spreadSheetJSONServiceVariable.DBActivity;
   }
 }
