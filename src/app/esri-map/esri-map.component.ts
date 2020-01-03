@@ -11,24 +11,32 @@
   limitations under the License.
 */
 
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
 import { loadModules } from 'esri-loader';
 import { EsriMapService } from '../services/esri-map.service';
+import { SpreadsheetService } from '../HomePage/spreadsheet.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-esri-map',
   templateUrl: './esri-map.component.html',
   styleUrls: ['./esri-map.component.css']
 })
-export class EsriMapComponent implements OnInit {
+export class EsriMapComponent implements OnInit, AfterViewInit {
 
   @ViewChild('mapViewNode') private viewNode: ElementRef; // needed to inject the MapView into the DOM
   mapView: __esri.MapView;
   panRequestSubscription: any;
 
-  constructor(private mapService: EsriMapService) {}
+  row: any;
+  table: Array<any> = [];
+
+  constructor(private mapService: EsriMapService,
+              private spreadSheetJSONServiceVariable: SpreadsheetService,
+              private route: ActivatedRoute) {}
 
   panMap(coordinates){
+    console.log("panning to " + coordinates)
     this.mapView.goTo(coordinates)
     .then(() => {
       this.mapView.zoom = 18;
@@ -39,6 +47,8 @@ export class EsriMapComponent implements OnInit {
   }
 
   public ngOnInit() {
+    this.table = this.spreadSheetJSONServiceVariable.DBArray;
+    this.row = this.spreadSheetJSONServiceVariable.GetRowByID(this.route.snapshot.paramMap.get('id'));
 
     this.panRequestSubscription = this.mapService.panRequest.subscribe(() => {
       this.panMap(this.mapService.destinationCoordinates);
@@ -58,13 +68,22 @@ export class EsriMapComponent implements OnInit {
 
         this.mapView = new MapView({
           container: this.viewNode.nativeElement,
-          center: [9.7221092, 63.7084133],
-          zoom: 8,
+          //TODO use regexp instead of calling replace twice
+          center: [ Number(this.row.longi.replace('"', '').replace('"', '') ),
+                    Number(this.row.latitud.replace('"', '').replace('"', '') )],
+          zoom: 18,
           map: map
         });
+
       })
-      .catch(err => {
+        .catch(err => {
         console.log(err);
       });
+
   }
+
+  ngAfterViewInit() {
+
+  }
+
 }
