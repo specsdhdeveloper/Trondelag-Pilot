@@ -29,7 +29,6 @@ export class EsriMapComponent implements OnInit, AfterViewInit {
   panRequestSubscription: any;
 
   row: any;
-  table: Array<any> = [];
 
   constructor(private mapService: EsriMapService,
               private spreadSheetJSONServiceVariable: SpreadsheetService,
@@ -47,7 +46,6 @@ export class EsriMapComponent implements OnInit, AfterViewInit {
   }
 
   public ngOnInit() {
-    this.table = this.spreadSheetJSONServiceVariable.DBArray1;
     this.row = this.spreadSheetJSONServiceVariable.GetRowByID(this.route.snapshot.paramMap.get('id'));
 
     this.panRequestSubscription = this.mapService.panRequest.subscribe(() => {

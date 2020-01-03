@@ -12,19 +12,10 @@ import { CarouselComponent } from '../carousel/carousel.component';
   styleUrls: ['./destination-page.component.css']
 })
 
-export class DestinationPageComponent implements OnInit, AfterViewInit {
+export class DestinationPageComponent implements OnInit {//, AfterViewInit {
 
     @ViewChild(ModelViewerComponent, {static: false} as any)
     private modelViewerComponent: ModelViewerComponent;
-
-    @ViewChild(BackgroundVideoComponent, {static: false} as any)
-    private backgroundVideoComponent: BackgroundVideoComponent;
-
-    @ViewChild(EsriMapComponent, {static: false} as any)
-    private mapComponent: EsriMapComponent;
-
-    @ViewChild(CarouselComponent, {static: false} as any)
-    private carouselComponent: CarouselComponent;
 
     row: any;
     table : Array<any> = [];
@@ -45,13 +36,5 @@ export class DestinationPageComponent implements OnInit, AfterViewInit {
         setTimeout(() => {
             this.modelViewerComponent.sketchfab_id = this.row.sketchfabid;
         });
-
-        setTimeout(() => {
-            this.backgroundVideoComponent.file = this.row.videofile;
-        });
-
-        setTimeout(() => {
-            this.mapComponent.panMap(new Array(this.row.latitud, this.row.long));
-        })
     }
 }
