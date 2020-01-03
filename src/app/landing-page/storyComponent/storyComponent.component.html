@@ -8,7 +8,7 @@
             <div class="card card-plain card-blog">
               <div class="card-image">
                 <a [routerLink]="['/story/', item.id]">
-                  <img class="img rounded img-raised" src="{{item.media}}" />
+                  <img class="img rounded img-raised" src="{{'assets/img/'+item.media}}" />
                 </a>
               </div>
               <div class="card-body">
@@ -20,10 +20,6 @@
                   {{item.p1}}
                   <a [routerLink]="['/story/', item.id]">Read More</a>
                 </p>
-                <div class="author">
-                  <img src="assets/img/olivia.jpg" alt="..." class="avatar img-raised" />
-                  <span>Anna Spark</span>
-                </div>
               </div>
             </div>
           </div>
