@@ -21,15 +21,12 @@ import { PricingComponent } from './examples/pricing/pricing.component';
 
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SpreadsheetResolver } from './resolveComponents/spreadsheet.resolve';
-import { HomePage } from './HomePage/homePage.component';
 import { DestinationPageComponent } from './destinations-page/destination-page.component';
 import { StoryPageComponent } from './story-page/story-page.component';
 import { ActivityPageComponent } from './activities-page/activity-page.component';
 
 const routes: Routes =[
     { path: '', redirectTo: 'landing', pathMatch: 'full'},
-    { path: 'home',                 component: HomePage,                        resolve: { homePage : SpreadsheetResolver}},
-    { path: 'home/:id',             component: HomePage,                        resolve: { homePage : SpreadsheetResolver}},
     { path: 'destination/:id',      component: DestinationPageComponent,        resolve: { destination : SpreadsheetResolver}},
     { path: 'story/:id',            component: StoryPageComponent,              resolve: { story : SpreadsheetResolver}},
     { path: 'activity/:id',         component: ActivityPageComponent,           resolve: { activity : SpreadsheetResolver}},
