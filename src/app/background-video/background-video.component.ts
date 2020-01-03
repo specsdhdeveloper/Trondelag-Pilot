@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {SpreadsheetService} from '../HomePage/spreadsheet.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-background-video',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BackgroundVideoComponent implements OnInit {
 
-  constructor() { }
+  file: string
+
+  constructor(private spreadSheetJSONServiceVariable: SpreadsheetService,
+              private route: ActivatedRoute) {}
 
   ngOnInit() {
+    this.file = this.spreadSheetJSONServiceVariable.GetRowByID(this.route.snapshot.paramMap.get('id')).videofile;
   }
 
 }

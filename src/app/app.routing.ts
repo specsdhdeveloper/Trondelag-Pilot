@@ -19,8 +19,7 @@ import { RegisterComponent } from './examples/register/register.component';
 import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.component';
 import { PricingComponent } from './examples/pricing/pricing.component';
 
-import {CarouselComponent} from './carousel/carousel.component';
-import {LandingPageComponent} from './landing-page/landing-page.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SpreadsheetResolver } from './resolveComponents/spreadsheet.resolve';
 import { HomePage } from './HomePage/homePage.component';
 import { DestinationPageComponent } from './destinations-page/destination-page.component';

@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild, AfterViewInit} from '@angular/core';
 import { SpreadsheetService } from '../HomePage/spreadsheet.service';
 import { ActivatedRoute } from "@angular/router";
+import {ModelViewerComponent} from '../model-viewer/model-viewer.component';
 
 @Component({
   selector: 'app-story-page',
@@ -8,18 +9,26 @@ import { ActivatedRoute } from "@angular/router";
   styleUrls: ['./story-page.component.css']
 })
 
-export class StoryPageComponent implements OnInit {
+export class StoryPageComponent implements OnInit, AfterViewInit {
 
-  row : any;
-  table : Array<any> = [];
+  @ViewChild(ModelViewerComponent, {static: false} as any)
+  private modelViewerComponent: ModelViewerComponent;
 
-  constructor(private spreadSheetJSONServiceVariable: SpreadsheetService, private route: ActivatedRoute) {
+  row: any;
+  table: Array<any> = [];
 
+  constructor(private spreadSheetJSONServiceVariable: SpreadsheetService,
+              private route: ActivatedRoute) {
   }
 
   ngOnInit() {
-
       this.table = this.spreadSheetJSONServiceVariable.DBArray2;
       this.row = this.spreadSheetJSONServiceVariable.GetRowByID(this.route.snapshot.paramMap.get('id'));
+  }
+
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.modelViewerComponent.sketchfab_id = this.row.sketchfabid;
+    });
   }
 }

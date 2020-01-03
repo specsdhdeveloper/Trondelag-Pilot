@@ -11,7 +11,6 @@ import { ExamplesModule } from './examples/examples.module';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { PresentationComponent } from './presentation/presentation.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 
 import { PresentationModule } from './presentation/presentation.module';
@@ -22,7 +21,6 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ControlPanelComponent } from './control-panel/control-panel.component';
-import { CarouselComponent } from './carousel/carousel.component';
 import { BackgroundVideoComponent } from './background-video/background-video.component';
 import { ModelViewerComponent } from './model-viewer/model-viewer.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
@@ -35,6 +33,8 @@ import { ActivityPageComponent } from './activities-page/activity-page.component
 import { DestinationComponentLandingPage } from './landing-page/destinationComponent/destinationComponent.component';
 import { StoryComponentLandingPage } from './landing-page/storyComponent/storyComponent.component';
 import { ActivityComponentLandingPage } from './landing-page/activityComponent/activityComponent.component';
+import { SafePipe } from './safe.pipe';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
     declarations: [
@@ -55,7 +55,8 @@ import { ActivityComponentLandingPage } from './landing-page/activityComponent/a
         StoryComponentLandingPage,
         DestinationComponentLandingPage,
         ActivityComponentLandingPage,
-        FooterComponent
+        FooterComponent,
+        SafePipe
     ],
     imports: [
         BrowserAnimationsModule,
