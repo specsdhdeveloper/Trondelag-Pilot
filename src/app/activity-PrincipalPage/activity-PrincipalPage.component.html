@@ -1,42 +1,132 @@
 <app-header></app-header>
 
-<div class="container">
-    <div class= "row align-items-center">
-        <h1 _ngcontent-c4="" class="description text-black text-center font-weight-border" style="width: 1000px;padding-left: 10%;">ACTIVITIES</h1>
-    </div>      
+<div _ngcontent-c1="" class="container">
+    <h1 _ngcontent-c4="" class="description text-black text-center font-weight-border">ACTIVITIES</h1>
 </div>
 
-<!--Slider photos-->
-<div _ngcontent-c4="" class="blogs-4" id="blogs-4">
-    <div _ngcontent-c4="" class="container">
-        <div class="header-3">
-            <ngb-carousel>
-                <ng-template ngbSlide>
-                    <div class="page-header header-filter">
-                        <div class="page-header-image" style="background-image: url('assets/img/bg20.jpg');"></div>
-                    </div>
-                    </ng-template>
-                <ng-template ngbSlide>
-                    <div class="page-header header-filter">
-                        <div class="page-header-image" style="background-image: url('assets/img/bg15.jpg');"></div>
-                    </div>
+<div _ngcontent-c1="" class="container-fluid h-1" style="background-color:#E64A19;">
+    <br _ngcontent-c1="">
+    <div class= "row align-items-center text-black text-center font-weight-border">
+        <ngb-accordion>
+            <ngb-panel title="Jeg har én dag å bruke">
+                <ng-template ngbPanelContent>
+                    Jeg har en halv dag å bruke
+
+                    Jeg har tre dager å bruke
                 </ng-template>
-                <ng-template ngbSlide>
-                    <div class="page-header header-filter">
-                        <div class="page-header-image" style="background-image: url('assets/img/bg17.jpg');"></div>
-                    </div>
-                </ng-template>
-            </ngb-carousel>
-        </div>
-        <br>
-        <div _ngcontent-c4="" class="row">                    
-            <div _ngcontent-c4="" class="card card-plain card-blog">
-                <h5 _ngcontent-c4="" class="card-description"> </h5>
-            </div>
-        </div>            
+            </ngb-panel>
+        </ngb-accordion>
     </div>
-    <br>
 </div>
-<!--Slider photos-->
+
+<div _ngcontent-c1="" class="container-fluid h-1" style="background-color:rgb(238, 238, 238);">
+    <br _ngcontent-c1="">
+    <h1 _ngcontent-c1="" class="description text-black text-center font-weight-border">Turer i og fra Trondheim</h1>
+    <br _ngcontent-c1="">
+</div>
+
+<div class="main">
+    <div class="container">
+      <div class="section">
+        <br />
+        <div class="row">
+          <div *ngFor="let item of tableActivities" class="col-md-5">
+            <div _ngcontent-c1="" class="col">
+                <br _ngcontent-c1="">
+                <div _ngcontent-c1="" class="card card-plain card-blog">
+                  <div _ngcontent-c1="" class="row">
+                    <div _ngcontent-c1="" class="col">
+                      <div _ngcontent-c1="" class="card-image">
+                        <a [routerLink]="['/activity/', item.id]">
+                          <img _ngcontent-c1="" class="img img-raised rounded" src="{{'/assets/img/'+item.media}}">
+                        </a>
+                      </div>
+                    </div>
+                    <div _ngcontent-c1="" class="col">
+                      <h3 _ngcontent-c1="" class="card-title">
+                        <a _ngcontent-c1="" [routerLink]="['/activity/', item.id]">{{item.title}}</a>
+                      </h3>
+                      <p _ngcontent-c1="" class="card-description"> {{item.p1}} 
+                        <a _ngcontent-c1="" [routerLink]="['/activity/', item.id]"> Read More </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>      
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div _ngcontent-c1="" class="container-fluid h-1" style="background-color:rgb(238, 238, 238);">
+    <br _ngcontent-c1="">
+    <h1 _ngcontent-c1="" class="description text-black text-center font-weight-border">Historiske Trondheimsfjorden</h1>
+    <br _ngcontent-c1="">
+</div>
+
+<div class="main">
+    <div class="container">
+      <div class="section">
+        <br />
+        <div class="row">
+          <div *ngFor="let item of tableActivities" class="col-md-5">
+            <div _ngcontent-c1="" class="col">
+                <br _ngcontent-c1="">
+                <div _ngcontent-c1="" class="card card-plain card-blog">
+                  <div _ngcontent-c1="" class="row">
+                    <div _ngcontent-c1="" class="col">
+                      <div _ngcontent-c1="" class="card-image">
+                        <a [routerLink]="['/activity/', item.id]">
+                          <img _ngcontent-c1="" class="img img-raised rounded" src="{{'/assets/img/'+item.media}}">
+                        </a>
+                      </div>
+                    </div>
+                    <div _ngcontent-c1="" class="col">
+                      <h3 _ngcontent-c1="" class="card-title">
+                        <a _ngcontent-c1="" [routerLink]="['/activity/', item.id]">{{item.title}}</a>
+                      </h3>
+                      <p _ngcontent-c1="" class="card-description"> {{item.p1}} 
+                        <a _ngcontent-c1="" [routerLink]="['/activity/', item.id]"> Read More </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>      
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div _ngcontent-c1="" class="container-fluid h-1" style="background-color:rgb(238, 238, 238);">
+    <br _ngcontent-c1="">
+    <h1 _ngcontent-c1="" class="description text-black text-center font-weight-border">Museer og opplevelser</h1>
+    <br _ngcontent-c1="">
+</div>
+
+<div class="main">
+    <div class="container">
+      <div class="section">
+        <br />
+        <div class="row">
+          <div class="col-md-3" *ngFor="let item of tableActivities">
+            <div class="card card-plain card-blog">
+              <div class="card-image">
+                <a [routerLink]="['/destination/', item.id]">
+                  <img class="img rounded img-raised" src="{{'assets/img/'+item.media}}" />
+                </a>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a [routerLink]="['/destination/', item.id]">{{item.title}}</a>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <app-footer></app-footer>

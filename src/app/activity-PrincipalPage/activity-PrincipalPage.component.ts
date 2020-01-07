@@ -9,12 +9,15 @@ import { ActivatedRoute } from "@angular/router";
 })
 export class ActivityPrincipalPage implements OnInit {
 
+  tableActivities : Array<any> = [];
+
   constructor(private spreadSheetServiceVariable: SpreadsheetService, private route: ActivatedRoute) {
 
   }
 
   ngOnInit() {
     this.route.data.subscribe((data:any) => console.log(data));
+    this.tableActivities = this.spreadSheetServiceVariable.DBActivity;
   }
 
 }
