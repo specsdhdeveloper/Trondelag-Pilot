@@ -54,14 +54,15 @@ export class EsriMapComponent implements OnInit, AfterViewInit {
 
     // use esri-loader to load JSAPI modules
     return loadModules([
-      'esri/Map',
-      'esri/views/SceneView',
-      'esri/Graphic'
+      'esri/WebScene',
+      'esri/views/SceneView'
     ])
-      .then(([Map, MapView, Graphic]) => {
-        const map: __esri.Map = new Map({
-          basemap: 'hybrid',
-          ground: "world-elevation"
+      .then(([WebScene, MapView]) => {
+
+        const scene = new WebScene({
+          portalItem: {
+            id: "3a9976baef9240ab8645ee25c7e9c096"
+          }
         });
 
         this.mapView = new MapView({
@@ -70,7 +71,7 @@ export class EsriMapComponent implements OnInit, AfterViewInit {
           center: [ Number(this.row.longi.replace('"', '').replace('"', '') ),
                     Number(this.row.latitud.replace('"', '').replace('"', '') )],
           zoom: 18,
-          map: map
+          map: scene
         });
 
       })
