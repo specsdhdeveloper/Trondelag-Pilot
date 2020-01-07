@@ -21,18 +21,15 @@ import { PricingComponent } from './examples/pricing/pricing.component';
 
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SpreadsheetResolver } from './resolveComponents/spreadsheet.resolve';
-import { HomePage } from './HomePage/homePage.component';
-import { DestinationPageComponent } from './destinations-page/destination-page.component';
+import { DestinationPageComponent } from './destination-page/destination-page.component';
 import { StoryPageComponent } from './story-page/story-page.component';
-import { ActivityPageComponent } from './activities-page/activity-page.component';
+import { ActivityPageComponent } from './activity-page/activity-page.component';
 import { DestinationPrincipalPage } from './destinationPrincipalPage/destinationPrincipalPage.component';
 import { StoryPrincipalPage } from './storyPrincipalPage/storyPrincipalPage.component';
 import { ActivityPrincipalPage } from './activityPrincipalPage/activityPrincipalPage.component';
 
 const routes: Routes =[
     { path: '', redirectTo: 'landing', pathMatch: 'full'},
-    { path: 'home',                 component: HomePage,                        resolve: { homePage : SpreadsheetResolver}},
-    { path: 'home/:id',             component: HomePage,                        resolve: { homePage : SpreadsheetResolver}},
     { path: 'destination',          component: DestinationPrincipalPage,        resolve: { principalDestination : SpreadsheetResolver}},
     { path: 'destination/:id',      component: DestinationPageComponent,        resolve: { destination : SpreadsheetResolver}},
     { path: 'story',                component: StoryPrincipalPage,              resolve: { principalStory : SpreadsheetResolver}},
