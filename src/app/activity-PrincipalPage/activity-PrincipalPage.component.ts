@@ -3,11 +3,11 @@ import { SpreadsheetService } from '../services/spreadsheet.service';
 import { ActivatedRoute } from "@angular/router";
 
 @Component({
-  selector: 'app-destinationPrincipalPage',
-  templateUrl: './destinationPrincipalPage.component.html',
-  styleUrls: ['./destinationPrincipalPage.component.scss']
+  selector: 'app-activity-PrincipalPage',
+  templateUrl: './activity-PrincipalPage.component.html',
+  styleUrls: ['./activity-PrincipalPage.component.scss']
 })
-export class DestinationPrincipalPage implements OnInit {
+export class ActivityPrincipalPage implements OnInit {
 
   constructor(private spreadSheetServiceVariable: SpreadsheetService, private route: ActivatedRoute) {
 

@@ -3,9 +3,9 @@ import { SpreadsheetService } from '../services/spreadsheet.service';
 import { ActivatedRoute } from "@angular/router";
 
 @Component({
-  selector: 'app-storyPrincipalPage',
-  templateUrl: './storyPrincipalPage.component.html',
-  styleUrls: ['./storyPrincipalPage.component.scss']
+  selector: 'app-story-PrincipalPage',
+  templateUrl: './story-PrincipalPage.component.html',
+  styleUrls: ['./story-PrincipalPage.component.scss']
 })
 export class StoryPrincipalPage implements OnInit {
 

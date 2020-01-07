@@ -32,9 +32,9 @@ import { ActivityPageComponent } from './activity-page/activity-page.component';
 import { DestinationComponentLandingPage } from './landing-page/destinationComponent/destinationComponent.component';
 import { StoryComponentLandingPage } from './landing-page/storyComponent/storyComponent.component';
 import { ActivityComponentLandingPage } from './landing-page/activityComponent/activityComponent.component';
-import { DestinationPrincipalPage } from './destinationPrincipalPage/destinationPrincipalPage.component';
-import { StoryPrincipalPage } from './storyPrincipalPage/storyPrincipalPage.component';
-import { ActivityPrincipalPage } from './activityPrincipalPage/activityPrincipalPage.component';
+import { DestinationPrincipalPage } from './destination-PrincipalPage/destination-PrincipalPage.component';
+import { StoryPrincipalPage } from './story-PrincipalPage/story-PrincipalPage.component';
+import { ActivityPrincipalPage } from './activity-PrincipalPage/activity-PrincipalPage.component';
 import { SafePipe } from './safe.pipe';
 import { CarouselComponent } from './carousel/carousel.component';
 
