@@ -7,7 +7,7 @@
 <div _ngcontent-c1="" class="container-fluid h-1" style="background-color:#E64A19;">
     <br _ngcontent-c1="">
     <div class= "row align-items-center text-black text-center font-weight-border">
-        <ngb-accordion>
+        <!--<ngb-accordion>
             <ngb-panel title="Jeg har én dag å bruke">
                 <ng-template ngbPanelContent>
                     Jeg har en halv dag å bruke
@@ -15,8 +15,34 @@
                     Jeg har tre dager å bruke
                 </ng-template>
             </ngb-panel>
-        </ngb-accordion>
+        </ngb-accordion>-->
+        <div _ngcontent-c1="" class="col">
+          <select>
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div _ngcontent-c1="" class="col">
+          <select>
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div _ngcontent-c1="" class="col">
+          <select>
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
     </div>
+    <br _ngcontent-c1="">
+    <br _ngcontent-c1="">
 </div>
 
 <div _ngcontent-c1="" class="container-fluid h-1" style="background-color:rgb(238, 238, 238);">
@@ -110,7 +136,67 @@
       <div class="section">
         <br />
         <div class="row">
-          <div class="col-md-3" *ngFor="let item of tableActivities">
+          <div _ngcontent-c1="" class="col-lg">
+            <div class="card card-plain card-blog">
+              <div class="card-image">
+                <a [routerLink]="['/destination']">
+                  <img class="img rounded img-raised" src="{{'assets/img/bg1.jpg'}}" />
+                </a>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title text-center">
+                  <a [routerLink]="['/destination']">titulo</a>
+                </h4>
+              </div>
+            </div>
+          </div>
+
+          <div _ngcontent-c1="" class="col-lg">
+            <div class="card card-plain card-blog">
+              <div class="card-image">
+                <a [routerLink]="['/destination']">
+                  <img class="img rounded img-raised" src="{{'assets/img/bg1.jpg'}}" />
+                </a>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title text-center">
+                  <a [routerLink]="['/destination']">titulo</a>
+                </h4>
+              </div>
+            </div>
+          </div>
+
+          <div _ngcontent-c1="" class="col-lg">
+            <div class="card card-plain card-blog">
+              <div class="card-image">
+                <a [routerLink]="['/destination']">
+                  <img class="img rounded img-raised" src="{{'assets/img/bg1.jpg'}}" />
+                </a>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title text-center">
+                  <a [routerLink]="['/destination']">titulo</a>
+                </h4>
+              </div>
+            </div>
+          </div>
+
+          <div _ngcontent-c1="" class="col-lg">
+            <div class="card card-plain card-blog">
+              <div class="card-image">
+                <a [routerLink]="['/destination']">
+                  <img class="img rounded img-raised" src="{{'assets/img/bg1.jpg'}}" />
+                </a>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title text-center">
+                  <a [routerLink]="['/destination']">titulo</a>
+                </h4>
+              </div>
+            </div>
+          </div>
+
+          <!--<div class="col-md-3" *ngFor="let item of tableActivities">
             <div class="card card-plain card-blog">
               <div class="card-image">
                 <a [routerLink]="['/destination/', item.id]">
@@ -123,7 +209,7 @@
                 </h4>
               </div>
             </div>
-          </div>
+          </div>-->
         </div>
       </div>
     </div>
