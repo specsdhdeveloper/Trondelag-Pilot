@@ -1,57 +1,30 @@
 <app-header></app-header>
 
 <div class="page-header page-header-small">
-    <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/bg26.jpg');">
-    </div>
+
     <div class="content-center">
-        <h1 class="title">Stories</h1>
-        <div class="text-center">
-            <a href="#pablo" class="btn btn-primary btn-icon  btn-round">
-                <i class="fa fa-facebook-square"></i>
-            </a>
-            <a href="#pablo" class="btn btn-primary btn-icon btn-round">
-                <i class="fa fa-twitter"></i>
-            </a>
-            <a href="#pablo" class="btn btn-primary btn-icon btn-round">
-                <i class="fa fa-google-plus"></i>
-            </a>
-        </div>
+        <h1 class="title">STORIES</h1>
     </div>
+
+    <ngb-carousel>
+        <ng-template ngbSlide >
+            <div class="page-header header-filter">
+                <div class="page-header-image" [style.backgroundImage] = "'url(assets/img/tours/sailing3.jpg)'"> </div>
+            </div>
+        </ng-template>
+        <ng-template ngbSlide >
+            <div class="page-header header-filter">
+                <div class="page-header-image" [style.backgroundImage] = "'url(assets/img/tours/bombed.jpg)'"> </div>
+            </div>
+        </ng-template>
+        <ng-template ngbSlide >
+            <div class="page-header header-filter">
+                <div class="page-header-image" [style.backgroundImage] = "'url(assets/img/skatval/Skatval-museum_fb1.jpg)'"> </div>
+            </div>
+        </ng-template>
+    </ngb-carousel>
+
 </div>
-<!--<div _ngcontent-c1="" class="container-fluid h-1" style="background-color:#E64A19;">
-    <br _ngcontent-c1="">
-    <div class= "row align-items-center text-black text-center font-weight-border">
-        <div _ngcontent-c1="" class="col">
-          <label for="sel2">Mutiple select list (hold shift to select more than one):</label>
-          <select class="form-control">
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-        </div>
-        <div _ngcontent-c1="" class="col">
-          <label for="sel2">Mutiple select list (hold shift to select more than one):</label>
-          <select class="form-control">
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-        </div>
-        <div _ngcontent-c1="" class="col">
-          <label for="sel2">Mutiple select list (hold shift to select more than one):</label>
-          <select class="form-control">
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-        </div>
-    </div>
-    <br _ngcontent-c1="">
-    <br _ngcontent-c1="">
-</div>-->
 
 <div class="main">
     <div class="container">
