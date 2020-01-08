@@ -1,6 +1,6 @@
 <app-header></app-header>
 
-<!--welcome, introduction-->
+
 <div class="container-fluid h-1">
     <div class= "row" style="background-color:#E64A19;" >
         <!--<h4 class="title">Historiske Trøndelag</h4>-->
@@ -8,6 +8,12 @@
     </div>      
 </div>
 <!--welcome, introduction-->
+
+<!-- The video -->
+<video autoplay muted looponcanplay="this.play()" onloadedmetadata="this.muted = true" id="myVideo">
+    <source src="{{'assets/video/earth.mp4'}}" type="video/mp4">
+</video>
+
 <app-destinationComponent></app-destinationComponent>
 <app-storyComponent></app-storyComponent>
 <app-activityComponent></app-activityComponent>
