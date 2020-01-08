@@ -10,14 +10,39 @@ import { ActivatedRoute } from "@angular/router"
 export class ActivityPrincipalPage implements OnInit {
 
   tableActivities : Array<any> = [];
+  tableBlock1 : Array<any> = [];
+  tableBlock2 : Array<any> = [];
+  tableBlock3 : Array<any> = [];
 
   constructor(private spreadSheetServiceVariable: SpreadsheetService, private route: ActivatedRoute) {
 
   }
 
   ngOnInit() {
-    this.route.data.subscribe((data:any) => console.log(data));
+    //this.route.data.subscribe((data:any) => console.log(data));
     this.tableActivities = this.spreadSheetServiceVariable.DBActivity;
+    console.log(this.tableActivities);
+
+    for(let i = 0; i < this.tableActivities.length; i++)
+    {      
+      if(this.tableActivities[i].inblockact == "1") 
+      {        
+        this.tableBlock1.push(this.tableActivities[i]);
+      }
+      else if(this.tableActivities[i].inblockact == "2")
+      {
+        this.tableBlock2.push(this.tableActivities[i]);
+      }
+      else if(this.tableActivities[i].inblockact == "3")
+      {
+        this.tableBlock3.push(this.tableActivities[i]);
+      }
+    }
+
+    console.log(this.tableBlock1);
+    console.log(this.tableBlock2);
+    console.log(this.tableBlock3);
+    
   }
 
 }

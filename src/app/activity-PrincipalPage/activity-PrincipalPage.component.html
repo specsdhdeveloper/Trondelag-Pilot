@@ -1,21 +1,31 @@
 <app-header></app-header>
 
-<div _ngcontent-c1="" class="container">
+<!--<div _ngcontent-c1="" class="container">
     <h1 _ngcontent-c4="" class="description text-black text-center font-weight-border">ACTIVITIES</h1>
+</div>-->
+
+<div class="page-header page-header-small">
+  <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/bg26.jpg');">
+  </div>
+  <div class="content-center">
+      <h1 class="title">ACTIVITIES</h1>
+      <div class="text-center">
+          <a href="#pablo" class="btn btn-primary btn-icon  btn-round">
+              <i class="fa fa-facebook-square"></i>
+          </a>
+          <a href="#pablo" class="btn btn-primary btn-icon btn-round">
+              <i class="fa fa-twitter"></i>
+          </a>
+          <a href="#pablo" class="btn btn-primary btn-icon btn-round">
+              <i class="fa fa-google-plus"></i>
+          </a>
+      </div>
+  </div>
 </div>
 
 <div _ngcontent-c1="" class="container-fluid h-1" style="background-color:#E64A19;">
     <br _ngcontent-c1="">
     <div class= "row align-items-center text-black text-center font-weight-border">
-        <!--<ngb-accordion>
-            <ngb-panel title="Jeg har én dag å bruke">
-                <ng-template ngbPanelContent>
-                    Jeg har en halv dag å bruke
-
-                    Jeg har tre dager å bruke
-                </ng-template>
-            </ngb-panel>
-        </ngb-accordion>-->
         <div _ngcontent-c1="" class="col">
           <select>
             <option selected>Open this select menu</option>
@@ -56,7 +66,7 @@
       <div class="section">
         <br />
         <div class="row">
-          <div *ngFor="let item of tableActivities" class="col-md-5">
+          <div *ngFor="let item of tableBlock1" class="col-md-5">
             <div _ngcontent-c1="" class="col">
                 <br _ngcontent-c1="">
                 <div _ngcontent-c1="" class="card card-plain card-blog">
@@ -70,10 +80,10 @@
                     </div>
                     <div _ngcontent-c1="" class="col">
                       <h3 _ngcontent-c1="" class="card-title">
-                        <a _ngcontent-c1="" [routerLink]="['/activity/', item.id]">{{item.title}}</a>
+                        <a _ngcontent-c1="" [routerLink]="['/activity/', item.id]">{{item.cardtitle}}</a>
                       </h3>
-                      <p _ngcontent-c1="" class="card-description"> {{item.p1}} 
-                        <a _ngcontent-c1="" [routerLink]="['/activity/', item.id]"> Read More </a>
+                      <p _ngcontent-c1="" class="card-description"> {{item.carddescription}} 
+                        <!--<a _ngcontent-c1="" [routerLink]="['/activity/', item.id]"> Read More </a>-->
                       </p>
                     </div>
                   </div>
@@ -96,7 +106,7 @@
       <div class="section">
         <br />
         <div class="row">
-          <div *ngFor="let item of tableActivities" class="col-md-5">
+          <div *ngFor="let item of tableBlock2" class="col-md-5">
             <div _ngcontent-c1="" class="col">
                 <br _ngcontent-c1="">
                 <div _ngcontent-c1="" class="card card-plain card-blog">
@@ -104,16 +114,16 @@
                     <div _ngcontent-c1="" class="col">
                       <div _ngcontent-c1="" class="card-image">
                         <a [routerLink]="['/activity/', item.id]">
-                          <img _ngcontent-c1="" class="img img-raised rounded" src="{{'/assets/img/'+item.media}}">
+                          <img _ngcontent-c1="" class="img img-raised rounded" src="{{'/assets/img/'+ item.media}}">
                         </a>
                       </div>
                     </div>
                     <div _ngcontent-c1="" class="col">
                       <h3 _ngcontent-c1="" class="card-title">
-                        <a _ngcontent-c1="" [routerLink]="['/activity/', item.id]">{{item.title}}</a>
+                        <a _ngcontent-c1="" [routerLink]="['/activity/', item.id]">{{item.cardtitle}}</a>
                       </h3>
-                      <p _ngcontent-c1="" class="card-description"> {{item.p1}} 
-                        <a _ngcontent-c1="" [routerLink]="['/activity/', item.id]"> Read More </a>
+                      <p _ngcontent-c1="" class="card-description"> {{item.carddescription}} 
+                        <!--<a _ngcontent-c1="" [routerLink]="['/activity/', item.id]"> Read More </a>-->
                       </p>
                     </div>
                   </div>
@@ -140,12 +150,12 @@
             <div class="card card-plain card-blog">
               <div class="card-image">
                 <a [routerLink]="['/destination']">
-                  <img class="img rounded img-raised" src="{{'assets/img/bg1.jpg'}}" />
+                  <img class="img rounded img-raised" href="https://www.jodiskmuseum.org/index.html" src="{{'assets/img/bg1.jpg'}}" />
                 </a>
               </div>
               <div class="card-body">
                 <h4 class="card-title text-center">
-                  <a [routerLink]="['/destination']">titulo</a>
+                  <a href="https://www.jodiskmuseum.org/index.html">Jødisk museum</a>
                 </h4>
               </div>
             </div>
@@ -155,12 +165,12 @@
             <div class="card card-plain card-blog">
               <div class="card-image">
                 <a [routerLink]="['/destination']">
-                  <img class="img rounded img-raised" src="{{'assets/img/bg1.jpg'}}" />
+                  <img class="img rounded img-raised" href="https://justismuseet.no/" src="{{'assets/img/bg1.jpg'}}" />
                 </a>
               </div>
               <div class="card-body">
                 <h4 class="card-title text-center">
-                  <a [routerLink]="['/destination']">titulo</a>
+                  <a href="https://justismuseet.no/">Justismuseet</a>
                 </h4>
               </div>
             </div>
@@ -170,12 +180,12 @@
             <div class="card card-plain card-blog">
               <div class="card-image">
                 <a [routerLink]="['/destination']">
-                  <img class="img rounded img-raised" src="{{'assets/img/bg1.jpg'}}" />
+                  <img class="img rounded img-raised" href="https://falstadsenteret.no/" src="{{'assets/img/bg1.jpg'}}" />
                 </a>
               </div>
               <div class="card-body">
                 <h4 class="card-title text-center">
-                  <a [routerLink]="['/destination']">titulo</a>
+                  <a href="https://falstadsenteret.no/">Falstadsenteret</a>
                 </h4>
               </div>
             </div>
@@ -185,31 +195,16 @@
             <div class="card card-plain card-blog">
               <div class="card-image">
                 <a [routerLink]="['/destination']">
-                  <img class="img rounded img-raised" src="{{'assets/img/bg1.jpg'}}" />
+                  <img class="img rounded img-raised" href="https://www.facebook.com/Skatval-Krigshistoriske-Museum-426882890847369/" src="{{'assets/img/bg1.jpg'}}" />
                 </a>
               </div>
               <div class="card-body">
                 <h4 class="card-title text-center">
-                  <a [routerLink]="['/destination']">titulo</a>
+                  <a href="https://www.facebook.com/Skatval-Krigshistoriske-Museum-426882890847369/">Skatval krigshistoriske museum</a>
                 </h4>
               </div>
             </div>
           </div>
-
-          <!--<div class="col-md-3" *ngFor="let item of tableActivities">
-            <div class="card card-plain card-blog">
-              <div class="card-image">
-                <a [routerLink]="['/destination/', item.id]">
-                  <img class="img rounded img-raised" src="{{'assets/img/'+item.media}}" />
-                </a>
-              </div>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a [routerLink]="['/destination/', item.id]">{{item.title}}</a>
-                </h4>
-              </div>
-            </div>
-          </div>-->
         </div>
       </div>
     </div>
