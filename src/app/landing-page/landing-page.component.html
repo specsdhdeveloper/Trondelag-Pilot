@@ -1,18 +1,18 @@
 <app-header></app-header>
 
+<div class="row">
+    <!-- The video -->
+    <video autoplay muted looponcanplay="this.play()" onloadedmetadata="this.muted = true" id="myVideo">
+        <source src="{{'assets/video/earth.mp4'}}" type="video/mp4">
+    </video>
 
-<div class="container-fluid h-1">
-    <div class= "row" style="background-color:#E64A19;" >
-        <!--<h4 class="title">Historiske Trøndelag</h4>-->
-        <h4 _ngcontent-c4="" class="description text-black text-center">Ta Trøndelag ut av historiebøkene, og vi har bare permene igjen", heter det i et kjent norsk sitat. Fylket bugner av kulturminner fra steinalder til i dag. Her holdt store vikinger til, her ble det skrevet religionshistorie og trønderne er fortsatt beryktet for sitt særegne lynne. I Trøndelag kan du følge historien fra tidenes morgen til i dag.</h4>
-    </div>      
+    <!--welcome, introduction-->
+    <div _ngcontent-c4="" class="container-fluid">
+        <div class= "row text-center" style="background-color:#E64A19;" >
+            <h4 _ngcontent-c4="" style="padding-left: 2%; padding-right: 2%;">Ta Trøndelag ut av historiebøkene, og vi har bare permene igjen", heter det i et kjent norsk sitat. Fylket bugner av kulturminner fra steinalder til i dag. Her holdt store vikinger til, her ble det skrevet religionshistorie og trønderne er fortsatt beryktet for sitt særegne lynne. I Trøndelag kan du følge historien fra tidenes morgen til i dag.</h4>
+        </div>      
+    </div>
 </div>
-<!--welcome, introduction-->
-
-<!-- The video -->
-<video autoplay muted looponcanplay="this.play()" onloadedmetadata="this.muted = true" id="myVideo">
-    <source src="{{'assets/video/earth.mp4'}}" type="video/mp4">
-</video>
 
 <app-destinationComponent></app-destinationComponent>
 <app-storyComponent></app-storyComponent>
