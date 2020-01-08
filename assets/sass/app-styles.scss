@@ -1,0 +1,49 @@
+/*!
+Customization of app-styles scss files
+*/
+
+// @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+@import 'app-styles/variables';
+@import 'app-styles/mixins';
+
+// Plugins CSS
+@import "app-styles/plugins/plugin-bootstrap-switch";
+@import "app-styles/plugins/plugin-nouislider";
+@import "app-styles/plugins/plugin-isometricGrids";
+@import "app-styles/plugins/plugin-bootstrap-select";
+@import "app-styles/plugins/plugin-tagsinput";
+@import "app-styles/plugins/plugin-fileupload";
+@import "app-styles/plugins/plugin-datetimepicker";
+
+// Core CSS
+@import "app-styles/buttons";
+@import "app-styles/inputs";
+@import "app-styles/checkboxes-radio";
+@import "app-styles/progress";
+@import "app-styles/badges";
+@import "app-styles/pagination";
+@import "app-styles/typography";
+@import "app-styles/misc";
+@import "app-styles/pills";
+
+// components
+@import "app-styles/tabs";
+@import "app-styles/navbar";
+@import "app-styles/dropdown";
+@import "app-styles/alerts";
+@import "app-styles/images";
+@import "app-styles/popups";
+@import "app-styles/nucleo-outline";
+@import "app-styles/tables";
+@import "app-styles/info-areas";
+@import "app-styles/media";
+@import "app-styles/modals";
+@import "app-styles/carousel";
+@import "app-styles/cards";
+@import "app-styles/footers";
+
+// example pages and sections
+@import "app-styles/example-pages";
+@import "app-styles/sections";
+
+@import "app-styles/responsive";
