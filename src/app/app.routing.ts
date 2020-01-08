@@ -32,8 +32,8 @@ import { ActivityPrincipalPage } from './activity-PrincipalPage/activity-Princip
 const routes: Routes =[
     { path: '', redirectTo: 'landing', pathMatch: 'full'},
     { path: 'principalLanding',     component: PrincipalLandingPageComponent,   resolve: { principalLanding : SpreadsheetResolver}},
-    { path: 'destination',          component: DestinationPrincipalPage,        resolve: { principalDestination : SpreadsheetResolver}},
-    { path: 'destination/:id',      component: DestinationPageComponent,        resolve: { destination : SpreadsheetResolver}},
+    { path: 'destinations',          component: DestinationPrincipalPage,        resolve: { principalDestination : SpreadsheetResolver}},
+    { path: 'destination/:id',      component: DestinationPageComponent,        resolve: { destinations : SpreadsheetResolver}},
     { path: 'story',                component: StoryPrincipalPage,              resolve: { principalStory : SpreadsheetResolver}},
     { path: 'story/:id',            component: StoryPageComponent,              resolve: { story : SpreadsheetResolver}},    
     { path: 'activity',             component: ActivityPrincipalPage,           resolve: { principalActivity : SpreadsheetResolver}},

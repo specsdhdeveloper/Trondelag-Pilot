@@ -1,42 +1,59 @@
 <app-header></app-header>
 
-<!-- The video -->
-<video autoplay muted looponcanplay="this.play()" onloadedmetadata="this.muted = true" id="myVideo">
-    <source src="{{'assets/video/earth.mp4'}}" type="video/mp4">
-</video>
+<div class="page-header page-header-small">
 
-<div class="main">
-    <div class="container">
-      <div class="section">
-        <br />
-        <div class="row">
-          <div *ngFor="let item of tableDestination" class="col-md-5">
-            <div _ngcontent-c1="" class="col">
-                <br _ngcontent-c1="">
-                <div _ngcontent-c1="" class="card card-plain card-blog">
-                  <div _ngcontent-c1="" class="row">
-                    <div _ngcontent-c1="" class="col">
-                      <div _ngcontent-c1="" class="card-image">
-                        <a [routerLink]="['/destination/', item.id]">
-                          <img _ngcontent-c1="" class="img img-raised rounded" style="width: 250px;height: 200px;" src="{{'/assets/img/'+item.cardimg}}">
-                        </a>
-                      </div>
-                    </div>
-                    <div _ngcontent-c1="" class="col">
-                      <h3 _ngcontent-c1="" class="card-title">
-                        <a _ngcontent-c1="" [routerLink]="['/destination/', item.id]">{{item.cardtitle}}</a>
-                      </h3>
-                      <p _ngcontent-c1="" class="card-description"> {{item.carddescription}} 
-                        <!--<a _ngcontent-c1="" [routerLink]="['/activity/', item.id]"> Read More </a>-->
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>      
-          </div>
+    <!-- The video -->
+    <video autoplay muted looponcanplay="this.play()" onloadedmetadata="this.muted = true" id="myVideo">
+        <source src="{{'assets/video/earth.mp4'}}" type="video/mp4">
+    </video>
+
+    <div class="content-center">
+        <h1 class="title">DESTINATIONS</h1>
+        <div class="text-center">
         </div>
-      </div>
+
     </div>
+
 </div>
+
+<app-destinationComponent></app-destinationComponent>
+
+<!--Slider photos-->
+<div _ngcontent-c4="" class="blogs-4" id="blogs-4">
+    <div _ngcontent-c4="" class="container">
+        <div class="header-3">
+            <ngb-carousel>
+                <ng-template ngbSlide>
+                    <div class="page-header header-filter">
+                        <div class="page-header-image" style="background-image: url('assets/img/skatval/Skatval-museum_fb_tirpitz.jpg');"></div>
+                    </div>
+                    </ng-template>
+                <ng-template ngbSlide>
+                    <div class="page-header header-filter">
+                        <div class="page-header-image" style="background-image: url('assets/img/tirpitz/tirpitz7.jpg');"></div>
+                    </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                    <div class="page-header header-filter">
+                        <div class="page-header-image" style="background-image: url('assets/img/tirpitz/tirpitz6.jpg');"></div>
+                    </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                    <div class="page-header header-filter">
+                        <div class="page-header-image" style="background-image: url('assets/img/dora/VR-Dora2.jpg');"></div>
+                    </div>
+                </ng-template>
+            </ngb-carousel>
+        </div>
+        <br>
+        <div _ngcontent-c4="" class="row">                    
+            <div _ngcontent-c4="" class="card card-plain card-blog">
+                <h5 _ngcontent-c4="" class="card-description"> </h5>
+            </div>
+        </div>            
+    </div>
+    <br>
+</div>
+<!--Slider photos-->
 
 <app-footer></app-footer>
