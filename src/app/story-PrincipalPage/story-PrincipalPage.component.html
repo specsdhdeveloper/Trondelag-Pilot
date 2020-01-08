@@ -53,6 +53,40 @@
     <br _ngcontent-c1="">
 </div>
 
+<div class="main">
+    <div class="container">
+      <div class="section">
+        <br />
+        <div class="row">
+          <div *ngFor="let item of tableStories" class="col-md-5">
+            <div _ngcontent-c1="" class="col">
+                <br _ngcontent-c1="">
+                <div _ngcontent-c1="" class="card card-plain card-blog">
+                  <div _ngcontent-c1="" class="row">
+                    <div _ngcontent-c1="" class="col">
+                      <div _ngcontent-c1="" class="card-image">
+                        <a [routerLink]="['/activity/', item.id]">
+                          <img _ngcontent-c1="" class="img img-raised rounded" style="width: 250px;height: 200px;" src="{{'/assets/img/'+item.cardimg}}">
+                        </a>
+                      </div>
+                    </div>
+                    <div _ngcontent-c1="" class="col">
+                      <h3 _ngcontent-c1="" class="card-title">
+                        <a _ngcontent-c1="" [routerLink]="['/activity/', item.id]">{{item.cardtitle}}</a>
+                      </h3>
+                      <p _ngcontent-c1="" class="card-description"> {{item.carddescription}} 
+                        <!--<a _ngcontent-c1="" [routerLink]="['/activity/', item.id]"> Read More </a>-->
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>      
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
 <!--Slider photos-->
 <div _ngcontent-c4="" class="blogs-4" id="blogs-4">
     <div _ngcontent-c4="" class="container">
