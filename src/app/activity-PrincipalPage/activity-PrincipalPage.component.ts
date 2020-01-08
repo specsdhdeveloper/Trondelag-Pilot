@@ -21,7 +21,6 @@ export class ActivityPrincipalPage implements OnInit {
   ngOnInit() {
     //this.route.data.subscribe((data:any) => console.log(data));
     this.tableActivities = this.spreadSheetServiceVariable.DBActivity;
-    console.log(this.tableActivities);
 
     for(let i = 0; i < this.tableActivities.length; i++)
     {      
@@ -37,12 +36,7 @@ export class ActivityPrincipalPage implements OnInit {
       {
         this.tableBlock3.push(this.tableActivities[i]);
       }
-    }
-
-    console.log(this.tableBlock1);
-    console.log(this.tableBlock2);
-    console.log(this.tableBlock3);
-    
+    }  
   }
 
 }

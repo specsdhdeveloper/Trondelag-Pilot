@@ -3,88 +3,85 @@
 <div class="main">
     <div class="container">
         <div class="section">
-            <!--title-->
-            <h1 _ngcontent-c4="" class="title" itemprop="headline" style="text-align: center;">{{row.title}}</h1>
-            <!--title-->
+            <div class="section section-about-us">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 ml-auto mr-auto text-center">
+                            <h5 class="description">{{row.carddescription}}</h5>
+                        </div>
+                    </div>
+                    <div class="separator separator-primary"></div>
+                    <div class="section-story-overview">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <!-- First image on the left side -->
+                                <div class="image-container image-left" style="background-image: url('assets/img/ + row.imgleft')">
+                                    <p class="blockquote blockquote-primary">"Over the span of the satellite record, Arctic sea ice has been declining significantly, while sea ice in the Antarctichas increased very slightly"
+                                        <br>
+                                        <br>
+                                        <small>-NOAA</small>
+                                    </p>
+                                </div>
+                                <!-- Second image on the left side of the article -->
+                                <div class="image-container image-left-bottom" style="background-image: url('assets/img/ + row.imgright')"></div>
+                            </div>
+                            <div class="col-md-5">
+                                <!-- First image on the right side, above the article -->
+                                <div class="image-container image-right" style="background-image: url('assets/img/ + row.imgbottom')"></div>
+                                <!--<h3>So what does the new record for the lowest level of winter ice actually mean</h3>-->
+                                <p>{{row.p1}}
+                                </p>
+                                <p>
+                                    {{row.p2}}
+                                </p>
+                                <p>{{row.p3}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-            <!--Card-Destination-->
+<div class="main">
+    <div class="container">
+        <div class="section">       
+            <!--Slider photos-->
             <div _ngcontent-c4="" class="blogs-4" id="blogs-4">
                 <div _ngcontent-c4="" class="container">
-                    <div _ngcontent-c4="" class="row">                        
-                        <div _ngcontent-c4="" class="col-md-10 ml-auto mr-auto">                            
-                            <div _ngcontent-c4="" class="card card-plain card-blog">
-                                <!--<div _ngcontent-c4="" class="card-image">
-                                    <a _ngcontent-c4="" href="#pablo">
-                                        <img _ngcontent-c4="" class="img img-raised rounded" src="assets/img/examples/card-blog13.jpg">
-                                    </a>
-                                </div>-->
-                                <h4 _ngcontent-c4="" class="card-description"> {{row.abstract}}</h4>                               
-                                <h5 _ngcontent-c4="" class="card-description"> {{row.p1}}</h5>
-                                <h5 _ngcontent-c4="" class="card-description"> {{row.p2}}</h5>
-
-                                <!-- Footer cardDestination-->
-                                <footer _ngcontent-c4="" class="page-footer font-small blue pt-4">
-                                    <div class="container-fluid text-center text-md-left">                            
-                                        <div class="row">                                
-                                            <div class="col-lg">
-                                                <!--<ul class="links-vertical" class="text-dark">-->
-                                                    Bookmarks
-                                                <!--</ul>-->
-                                            </div>
-                                            <div class="col-lg">
-                                                <!--<ul class="links-vertical" class="text-dark">-->
-                                                    Activities
-                                                <!--</ul>-->
-                                            </div>
-                                            <div class="col-lg">
-                                                <!--<ul class="links-vertical" class="text-dark">-->
-                                                    Stories
-                                                <!--</ul>-->
-                                            </div>                                
-                                        </div>
-                                    </div>
-                                </footer>
-                                <!-- Footer cardDestination-->
-                            </div>                            
-                        </div>
+                    <div class="header-3">
+                        <ngb-carousel>
+                        <ng-template ngbSlide>
+                            <div class="page-header header-filter">
+                            <div class="page-header-image" style="background-image: url('assets/img/bg20.jpg');"></div>
+                            </div>
+                        </ng-template>
+                        <ng-template ngbSlide>
+                            <div class="page-header header-filter">
+                            <div class="page-header-image" style="background-image: url('assets/img/bg15.jpg');"></div>
+                            </div>
+                        </ng-template>
+                        <ng-template ngbSlide>
+                            <div class="page-header header-filter">
+                            <div class="page-header-image" style="background-image: url('assets/img/bg17.jpg');"></div>
+                            </div>
+                        </ng-template>
+                        </ngb-carousel>
                     </div>
-                </div>
-            </div>
-            <!--Card-Destination-->
-        </div>        
-        <!--Slider photos-->
-        <div _ngcontent-c4="" class="blogs-4" id="blogs-4">
-            <div _ngcontent-c4="" class="container">
-                <div class="header-3">
-                    <ngb-carousel>
-                      <ng-template ngbSlide>
-                        <div class="page-header header-filter">
-                          <div class="page-header-image" style="background-image: url('assets/img/bg20.jpg');"></div>
+                    <br>
+                    <div _ngcontent-c4="" class="row">
+                        
+                        <div _ngcontent-c4="" class="card card-plain card-blog">
+                            <h5 _ngcontent-c4="" class="card-description"> {{row.p3}}</h5>
                         </div>
-                      </ng-template>
-                      <ng-template ngbSlide>
-                        <div class="page-header header-filter">
-                          <div class="page-header-image" style="background-image: url('assets/img/bg15.jpg');"></div>
-                        </div>
-                      </ng-template>
-                      <ng-template ngbSlide>
-                        <div class="page-header header-filter">
-                          <div class="page-header-image" style="background-image: url('assets/img/bg17.jpg');"></div>
-                        </div>
-                      </ng-template>
-                    </ngb-carousel>
+                    </div>            
                 </div>
                 <br>
-                <div _ngcontent-c4="" class="row">
-                    
-                    <div _ngcontent-c4="" class="card card-plain card-blog">
-                        <h5 _ngcontent-c4="" class="card-description"> {{row.p3}}</h5>
-                    </div>
-                </div>            
             </div>
-            <br>
+            <!--Slider photos-->
         </div>
-        <!--Slider photos-->
     </div>
 </div>
 <!--<app-landing-page></app-landing-page>-->

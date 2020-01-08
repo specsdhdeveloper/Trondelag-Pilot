@@ -23,13 +23,13 @@ export class StoryPageComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
       this.table = this.spreadSheetJSONServiceVariable.DBStory;
-      this.row = this.spreadSheetJSONServiceVariable.GetRowByID(this.route.snapshot.paramMap.get('id'));
+      this.row = this.spreadSheetJSONServiceVariable.GetRowByStoryID(this.route.snapshot.paramMap.get('id'));
       console.log(this.row);
   }
 
   ngAfterViewInit() {
     setTimeout(() => {
-      this.modelViewerComponent.sketchfab_id = this.row.sketchfabid;
+      //this.modelViewerComponent.sketchfabid = this.row.sketchfabid;
     });
   }
 }

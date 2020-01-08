@@ -25,7 +25,7 @@ export class DestinationPageComponent implements OnInit {//, AfterViewInit {
     }
 
     ngOnInit() {
-        this.row = this.spreadSheetJSONServiceVariable.GetRowByID(this.route.snapshot.paramMap.get('id'));        
+        this.row = this.spreadSheetJSONServiceVariable.GetRowByDestinationID(this.route.snapshot.paramMap.get('id'));        
         console.log(this.route.snapshot.paramMap.get('id'));
         console.log(this.row);
     }
@@ -33,7 +33,7 @@ export class DestinationPageComponent implements OnInit {//, AfterViewInit {
 
     ngAfterViewInit(){
         setTimeout(() => {
-            this.modelViewerComponent.sketchfab_id = this.row.sketchfabid;
+           // this.modelViewerComponent.sketchfabid = this.row.sketchfabid;
         });
     }
 }
