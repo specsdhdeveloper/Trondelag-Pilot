@@ -1,7 +1,9 @@
 <div class="main">
     <div class="container">
       <div class="section">
-        <h2 _ngcontent-c4="">Stories</h2>
+        <a [routerLink]="['/activity']">
+          <h2 _ngcontent-c4="" class="text-black">Stories</h2>
+        </a>
         <br />
         <div class="row">
           <div class="col-md-3" *ngFor="let item of tableStories">
@@ -12,13 +14,13 @@
                 </a>
               </div>
               <div class="card-body">
-                <h6 class="category text-info">{{item.abstract}}</h6>
+                <!--<h6 class="category text-info">{{item.abstract}}</h6>-->
                 <h4 class="card-title">
-                  <a [routerLink]="['/story/', item.id]">{{item.title}}</a>
+                  <a [routerLink]="['/story/', item.id]">{{item.cardtitle}}</a>
                 </h4>
                 <p class="card-description">
-                  {{item.p1}}
-                  <a [routerLink]="['/story/', item.id]">Read More</a>
+                  {{item.carddescription}}
+                  <!--<a [routerLink]="['/story/', item.id]">Read More</a>-->
                 </p>
               </div>
             </div>
