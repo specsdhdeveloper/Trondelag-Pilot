@@ -20,8 +20,8 @@ export class DestinationPrincipalPage implements OnInit {
 
   ngOnInit() {
 
-        //this.route.data.subscribe((data:any) => console.log(data));
-        this.tableDestination = this.spreadSheetServiceVariable.DBDestination;
+    //this.route.data.subscribe((data:any) => console.log(data));
+    this.tableDestination = this.spreadSheetServiceVariable.DBDestination;
 
         for(let i = 0; i < this.tableDestination.length; i++)
         {      
@@ -38,7 +38,6 @@ export class DestinationPrincipalPage implements OnInit {
             this.tableBlock3.push(this.tableDestination[i]);
           }
         }
-
   }
 
 }
