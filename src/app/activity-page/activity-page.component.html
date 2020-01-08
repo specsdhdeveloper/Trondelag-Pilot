@@ -1,22 +1,15 @@
 <app-header></app-header>
 
 <div class="page-header page-header-small">
-    <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/bg26.jpg');">
+    <div class="page-header-image rellax-header" data-rellax-speed="-8" >
+
     </div>
     <div class="content-center">
         <h1 class="title">{{row.cardtitle}}</h1>
-        <div class="text-center">
-            <a href="#pablo" class="btn btn-primary btn-icon  btn-round">
-                <i class="fa fa-facebook-square"></i>
-            </a>
-            <a href="#pablo" class="btn btn-primary btn-icon btn-round">
-                <i class="fa fa-twitter"></i>
-            </a>
-            <a href="#pablo" class="btn btn-primary btn-icon btn-round">
-                <i class="fa fa-google-plus"></i>
-            </a>
-        </div>
     </div>
+
+    <app-carousel></app-carousel>
+
 </div>
 
 <div class="main">
@@ -28,6 +21,7 @@
                         <div class="col-md-8 ml-auto mr-auto text-center">
                             <h5 class="title">{{row.cardtitle}}</h5>
                             <h4 class="description">{{row.carddescription}}</h4>
+                            <p> {{row.itin1}}</p>
                         </div>
                     </div>
                     <div class="separator separator-primary"></div>
@@ -35,190 +29,34 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <!-- First image on the left side -->
-                                <div class="image-container image-left" style="background-image: url('assets/img/ + row.imgleft')">
-                                    <p class="blockquote blockquote-primary">"Over the span of the satellite record, Arctic sea ice has been declining significantly, while sea ice in the Antarctichas increased very slightly"
+                                <div class="image-container image-left"  [style.backgroundImage] = "'url(assets/img/' + row.imgleft + ')'">
+                                    <!--<p class="blockquote blockquote-primary">"Over the span of the satellite record, Arctic sea ice has been declining significantly, while sea ice in the Antarctichas increased very slightly"
                                         <br>
                                         <br>
                                         <small>-NOAA</small>
-                                    </p>
+                                    </p>-->
                                 </div>
                                 <!-- Second image on the left side of the article -->
-                                <div class="image-container image-left-bottom" style="background-image: url('assets/img/ + row.imgright')"></div>
+                                <div class="image-container image-left-bottom" [style.backgroundImage] = "'url(assets/img/' + row.imgleftbottom + ')'"></div>
                             </div>
                             <div class="col-md-5">
                                 <!-- First image on the right side, above the article -->
-                                <div class="image-container image-right" style="background-image: url('assets/img/ + row.imgbottom')"></div>
+                                <div class="image-container image-right" [style.backgroundImage] = "'url(assets/img/' + row.imgright + ')'"></div>
                                 <!--<h3>So what does the new record for the lowest level of winter ice actually mean</h3>-->
                                 <p>{{row.p1}}</p>
                                 <p>{{row.p2}}</p>
                                 <p>{{row.p3}}</p>
+                                <p>{{row.itin2}}</p>
+                                <div class="image-container" [style.backgroundImage] = "'url(assets/img/' + row.mapimg + ')'"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>        
-        <!--Slider photos-->
-        <div _ngcontent-c4="" class="blogs-4" id="blogs-4">
-            <div _ngcontent-c4="" class="container">
-                <div class="header-3">
-                    <ngb-carousel>
-                      <ng-template ngbSlide>
-                        <div class="page-header header-filter">
-                          <div class="page-header-image" style="background-image: url('assets/img/bg20.jpg');"></div>
-                        </div>
-                      </ng-template>
-                      <ng-template ngbSlide>
-                        <div class="page-header header-filter">
-                          <div class="page-header-image" style="background-image: url('assets/img/bg15.jpg');"></div>
-                        </div>
-                      </ng-template>
-                      <ng-template ngbSlide>
-                        <div class="page-header header-filter">
-                          <div class="page-header-image" style="background-image: url('assets/img/bg17.jpg');"></div>
-                        </div>
-                      </ng-template>
-                    </ngb-carousel>
-                </div>
-                <br>
-                <div _ngcontent-c4="" class="row">
-                    
-                    <div _ngcontent-c4="" class="card card-plain card-blog">
-                        <h5 _ngcontent-c4="" class="card-description"> {{row.p3}}</h5>
-                    </div>
-                </div>
-            
-            </div>
-            <br>
         </div>
-        <!--Slider photos-->
-
-        <!--<div _ngcontent-c4="" class="card card-plain card-blog">
-            <div _ngcontent-c4="" class="container">
-                <div _ngcontent-c4="" class="row">
-                    <div _ngcontent-c4="" class="col-md-10 ml-auto mr-auto">
-                        <h2 _ngcontent-c4="" class="title"> Tour Itinerari</h2>
-                        <h3 _ngcontent-c4="" class="card-description"> More acquisitions for Groupon to widen the net of consumers using its platform for more than daily deals. Today it is announcing the acquisition of ideeli, a flash fashion retailer, for $43 million in... </h3>
-                        <h2 _ngcontent-c4="" class="title"> Requeriments</h2>
-                        <h3 _ngcontent-c4="" class="card-description"> More acquisitions for Groupon to widen the net of consumers using its platform for more than daily deals. Today it is announcing the acquisition of ideeli, a flash fashion retailer, for $43 million in... </h3>
-                        <h2 _ngcontent-c4="" class="title"> Pricing, booking</h2>
-                        <h3 _ngcontent-c4="" class="card-description"> More acquisitions for Groupon to widen the net of consumers using its platform for more than daily deals. Today it is announcing the acquisition of ideeli, a flash fashion retailer, for $43 million in... </h3>
-
-                    --><!--pricing panel-->
-                        <!--<div _ngcontent-c7="" class="section related-products" data-background-color="black">
-                            <div _ngcontent-c7="" class="container">
-                                <h3 _ngcontent-c7="" class="title text-center">You may also be interested in:</h3>
-                                <div _ngcontent-c7="" class="row">
-                                    <div _ngcontent-c7="" class="col-sm-6 col-md-3">
-                                        <div _ngcontent-c7="" class="card card-product">
-                                            <div _ngcontent-c7="" class="card-image">
-                                                <a _ngcontent-c7="" href="#pablo">
-                                                    <img _ngcontent-c7="" class="img rounded" src="assets/img/saint-laurent.jpg">
-                                                </a>
-                                            </div>
-                                            <div _ngcontent-c7="" class="card-body">
-                                                <h6 _ngcontent-c7="" class="category text-danger">Trending</h6>
-                                                <h4 _ngcontent-c7="" class="card-title">
-                                                    <a _ngcontent-c7="" class="card-link" href="#pablo">Dolce &amp; Gabbana</a>
-                                                </h4>
-                                                <div _ngcontent-c7="" class="card-description"> Dolce &amp; Gabbana's 'Greta' tote has been crafted in Italy from hard-wearing red textured-leather. </div>
-                                                <div _ngcontent-c7="" class="card-footer">
-                                                    <div _ngcontent-c7="" class="price-container">
-                                                        <span _ngcontent-c7="" class="price">€1,459</span>
-                                                    </div>
-                                                    <button _ngcontent-c7="" class="btn btn-neutral btn-icon btn-round pull-right" ngbtooltip="Add to wishlist" placement="top" ng-reflect-placement="top" ng-reflect-ngb-tooltip="Add to wishlist">
-                                                        <i _ngcontent-c7="" class="now-ui-icons ui-2_favourite-28"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div _ngcontent-c7="" class="col-sm-6 col-md-3">
-                                        <div _ngcontent-c7="" class="card card-product">
-                                            <div _ngcontent-c7="" class="card-image">
-                                                <a _ngcontent-c7="" href="#pablo">
-                                                    <img _ngcontent-c7="" class="img rounded" src="assets/img/gucci.jpg">
-                                                </a>
-                                            </div>
-                                            <div _ngcontent-c7="" class="card-body">
-                                                <h6 _ngcontent-c7="" class="category text-muted">Popular</h6>
-                                                <h4 _ngcontent-c7="" class="card-title">
-                                                    <a _ngcontent-c7="" class="card-link" href="#pablo">Balmain</a>
-                                                </h4>
-                                                <div _ngcontent-c7="" class="card-description"> Balmain's mid-rise skinny jeans are cut with stretch to ensure they retain their second-skin fit but move comfortably. </div>
-                                                <div _ngcontent-c7="" class="card-footer">
-                                                    <div _ngcontent-c7="" class="price-container">
-                                                        <span _ngcontent-c7="" class="price">€459</span>
-                                                    </div>
-                                                    <button _ngcontent-c7="" class="btn btn-neutral btn-icon btn-round pull-right" ngbtooltip="Add to wishlist" placement="top" ng-reflect-placement="top" ng-reflect-ngb-tooltip="Add to wishlist">
-                                                        <i _ngcontent-c7="" class="now-ui-icons ui-2_favourite-28"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div _ngcontent-c7="" class="col-sm-6 col-md-3">
-                                        <div _ngcontent-c7="" class="card card-product">
-                                            <div _ngcontent-c7="" class="card-image">
-                                                <a _ngcontent-c7="" href="#pablo">
-                                                    <img _ngcontent-c7="" class="img rounded" src="assets/img/wooyoungmi.jpg">
-                                                </a>
-                                            </div>
-                                            <div _ngcontent-c7="" class="card-body">
-                                                <h6 _ngcontent-c7="" class="category text-muted">Popular</h6>
-                                                <h4 _ngcontent-c7="" class="card-title">
-                                                    <a _ngcontent-c7="" class="card-link" href="#pablo">Balenciaga</a>
-                                                </h4>
-                                                <div _ngcontent-c7="" class="card-description"> Balenciaga's black textured-leather wallet is finished with the label's iconic 'Giant' studs. This is where you can... </div>
-                                                <div _ngcontent-c7="" class="card-footer">
-                                                    <div _ngcontent-c7="" class="price-container">
-                                                        <span _ngcontent-c7="" class="price">€559</span>
-                                                    </div>
-                                                    <button _ngcontent-c7="" class="btn btn-neutral btn-icon btn-round pull-right" ngbtooltip="Add to wishlist" placement="top" ng-reflect-placement="top" ng-reflect-ngb-tooltip="Add to wishlist"><i _ngcontent-c7="" class="now-ui-icons ui-2_favourite-28"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div _ngcontent-c7="" class="col-sm-6 col-md-3">
-                                        <div _ngcontent-c7="" class="card card-product">
-                                            <div _ngcontent-c7="" class="card-image">
-                                                <a _ngcontent-c7="" href="#pablo">
-                                                    <img _ngcontent-c7="" class="img rounded" src="assets/img/saint-laurent1.jpg">
-                                                </a>
-                                            </div>
-                                            <div _ngcontent-c7="" class="card-body">
-                                                <h6 _ngcontent-c7="" class="category text-rose">Trending</h6>
-                                                    <h4 _ngcontent-c7="" class="card-title">
-                                                        <a _ngcontent-c7="" class="card-link" href="#pablo">Dolce &amp; Gabbana</a>
-                                                    </h4>
-                                                    <div _ngcontent-c7="" class="card-description"> Dolce &amp; Gabbana's 'Greta' tote has been crafted in Italy from hard-wearing red textured-leather. </div>
-                                                    <div _ngcontent-c7="" class="card-footer">
-                                                        <div _ngcontent-c7="" class="price-container">
-                                                            <span _ngcontent-c7="" class="price"> € 1,359</span>
-                                                        </div>
-                                                        <button _ngcontent-c7="" class="btn btn-neutral btn-icon btn-round pull-right" ngbtooltip="Add to wishlist" placement="top" ng-reflect-placement="top" ng-reflect-ngb-tooltip="Add to wishlist">
-                                                            <i _ngcontent-c7="" class="now-ui-icons ui-2_favourite-28"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>-->
-                            <!--pricing panel-->
-
-                        <!--<h2 _ngcontent-c4="" class="title"> Additional Info</h2>
-                        <h3 _ngcontent-c4="" class="card-description"> More acquisitions for Groupon to widen the net of consumers using its platform for more than daily deals. Today it is announcing the acquisition of ideeli, a flash fashion retailer, for $43 million in... </h3>
-                    </div>
-                </div>
-            </div>
-        </div> -->       
     </div>
+
     <br _ngcontent-c4="">
 </div>
-
-<!-- Footer <footer class="blockquote-footer text-center">{{row.itin2}} </footer> Footer -->
 
 <app-footer></app-footer>
