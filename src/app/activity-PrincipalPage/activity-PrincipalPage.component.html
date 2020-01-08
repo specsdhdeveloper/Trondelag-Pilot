@@ -27,7 +27,7 @@
     <br _ngcontent-c1="">
     <div class= "row align-items-center text-black text-center font-weight-border">
         <div _ngcontent-c1="" class="col">
-          <label for="sel2">Mutiple select list (hold shift to select more than one):</label>
+          <label for="sel2">Filter:</label>
           <select class="form-control">
             <option selected>Open this select menu</option>
             <option value="1">One</option>
@@ -36,7 +36,7 @@
           </select>
         </div>
         <div _ngcontent-c1="" class="col">
-          <label for="sel2">Mutiple select list (hold shift to select more than one):</label>
+          <label for="sel2">Filter:</label>
           <select class="form-control">
             <option selected>Open this select menu</option>
             <option value="1">One</option>
@@ -44,7 +44,7 @@
             <option value="3">Three</option>
           </select>
         </div>
-        <div _ngcontent-c1="" class="col">
+        <!--<div _ngcontent-c1="" class="col">
           <label for="sel2">Mutiple select list (hold shift to select more than one):</label>
           <select class="form-control">
             <option selected>Open this select menu</option>
@@ -52,7 +52,7 @@
             <option value="2">Two</option>
             <option value="3">Three</option>
           </select>
-        </div>
+        </div>-->
     </div>
     <br _ngcontent-c1="">
     <br _ngcontent-c1="">
@@ -85,9 +85,10 @@
                       <h3 _ngcontent-c1="" class="card-title">
                         <a _ngcontent-c1="" [routerLink]="['/activity/', item.id]">{{item.cardtitle}}</a>
                       </h3>
-                      <p _ngcontent-c1="" class="card-description"> {{item.carddescription}} 
-                        <!--<a _ngcontent-c1="" [routerLink]="['/activity/', item.id]"> Read More </a>-->
-                      </p>
+                      <p _ngcontent-c1="" class="card-description"> {{item.carddescription}} </p>
+                      <h6 _ngcontent-c4="" class="card-description">
+                        <a _ngcontent-c4="">{{item.itin1}}</a>
+                      </h6>
                     </div>
                   </div>
                 </div>
@@ -125,9 +126,10 @@
                       <h3 _ngcontent-c1="" class="card-title">
                         <a _ngcontent-c1="" [routerLink]="['/activity/', item.id]">{{item.cardtitle}}</a>
                       </h3>
-                      <p _ngcontent-c1="" class="card-description"> {{item.carddescription}} 
-                        <!--<a _ngcontent-c1="" [routerLink]="['/activity/', item.id]"> Read More </a>-->
-                      </p>
+                      <p _ngcontent-c1="" class="card-description"> {{item.carddescription}}</p>
+                      <h6 _ngcontent-c4="" class="card-description">
+                        <a _ngcontent-c4="">{{item.itin1}}</a>
+                      </h6>
                     </div>
                   </div>
                 </div>
@@ -152,8 +154,8 @@
           <div _ngcontent-c1="" class="col-lg">
             <div class="card card-plain card-blog">
               <div class="card-image">
-                <a [routerLink]="['/destination']">
-                  <img class="img rounded img-raised" style="width: 250px;height: 200px;" href="https://www.jodiskmuseum.org/index.html" src="{{'assets/img/bg1.jpg'}}" />
+                <a href="https://www.jodiskmuseum.org/index.html">
+                  <img class="img rounded img-raised" style="width: 250px;height: 200px;" src="{{'assets/img/museums/JewishMuseum3_crop.jpg'}}" />
                 </a>
               </div>
               <div class="card-body">
@@ -167,8 +169,8 @@
           <div _ngcontent-c1="" class="col-lg">
             <div class="card card-plain card-blog">
               <div class="card-image">
-                <a [routerLink]="['/destination']">
-                  <img class="img rounded img-raised" style="width: 250px;height: 200px;" href="https://justismuseet.no/" src="{{'assets/img/bg1.jpg'}}" />
+                <a href="https://justismuseet.no/">
+                  <img class="img rounded img-raised" style="width: 250px;height: 200px;" src="{{'assets/img/museums/JusticeMuseum2_sq.jpg'}}" />
                 </a>
               </div>
               <div class="card-body">
@@ -182,8 +184,8 @@
           <div _ngcontent-c1="" class="col-lg">
             <div class="card card-plain card-blog">
               <div class="card-image">
-                <a [routerLink]="['/destination']">
-                  <img class="img rounded img-raised" style="width: 250px;height: 200px;" href="https://falstadsenteret.no/" src="{{'assets/img/bg1.jpg'}}" />
+                <a href="https://falstadsenteret.no/">
+                  <img class="img rounded img-raised" style="width: 250px;height: 200px;" src="{{'assets/img/museums/JewishMuseum3_crop.jpg'}}" />
                 </a>
               </div>
               <div class="card-body">
@@ -197,8 +199,8 @@
           <div _ngcontent-c1="" class="col-lg">
             <div class="card card-plain card-blog">
               <div class="card-image">
-                <a [routerLink]="['/destination']">
-                  <img class="img rounded img-raised" style="width: 250px;height: 200px;" href="https://www.facebook.com/Skatval-Krigshistoriske-Museum-426882890847369/" src="{{'assets/img/bg1.jpg'}}" />
+                <a href="https://www.facebook.com/Skatval-Krigshistoriske-Museum-426882890847369/">
+                  <img class="img rounded img-raised" style="width: 250px;height: 200px;" src="{{'assets/img/museums/JusticeMuseum2_sq.jpg'}}" />
                 </a>
               </div>
               <div class="card-body">

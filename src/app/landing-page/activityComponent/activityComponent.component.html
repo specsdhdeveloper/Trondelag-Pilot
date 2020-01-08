@@ -1,7 +1,7 @@
 <div class="main">
   <div _ngcontent-c4="" class="blogs-3">
     <div _ngcontent-c4="" class="container">
-      <a [routerLink]="['/activity']">
+      <a [routerLink]="['/activities']">
         <h2 _ngcontent-c4="" class="text-black">Activities</h2>
       </a>
       <br />
@@ -21,13 +21,10 @@
                 <h3 _ngcontent-c4="" class="card-title">
                   <a _ngcontent-c4="" [routerLink]="['/activity/', item.id]">{{item.cardtitle}}</a>
                 </h3>
-                <p _ngcontent-c4="" class="card-description"> {{item.carddescription}} 
-                  <!--<a _ngcontent-c4="" [routerLink]="['/activity/', item.id]"> Read More </a>-->
-                </p>
-                <!--<div _ngcontent-c4="" class="author">
-                  <img _ngcontent-c4="" alt="..." class="avatar img-raised" src="assets/img/olivia.jpg">
-                  <span _ngcontent-c4="">Katie Roof</span>
-                </div>-->
+                <p _ngcontent-c4="" class="card-description"> {{item.carddescription}} </p>
+                <h6 _ngcontent-c4="" class="card-description">
+                  <a _ngcontent-c4="">{{item.itin1}}</a>
+                </h6>
               </div>
             </div>
           </div>
