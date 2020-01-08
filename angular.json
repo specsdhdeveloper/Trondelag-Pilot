@@ -22,7 +22,7 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/assets/sass/now-ui-kit.scss",
+              "src/assets/sass/app-styles.scss",
               "src/assets/sass/demo.scss"
             ],
             "scripts": [
