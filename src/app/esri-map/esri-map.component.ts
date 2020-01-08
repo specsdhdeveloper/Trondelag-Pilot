@@ -46,7 +46,7 @@ export class EsriMapComponent implements OnInit, AfterViewInit {
   }
 
   public ngOnInit() {
-    this.row = this.spreadSheetJSONServiceVariable.GetRowByID(this.route.snapshot.paramMap.get('id'));
+    //this.row = this.spreadSheetJSONServiceVariable.GetRowByID(this.route.snapshot.paramMap.get('id'));
 
     this.panRequestSubscription = this.mapService.panRequest.subscribe(() => {
       this.panMap(this.mapService.destinationCoordinates);

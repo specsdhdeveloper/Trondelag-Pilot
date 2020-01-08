@@ -17,7 +17,7 @@ export class CarouselComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.carouselImages = this.spreadSheetJSONServiceVariable.GetRowByID(this.route.snapshot.paramMap.get('id')).carouselimages.split(',')
+    //this.carouselImages = this.spreadSheetJSONServiceVariable.GetRowByID(this.route.snapshot.paramMap.get('id')).carouselimages.split(',')
     console.log(this.carouselImages)
   }
 

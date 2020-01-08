@@ -15,7 +15,7 @@ export class BackgroundVideoComponent implements OnInit {
               private route: ActivatedRoute) {}
 
   ngOnInit() {
-    this.file = this.spreadSheetJSONServiceVariable.GetRowByID(this.route.snapshot.paramMap.get('id')).videofile;
+    this.file = this.spreadSheetJSONServiceVariable.GetRowByDestinationID(this.route.snapshot.paramMap.get('id')).videofile;
   }
 
 }
