@@ -12,13 +12,11 @@ export class ActivityPageComponent implements OnInit {
 
   row : any;
   table : Array<any> = [];
-
   constructor(private spreadSheetJSONServiceVariable: SpreadsheetService, private route: ActivatedRoute) {
 
   }
 
   ngOnInit() {
-
       this.row = this.spreadSheetJSONServiceVariable.GetRowByActivityID(this.route.snapshot.paramMap.get('id'));
       console.log(this.row);
   }

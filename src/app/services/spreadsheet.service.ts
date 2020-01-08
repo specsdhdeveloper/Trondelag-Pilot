@@ -30,7 +30,22 @@ export class SpreadsheetService{
       return this.DBActivity[id-1];
     }
 
-    public getJSON(url, arrayTemp : Array<any>, value): Observable<any> {      
+    public GetRowByID(id, path) {
+        if(path == 'activity')
+        {
+            return this.GetRowByActivityID(id)
+        }
+        else if(path == 'destination')
+        {
+            return this.GetRowByDestinationID(id)
+        }
+        else if(path == 'story')
+        {
+            return this.GetRowByStoryID(id)
+        }
+    }
+
+    public getJSON(url, arrayTemp : Array<any>, value): Observable<any> {
       return this.http.get(url)
         .pipe(
           map((res: any) => {
