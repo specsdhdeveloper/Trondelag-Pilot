@@ -10,16 +10,16 @@
               <div _ngcontent-c4="" class="col-md-4">
                 <div _ngcontent-c4="" class="card-image">
                   <a [routerLink]="['/activity/', item.id]">
-                    <img _ngcontent-c4="" class="img img-raised rounded" src="{{'/assets/img/'+item.media}}">
+                    <img _ngcontent-c4="" class="img img-raised rounded" style="width: 250px;height: 200px;" src="{{'/assets/img/'+item.media}}">
                   </a>
                 </div>
               </div>
               <div _ngcontent-c4="" class="col-md-8">
                 <h3 _ngcontent-c4="" class="card-title">
-                  <a _ngcontent-c4="" [routerLink]="['/activity/', item.id]">{{item.title}}</a>
+                  <a _ngcontent-c4="" [routerLink]="['/activity/', item.id]">{{item.cardtitle}}</a>
                 </h3>
-                <p _ngcontent-c4="" class="card-description"> {{item.p1}} 
-                  <a _ngcontent-c4="" [routerLink]="['/activity/', item.id]"> Read More </a>
+                <p _ngcontent-c4="" class="card-description"> {{item.carddescription}} 
+                  <!--<a _ngcontent-c4="" [routerLink]="['/activity/', item.id]"> Read More </a>-->
                 </p>
                 <!--<div _ngcontent-c4="" class="author">
                   <img _ngcontent-c4="" alt="..." class="avatar img-raised" src="assets/img/olivia.jpg">
