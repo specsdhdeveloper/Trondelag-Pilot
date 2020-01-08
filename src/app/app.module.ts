@@ -23,6 +23,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ControlPanelComponent } from './control-panel/control-panel.component';
 import { BackgroundVideoComponent } from './background-video/background-video.component';
 import { ModelViewerComponent } from './model-viewer/model-viewer.component';
+import { PrincipalLandingPageComponent } from './principalLanding-page/principalLanding-page.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SpreadsheetService } from './services/spreadsheet.service';
 import { SpreadsheetResolver } from './resolveComponents/spreadsheet.resolve';
@@ -49,6 +50,7 @@ import { CarouselComponent } from './carousel/carousel.component';
         CarouselComponent,
         BackgroundVideoComponent,
         ModelViewerComponent,
+        PrincipalLandingPageComponent,
         LandingPageComponent,
         DestinationPageComponent,
         StoryPageComponent,
