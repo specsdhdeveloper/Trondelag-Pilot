@@ -5,23 +5,31 @@
 </div>-->
 
 <div class="page-header page-header-small">
-  <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/bg26.jpg');">
-  </div>
-  <div class="content-center">
-      <h1 class="title">ACTIVITIES</h1>
-      <div class="text-center">
-          <a href="#pablo" class="btn btn-primary btn-icon  btn-round">
-              <i class="fa fa-facebook-square"></i>
-          </a>
-          <a href="#pablo" class="btn btn-primary btn-icon btn-round">
-              <i class="fa fa-twitter"></i>
-          </a>
-          <a href="#pablo" class="btn btn-primary btn-icon btn-round">
-              <i class="fa fa-google-plus"></i>
-          </a>
-      </div>
-  </div>
+
+    <div class="content-center">
+        <h1 class="title">ACTIVITIES</h1>
+    </div>
+
+    <ngb-carousel>
+        <ng-template ngbSlide >
+            <div class="page-header header-filter">
+                <div class="page-header-image" [style.backgroundImage] = "'url(assets/img/tours/sailing3.jpg)'"> </div>
+            </div>
+        </ng-template>
+        <ng-template ngbSlide >
+            <div class="page-header header-filter">
+                <div class="page-header-image" [style.backgroundImage] = "'url(assets/img/tours/bombed.jpg)'"> </div>
+            </div>
+        </ng-template>
+        <ng-template ngbSlide >
+            <div class="page-header header-filter">
+                <div class="page-header-image" [style.backgroundImage] = "'url(assets/img/skatval/Skatval-museum_fb1.jpg)'"> </div>
+            </div>
+        </ng-template>
+    </ngb-carousel>
+
 </div>
+
 
 <div _ngcontent-c1="" class="container-fluid h-1" style="background-color:#E64A19;">
     <br _ngcontent-c1="">

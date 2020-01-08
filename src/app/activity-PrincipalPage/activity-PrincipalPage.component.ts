@@ -19,7 +19,6 @@ export class ActivityPrincipalPage implements OnInit {
   }
 
   ngOnInit() {
-    //this.route.data.subscribe((data:any) => console.log(data));
     this.tableActivities = this.spreadSheetServiceVariable.DBActivity;
 
     for(let i = 0; i < this.tableActivities.length; i++)
