@@ -17,9 +17,17 @@ export class SpreadsheetService{
     public _jsonURLPage2 = 'https://spreadsheets.google.com/feeds/list/1uaOLwfifJWMhi3L0IJfkzvhwc8o4cukutJV0t3dcsAk/2/public/full?alt=json';
     public _jsonURLPage3 = 'https://spreadsheets.google.com/feeds/list/1uaOLwfifJWMhi3L0IJfkzvhwc8o4cukutJV0t3dcsAk/3/public/full?alt=json';
 
-    public GetRowByID(id)
+    public GetRowByDestinationID(id)
     {
       return this.DBDestination[id-1];
+    }
+    public GetRowByStoryID(id)
+    {
+      return this.DBStory[id-1];
+    }
+    public GetRowByActivityID(id)
+    {
+      return this.DBActivity[id-1];
     }
 
     public getJSON(url, arrayTemp : Array<any>, value): Observable<any> {      
