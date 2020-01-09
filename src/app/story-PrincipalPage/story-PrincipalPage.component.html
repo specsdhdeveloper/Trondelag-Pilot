@@ -6,23 +6,30 @@
         <h1 class="title">Historier</h1>
     </div>
 
-    <ngb-carousel>
-        <ng-template ngbSlide >
-            <div class="page-header header-filter">
-                <div class="page-header-image" [style.backgroundImage] = "'url(assets/img/tours/sailing3.jpg)'"> </div>
-            </div>
-        </ng-template>
-        <ng-template ngbSlide >
-            <div class="page-header header-filter">
-                <div class="page-header-image" [style.backgroundImage] = "'url(assets/img/tours/bombed.jpg)'"> </div>
-            </div>
-        </ng-template>
-        <ng-template ngbSlide >
-            <div class="page-header header-filter">
-                <div class="page-header-image" [style.backgroundImage] = "'url(assets/img/skatval/Skatval-museum_fb1.jpg)'"> </div>
-            </div>
-        </ng-template>
-    </ngb-carousel>
+    <div class="header-3">
+        <ngb-carousel>
+            <ng-template ngbSlide>
+                <div class="page-header header-filter">
+                    <div class="page-header-image" style="background-image: url('assets/img/tirpitz/Fleet_Air_Arm_attack_the_battleship_Tirpitz_crop.jpg');"></div>
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="page-header header-filter">
+                    <div class="page-header-image" style="background-image: url('assets/img/saami/Saami_Family_1900.jpg');"></div>
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="page-header header-filter">
+                    <div class="page-header-image" style="background-image: url('assets/img/stiklestad/stiklestad_killing_crop.jpg');"></div>
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="page-header header-filter">
+                    <div class="page-header-image" style="background-image: url('assets/img/tours/bombed.jpg');"></div>
+                </div>
+            </ng-template>
+        </ngb-carousel>
+    </div>
 
 </div>
 
