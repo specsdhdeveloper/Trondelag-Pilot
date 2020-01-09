@@ -12,12 +12,20 @@ export class ActivityPageComponent implements OnInit {
 
   row : any;
   table : Array<any> = [];
+  haveImagesCarousel : boolean = false;
+  haveVideo : boolean = false;
+
   constructor(private spreadSheetJSONServiceVariable: SpreadsheetService, private route: ActivatedRoute) {
 
   }
 
   ngOnInit() {
       this.row = this.spreadSheetJSONServiceVariable.GetRowByActivityID(this.route.snapshot.paramMap.get('id'));
-      console.log(this.row);
+
+      if(this.row.carouselimages != "" && this.row.carouselimages != undefined)
+        this.haveImagesCarousel = true;
+
+      if(this.row.videofile != "" && this.row.videofile != undefined)
+        this.haveVideo = true;
   }
 }

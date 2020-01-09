@@ -16,20 +16,25 @@ export class StoryPageComponent implements OnInit, AfterViewInit {
 
   row: any;
   table: Array<any> = [];
+  haveImagesCarousel : boolean = false;
+  haveVideo : boolean = false;
 
   constructor(private spreadSheetJSONServiceVariable: SpreadsheetService,
               private route: ActivatedRoute) {
   }
 
   ngOnInit() {
-      this.table = this.spreadSheetJSONServiceVariable.DBStory;
-      this.row = this.spreadSheetJSONServiceVariable.GetRowByStoryID(this.route.snapshot.paramMap.get('id'));
-      console.log(this.row);
+      this.row = this.spreadSheetJSONServiceVariable.GetRowByDestinationID(this.route.snapshot.paramMap.get('id'));
+
+      if(this.row.carouselimages != "" && this.row.carouselimages != undefined)
+          this.haveImagesCarousel = true;
+
+      if(this.row.videofile != "" && this.row.videofile != undefined)
+          this.haveVideo = true;
   }
 
   ngAfterViewInit() {
     setTimeout(() => {
-      //this.modelViewerComponent.sketchfabid = this.row.sketchfabid;
     });
   }
 }
