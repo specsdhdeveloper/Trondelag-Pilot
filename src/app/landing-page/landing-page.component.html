@@ -3,7 +3,7 @@
 <div class="row">
     <!-- The video -->
     <video autoplay muted looponcanplay="this.play()" onloadedmetadata="this.muted = true" id="myVideo">
-        <source src="{{'assets/video/earth.mp4'}}" type="video/mp4">
+        <source src="{{'assets/video/Overview_all_720p-30-110speed.mp4'}}" type="video/mp4">
     </video>
 
     <!--welcome, introduction-->
@@ -16,5 +16,24 @@
 
 <app-destinationComponent></app-destinationComponent>
 <app-storyComponent></app-storyComponent>
-<app-activityComponent></app-activityComponent>
+
+<ngb-carousel>
+    <ng-template ngbSlide >
+        <div class="page-header header-filter">
+            <div class="page-header-image" [style.backgroundImage] = "'url(assets/img/tours/sailing3.jpg)'"> </div>
+        </div>
+    </ng-template>
+    <ng-template ngbSlide >
+        <div class="page-header header-filter">
+            <div class="page-header-image" [style.backgroundImage] = "'url(assets/img/tours/bombed.jpg)'"> </div>
+        </div>
+    </ng-template>
+    <ng-template ngbSlide >
+        <div class="page-header header-filter">
+            <div class="page-header-image" [style.backgroundImage] = "'url(assets/img/skatval/Skatval-museum_fb1.jpg)'"> </div>
+        </div>
+    </ng-template>
+</ngb-carousel>
+
+
 <app-footer></app-footer>
