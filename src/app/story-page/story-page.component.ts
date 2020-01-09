@@ -24,7 +24,7 @@ export class StoryPageComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-      this.row = this.spreadSheetJSONServiceVariable.GetRowByDestinationID(this.route.snapshot.paramMap.get('id'));
+      this.row = this.spreadSheetJSONServiceVariable.GetRowByStoryID(this.route.snapshot.paramMap.get('id'));
 
       if(this.row.carouselimages != "" && this.row.carouselimages != undefined)
           this.haveImagesCarousel = true;
