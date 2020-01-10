@@ -21,25 +21,7 @@ export class DestinationPrincipalPage implements OnInit {
   ngOnInit() {
 
     window.scrollTo(0, 0);
-    
-    //this.route.data.subscribe((data:any) => console.log(data));
-    this.tableDestination = this.spreadSheetServiceVariable.DBDestination;
 
-        for(let i = 0; i < this.tableDestination.length; i++)
-        {      
-          if(this.tableDestination[i].inblockact == "1") 
-          {        
-            this.tableBlock1.push(this.tableDestination[i]);
-          }
-          else if(this.tableDestination[i].inblockact == "2")
-          {
-            this.tableBlock2.push(this.tableDestination[i]);
-          }
-          else if(this.tableDestination[i].inblockact == "3")
-          {
-            this.tableBlock3.push(this.tableDestination[i]);
-          }
-        }
   }
 
 }
