@@ -15,7 +15,7 @@
 
 <div class="main">
     <div class="container">
-        <div class="section">
+        <div class="section" style="padding-bottom: 0em;">
             <div class="section section-about-us">
                 <div class="container">
                     <div class="row">
@@ -47,17 +47,28 @@
                                 <p>{{row.p1}}</p>
                                 <p>{{row.p2}}</p>
                                 <p>{{row.p3}}</p>
-                                <p>{{row.itin2}}</p>
-                                <div class="image-container" [style.backgroundImage] = "'url(assets/img/' + row.mapimg + ')'"></div>
+                                <!--<div class="image-container" [style.backgroundImage] = "'url(assets/img/' + row.mapimg + ')'"></div>-->
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </div>                                       
+                </div>                
             </div>
         </div>
     </div>
-
-    <br _ngcontent-c4="">
+</div>
+<div class="section" style="padding-top: 0em;">
+    <div _ngcontent-c1="" class="container-fluid p" style="background-color:rgb(238, 238, 238);">
+        <br _ngcontent-c1="">
+        <p _ngcontent-c1="" class="description text-black text-center font-weight-border">{{row.itin2}}</p>
+        <br _ngcontent-c1="">
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <img class="image-container img-responsive" src = "{{'assets/img/'+ row.mapimg}}">
+            </div>                            
+        </div>
+    </div>    
 </div>
 
 <app-footer></app-footer>
