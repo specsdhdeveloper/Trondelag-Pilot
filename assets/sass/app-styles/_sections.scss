@@ -1,5 +1,5 @@
 .section{
-    padding: 70px 0;
+    padding: 40px 0; //SW reduced from default 70
     position: relative;
     background: $white-color;
 
@@ -200,7 +200,7 @@
 }
 
 .section-story-overview{
-    padding: 50px 0;
+    padding: 0px 0; //SW removed from 50px
 
     .image-container{
         height: 335px;
