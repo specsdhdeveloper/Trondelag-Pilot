@@ -20,6 +20,7 @@ export class StoryPrincipalPage implements OnInit {
 
   ngOnInit() {
     
+    window.scrollTo(0, 0);
     //this.route.data.subscribe((data:any) => console.log(data));
     this.tableStories = this.spreadSheetServiceVariable.DBStory;
 

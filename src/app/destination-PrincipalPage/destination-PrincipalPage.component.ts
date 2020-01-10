@@ -20,6 +20,8 @@ export class DestinationPrincipalPage implements OnInit {
 
   ngOnInit() {
 
+    window.scrollTo(0, 0);
+    
     //this.route.data.subscribe((data:any) => console.log(data));
     this.tableDestination = this.spreadSheetServiceVariable.DBDestination;
 

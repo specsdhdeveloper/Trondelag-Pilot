@@ -20,12 +20,14 @@ export class ActivityPageComponent implements OnInit {
   }
 
   ngOnInit() {
-      this.row = this.spreadSheetJSONServiceVariable.GetRowByActivityID(this.route.snapshot.paramMap.get('id'));
 
-      if(this.row.carouselimages != "" && this.row.carouselimages != undefined)
-        this.haveImagesCarousel = true;
+    window.scrollTo(0, 0);
+    this.row = this.spreadSheetJSONServiceVariable.GetRowByActivityID(this.route.snapshot.paramMap.get('id'));
 
-      if(this.row.videofile != "" && this.row.videofile != undefined)
-        this.haveVideo = true;
+    if(this.row.carouselimages != "" && this.row.carouselimages != undefined)
+      this.haveImagesCarousel = true;
+
+    if(this.row.videofile != "" && this.row.videofile != undefined)
+      this.haveVideo = true;
   }
 }

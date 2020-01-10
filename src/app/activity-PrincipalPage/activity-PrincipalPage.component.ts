@@ -19,6 +19,8 @@ export class ActivityPrincipalPage implements OnInit {
   }
 
   ngOnInit() {
+
+    window.scrollTo(0, 0);
     this.tableActivities = this.spreadSheetServiceVariable.DBActivity;
 
     for(let i = 0; i < this.tableActivities.length; i++)

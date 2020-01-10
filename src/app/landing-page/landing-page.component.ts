@@ -15,6 +15,7 @@ export class LandingPageComponent implements OnInit {
 
   ngOnInit() {
     this.route.data.subscribe((data:any) => console.log(data));
+    window.scrollTo(0, 0);
   }
 
 }
