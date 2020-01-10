@@ -1,39 +1,77 @@
 <app-header></app-header>
 
-<div class="row">
-    <!-- The video -->
-    <video autoplay muted loop onloadedmetadata="this.muted = true" id="myVideo">
-        <source src="https://specs.owncube.com/index.php/s/MzDwSBpWOhZM0Nc/download?path=%2FMap%20mockup%20videos&files=Overview_all_720p-30-110speed.mp4" type="video/mp4">
-    </video>
+<div class="main">    
+    <div class="container-fluid">
+        <div class="row">
+            <video autoplay muted loop onloadedmetadata="this.muted = true" id="myVideo">
+                <source src="https://specs.owncube.com/index.php/s/MzDwSBpWOhZM0Nc/download?path=%2FMap%20mockup%20videos&files=Overview_all_720p-30-110speed.mp4" type="video/mp4">
+            </video>
+            <div class= "row text-center" style="background-color:#E64A19;" >
+                <h4 _ngcontent-c4="" style="padding-left: 2%; padding-right: 2%;">Ta Trøndelag ut av historiebøkene, og vi har bare permene igjen", heter det i et kjent norsk sitat. Fylket bugner av kulturminner fra steinalder til i dag. Her holdt store vikinger til, her ble det skrevet religionshistorie og trønderne er fortsatt beryktet for sitt særegne lynne. I Trøndelag kan du følge historien fra tidenes morgen til i dag.</h4>
+            </div>            
+        </div>
+    </div>
 
-    <!--welcome, introduction-->
-    <div _ngcontent-c4="" class="container-fluid">
-        <div class= "row text-center" style="background-color:#E64A19;" >
-            <h4 _ngcontent-c4="" style="padding-left: 2%; padding-right: 2%;">Ta Trøndelag ut av historiebøkene, og vi har bare permene igjen", heter det i et kjent norsk sitat. Fylket bugner av kulturminner fra steinalder til i dag. Her holdt store vikinger til, her ble det skrevet religionshistorie og trønderne er fortsatt beryktet for sitt særegne lynne. I Trøndelag kan du følge historien fra tidenes morgen til i dag.</h4>
-        </div>      
+    <app-destinationComponent></app-destinationComponent>
+    <app-storyComponent></app-storyComponent>
+
+    <!--NEW CAROUSEL-->
+    <div class="section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <!--<div class="col-8">-->
+                    <ngb-carousel>
+                        <ng-template ngbSlide>
+                            <img class="img-responsive" src="assets/img/tours/sailing5.jpg" alt="Random first slide" class="w-100">
+                            <!--<div class="carousel-caption">
+                                <h3>First slide label</h3>
+                                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            </div>-->
+                        </ng-template>
+                        <ng-template ngbSlide>
+                            <img class="img-responsive" src="assets/img/tours/bombed.jpg" alt="Random second slide" class="w-100">
+                            <!--<div class="carousel-caption">
+                                <h3>Second slide label</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>-->
+                        </ng-template>
+                        <ng-template ngbSlide>
+                            <img class="img-responsive" src="assets/img/skatval/Skatval-museum_fb1.jpg" alt="Random third slide" class="w-100">
+                            <!--<div class="carousel-caption">
+                                <h3>Third slide label</h3>
+                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            </div>-->
+                        </ng-template>
+                    </ngb-carousel>
+                <!--</div>-->
+            </div>        
+        </div>    
     </div>
 </div>
 
-<app-destinationComponent></app-destinationComponent>
-<app-storyComponent></app-storyComponent>
-
-<ngb-carousel>
-    <ng-template ngbSlide >
-        <div class="page-header header-filter">
-            <div class="page-header-image" [style.backgroundImage] = "'url(assets/img/tours/sailing3.jpg)'"> </div>
+<!--OLD CAROUSEL-->
+<!--<div class="section">
+    <div class="container">
+        <div class="header-3">
+            <ngb-carousel>                    
+                <ng-template ngbSlide >   
+                    <div class="page-header">  
+                        <div class="page-header-image" [style.backgroundImage] = "'url(assets/img/tours/sailing5.jpg)'"> </div> 
+                    </div> 
+                </ng-template>  
+                <ng-template ngbSlide >     
+                    <div class="page-header ">     
+                        <div class="page-header-image" [style.backgroundImage] = "'url(assets/img/tours/bombed.jpg)'"> </div>    
+                    </div>  
+                </ng-template>   
+                <ng-template ngbSlide >      
+                    <div class="page-header ">      
+                        <div class="page-header-image" [style.backgroundImage] = "'url(assets/img/skatval/Skatval-museum_fb1.jpg)'"> </div>      
+                    </div>       
+                </ng-template>  
+            </ngb-carousel>
         </div>
-    </ng-template>
-    <ng-template ngbSlide >
-        <div class="page-header header-filter">
-            <div class="page-header-image" [style.backgroundImage] = "'url(assets/img/tours/bombed.jpg)'"> </div>
-        </div>
-    </ng-template>
-    <ng-template ngbSlide >
-        <div class="page-header header-filter">
-            <div class="page-header-image" [style.backgroundImage] = "'url(assets/img/skatval/Skatval-museum_fb1.jpg)'"> </div>
-        </div>
-    </ng-template>
-</ngb-carousel>
-
+    </div>
+</div>-->
 
 <app-footer></app-footer>
