@@ -1,43 +1,53 @@
-<app-header></app-header>
+<div class="main">
 
-<!--<div _ngcontent-c1="" class="container">
-    <h1 _ngcontent-c4="" class="description text-black text-center font-weight-border">ACTIVITIES</h1>
-</div>-->
+  <app-header></app-header>
 
-<div class="page-header page-header-small">
-
-    <div class="content-center">
-        <h1 class="title">Turer og aktiviteter</h1>
-    </div>
-
+  <!--NEW CAROUSEL-->
+  <div class="header">
     <ngb-carousel>
-        <ng-template ngbSlide >
-            <div class="page-header header-filter">
-                <div class="page-header-image" [style.backgroundImage] = "'url(assets/img/tours/sailing5.jpg)'"> </div>
-            </div>
-        </ng-template>
-        <ng-template ngbSlide >
-            <div class="page-header header-filter">
-                <div class="page-header-image" [style.backgroundImage] = "'url(assets/img/tours/bombed.jpg)'"> </div>
-            </div>
-        </ng-template>
-        <ng-template ngbSlide >
-            <div class="page-header header-filter">
-                <div class="page-header-image" [style.backgroundImage] = "'url(assets/img/skatval/Skatval-museum_fb1.jpg)'"> </div>
-            </div>
-        </ng-template>
+      <ng-template ngbSlide>
+        <img class="img-responsive" src="assets/img/tours/sailing5.jpg" alt="Random first slide" class="w-100">
+        <!--<div class="carousel-caption">
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>-->
+      </ng-template>
+      <ng-template ngbSlide>
+        <img class="img-responsive" src="assets/img/tours/bombed.jpg" alt="Random second slide" class="w-100">
+      </ng-template>
+      <ng-template ngbSlide>
+        <img class="img-responsive" src="assets/img/skatval/Skatval-museum_fb1.jpg" alt="Random third slide" class="w-100">
+      </ng-template>
     </ngb-carousel>
+  </div>
 
-</div>
+    <!--<div class="header-3">
+      <ngb-carousel>
+        <ng-template ngbSlide >
+          <div class="page-header header-filter">
+              <div class="page-header-image" [style.backgroundImage] = "'url(assets/img/tours/sailing5.jpg)'"> </div>
+          </div>
+        </ng-template>
+        <ng-template ngbSlide >
+          <div class="page-header header-filter">
+            <div class="page-header-image" [style.backgroundImage] = "'url(assets/img/tours/bombed.jpg)'"> </div>
+          </div>
+        </ng-template>
+        <ng-template ngbSlide >
+          <div class="page-header header-filter">
+              <div class="page-header-image" [style.backgroundImage] = "'url(assets/img/skatval/Skatval-museum_fb1.jpg)'"> </div>
+          </div>
+        </ng-template>
+      </ngb-carousel>
+    </div>-->
 
-
-<div _ngcontent-c1="" class="container-fluid h-1" style="background-color:#b8d4e4;">
+  <div _ngcontent-c1="" class="container-fluid h-1" style="background-color:#b8d4e4;">
     <br _ngcontent-c1="">
     <div class= "row align-items-center text-black text-center font-weight-border">
         <div _ngcontent-c1="" class="col">
           <label for="sel2">Varighet:</label>
           <select class="form-control">
-            <option selected>1-4 timer</option>            
+            <option selected>1-4 timer</option>
             <option value="2">4-8 timer</option>
             <option value="3">1-3 dager</option>
             <option value="4">3+ dager</option>
@@ -50,7 +60,7 @@
             
             <option value="2">2-6 personer</option>
             <option value="3">6-12 personer</option>
-            <option value="4">12+ personer</option>            
+            <option value="4">12+ personer</option>
           </select>
         </div>
         <div _ngcontent-c1="" class="col">
@@ -76,158 +86,152 @@
     </div>
     <br _ngcontent-c1="">
     <br _ngcontent-c1="">
-</div>
-
-<div _ngcontent-c1="" class="container-fluid h-1" style="background-color:rgb(238, 238, 238);">
+  </div>
+  
+  <div _ngcontent-c1="" class="container-fluid h-1" style="background-color:rgb(238, 238, 238);">
     <br _ngcontent-c1="">
     <h1 _ngcontent-c1="" class="description text-black text-center font-weight-border">Turer i og fra Trondheim</h1>
     <br _ngcontent-c1="">
-</div>
+  </div>
 
-<div class="main">
-    <div class="container">
-      <div class="section">
-        <br />
-        <div class="row">
-          <div *ngFor="let item of tableBlock1" class="col-md-5">
-            <div _ngcontent-c1="" class="col">
-                <br _ngcontent-c1="">
-                <div _ngcontent-c1="" class="card card-plain card-blog">
-                  <div _ngcontent-c1="" class="row">
-                    <div _ngcontent-c1="" class="col">
-                      <div _ngcontent-c1="" class="card-image">
-                        <a [routerLink]="['/activity/', item.id]">
-                          <img _ngcontent-c1="" class="img img-raised rounded" src="{{'assets/img/'+item.cardimg}}">
-                        </a>
-                      </div>
-                    </div>
-                    <div _ngcontent-c1="" class="col">
-                      <h3 _ngcontent-c1="" class="card-title">
-                        <a _ngcontent-c1="" [routerLink]="['/activity/', item.id]">{{item.cardtitle}}</a>
-                      </h3>
-                      <p _ngcontent-c1="" class="card-description"> {{item.carddescription}} </p>
-                      <h6 _ngcontent-c4="" class="card-description">
-                        <a _ngcontent-c4="">{{item.itin1}}</a>
-                      </h6>
+  <div class="container">
+    <div class="section">
+      <br _ngcontent-c1="">
+      <div class="row">
+        <div *ngFor="let item of tableBlock1" class="col-md-5">
+          <div _ngcontent-c1="" class="col">
+              <br _ngcontent-c1="">
+              <div _ngcontent-c1="" class="card card-plain card-blog">
+                <div _ngcontent-c1="" class="row">
+                  <div _ngcontent-c1="" class="col">
+                    <div _ngcontent-c1="" class="card-image">
+                      <a [routerLink]="['/activity/', item.id]">
+                        <img _ngcontent-c1="" class="img img-raised rounded" src="{{'assets/img/'+item.cardimg}}">
+                      </a>
                     </div>
                   </div>
+                  <div _ngcontent-c1="" class="col">
+                    <h3 _ngcontent-c1="" class="card-title">
+                      <a _ngcontent-c1="" [routerLink]="['/activity/', item.id]">{{item.cardtitle}}</a>
+                    </h3>
+                    <p _ngcontent-c1="" class="card-description"> {{item.carddescription}} </p>
+                    <h6 _ngcontent-c4="" class="card-description">
+                      <a _ngcontent-c4="">{{item.itin1}}</a>
+                    </h6>
+                  </div>
                 </div>
-              </div>      
-          </div>
+              </div>
+            </div>      
         </div>
       </div>
     </div>
-</div>
+  </div>
 
-<div _ngcontent-c1="" class="container-fluid h-1" style="background-color:rgb(238, 238, 238);">
+  <div _ngcontent-c1="" class="container-fluid h-1" style="background-color:rgb(238, 238, 238);">
     <br _ngcontent-c1="">
     <h1 _ngcontent-c1="" class="description text-black text-center font-weight-border">Historiske Trondheimsfjorden</h1>
     <br _ngcontent-c1="">
-</div>
+  </div>
 
-<div class="main">
-    <div class="container">
-      <div class="section">
-        <br />
-        <div class="row">
-          <div *ngFor="let item of tableBlock2" class="col-md-5">
-            <div _ngcontent-c1="" class="col">
-                <br _ngcontent-c1="">
-                <div _ngcontent-c1="" class="card card-plain card-blog">
-                  <div _ngcontent-c1="" class="row">
-                    <div _ngcontent-c1="" class="col">
-                      <div _ngcontent-c1="" class="card-image">
-                        <a [routerLink]="['/activity/', item.id]">
-                          <img _ngcontent-c1="" class="img img-raised rounded" src="{{'assets/img/'+ item.cardimg}}">
-                        </a>
-                      </div>
-                    </div>
-                    <div _ngcontent-c1="" class="col">
-                      <h3 _ngcontent-c1="" class="card-title">
-                        <a _ngcontent-c1="" [routerLink]="['/activity/', item.id]">{{item.cardtitle}}</a>
-                      </h3>
-                      <p _ngcontent-c1="" class="card-description"> {{item.carddescription}}</p>
-                      <h6 _ngcontent-c4="" class="card-description">
-                        <a _ngcontent-c4="">{{item.itin1}}</a>
-                      </h6>
+  <div class="container">
+    <div class="section">
+      <br />
+      <div class="row">
+        <div *ngFor="let item of tableBlock2" class="col-md-5">
+          <div _ngcontent-c1="" class="col">
+              <br _ngcontent-c1="">
+              <div _ngcontent-c1="" class="card card-plain card-blog">
+                <div _ngcontent-c1="" class="row">
+                  <div _ngcontent-c1="" class="col">
+                    <div _ngcontent-c1="" class="card-image">
+                      <a [routerLink]="['/activity/', item.id]">
+                        <img _ngcontent-c1="" class="img img-raised rounded" src="{{'assets/img/'+ item.cardimg}}">
+                      </a>
                     </div>
                   </div>
+                  <div _ngcontent-c1="" class="col">
+                    <h3 _ngcontent-c1="" class="card-title">
+                      <a _ngcontent-c1="" [routerLink]="['/activity/', item.id]">{{item.cardtitle}}</a>
+                    </h3>
+                    <p _ngcontent-c1="" class="card-description"> {{item.carddescription}}</p>
+                    <h6 _ngcontent-c4="" class="card-description">
+                      <a _ngcontent-c4="">{{item.itin1}}</a>
+                    </h6>
+                  </div>
                 </div>
-              </div>      
-          </div>
+              </div>
+            </div>      
         </div>
       </div>
     </div>
-</div>
+  </div>
 
-<div _ngcontent-c1="" class="container-fluid h-1" style="background-color:rgb(238, 238, 238);">
+  <div _ngcontent-c1="" class="container-fluid h-1" style="background-color:rgb(238, 238, 238);">
     <br _ngcontent-c1="">
     <h1 _ngcontent-c1="" class="description text-black text-center font-weight-border">Museer og opplevelser</h1>
     <br _ngcontent-c1="">
-</div>
+  </div>
 
-<div class="main">
-    <div class="container">
-      <div class="section">
-        <br />
-        <div class="row">
-          <div _ngcontent-c1="" class="col-lg">
-            <div class="card card-plain card-blog">
-              <div class="card-image">
-                <a href="https://www.jodiskmuseum.org/index.html">
-                  <img class="img rounded img-raised" style="width: 250px;height: 200px;" src="{{'assets/img/museums/JewishMuseum3_crop.jpg'}}" />
-                </a>
-              </div>
-              <div class="card-body">
-                <h4 class="card-title text-center">
-                  <a href="https://www.jodiskmuseum.org/index.html">Jødisk museum</a>
-                </h4>
-              </div>
+  <div class="container">
+    <div class="section">
+      <br />
+      <div class="row">
+        <div _ngcontent-c1="" class="col-lg">
+          <div class="card card-plain card-blog">
+            <div class="card-image">
+              <a href="https://www.jodiskmuseum.org/index.html">
+                <img class="img rounded img-raised" style="width: 250px;height: 200px;" src="{{'assets/img/museums/JewishMuseum3_crop.jpg'}}" />
+              </a>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title text-center">
+                <a href="https://www.jodiskmuseum.org/index.html">Jødisk museum</a>
+              </h4>
             </div>
           </div>
+        </div>
 
-          <div _ngcontent-c1="" class="col-lg">
-            <div class="card card-plain card-blog">
-              <div class="card-image">
-                <a href="https://justismuseet.no/">
-                  <img class="img rounded img-raised" style="width: 250px;height: 200px;" src="{{'assets/img/museums/JusticeMuseum2_sq.jpg'}}" />
-                </a>
-              </div>
-              <div class="card-body">
-                <h4 class="card-title text-center">
-                  <a href="https://justismuseet.no/">Justismuseet</a>
-                </h4>
-              </div>
+        <div _ngcontent-c1="" class="col-lg">
+          <div class="card card-plain card-blog">
+            <div class="card-image">
+              <a href="https://justismuseet.no/">
+                <img class="img rounded img-raised" style="width: 250px;height: 200px;" src="{{'assets/img/museums/JusticeMuseum2_sq.jpg'}}" />
+              </a>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title text-center">
+                <a href="https://justismuseet.no/">Justismuseet</a>
+              </h4>
             </div>
           </div>
+        </div>
 
-          <div _ngcontent-c1="" class="col-lg">
-            <div class="card card-plain card-blog">
-              <div class="card-image">
-                <a href="https://falstadsenteret.no/">
-                  <img class="img rounded img-raised" style="width: 250px;height: 200px;" src="{{'assets/img/falstad/Falstad_crop2.jpg'}}" />
-                </a>
-              </div>
-              <div class="card-body">
-                <h4 class="card-title text-center">
-                  <a href="https://falstadsenteret.no/">Falstadsenteret</a>
-                </h4>
-              </div>
+        <div _ngcontent-c1="" class="col-lg">
+          <div class="card card-plain card-blog">
+            <div class="card-image">
+              <a href="https://falstadsenteret.no/">
+                <img class="img rounded img-raised" style="width: 250px;height: 200px;" src="{{'assets/img/falstad/Falstad_crop2.jpg'}}" />
+              </a>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title text-center">
+                <a href="https://falstadsenteret.no/">Falstadsenteret</a>
+              </h4>
             </div>
           </div>
+        </div>
 
-          <div _ngcontent-c1="" class="col-lg">
-            <div class="card card-plain card-blog">
-              <div class="card-image">
-                <a href="https://www.facebook.com/Skatval-Krigshistoriske-Museum-426882890847369/">
-                  <img class="img rounded img-raised" style="width: 250px;height: 200px;" src="{{'assets/img/skatval/Skatval-museum_fb1.jpg'}}" />
-                </a>
-              </div>
-              <div class="card-body">
-                <h4 class="card-title text-center">
-                  <a href="https://www.facebook.com/Skatval-Krigshistoriske-Museum-426882890847369/">Skatval krigshistoriske museum</a>
-                </h4>
-              </div>
+        <div _ngcontent-c1="" class="col-lg">
+          <div class="card card-plain card-blog">
+            <div class="card-image">
+              <a href="https://www.facebook.com/Skatval-Krigshistoriske-Museum-426882890847369/">
+                <img class="img rounded img-raised" style="width: 250px;height: 200px;" src="{{'assets/img/skatval/Skatval-museum_fb1.jpg'}}" />
+              </a>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title text-center">
+                <a href="https://www.facebook.com/Skatval-Krigshistoriske-Museum-426882890847369/">Skatval krigshistoriske museum</a>
+              </h4>
             </div>
           </div>
         </div>
@@ -235,4 +239,5 @@
     </div>
   </div>
 
-<app-footer></app-footer>
+  <app-footer></app-footer>
+</div>
