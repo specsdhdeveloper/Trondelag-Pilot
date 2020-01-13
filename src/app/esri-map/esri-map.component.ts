@@ -66,9 +66,6 @@ export class EsriMapComponent implements OnInit, AfterViewInit {
 
         this.mapView = new MapView({
           container: this.viewNode.nativeElement,
-          //TODO use regexp instead of calling replace twice
-          center: [ Number(this.row.longi.replace('"', '').replace('"', '') ),
-                    Number(this.row.latitud.replace('"', '').replace('"', '') )],
           zoom: 18,
           map: map
         });
