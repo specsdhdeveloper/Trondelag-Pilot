@@ -24,8 +24,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class EsriMapComponent implements OnInit, AfterViewInit {
 
-  @ViewChild('mapViewNode') private viewNode: ElementRef; // needed to inject the MapView into the DOM
-  mapView: __esri.MapView;
+  @ViewChild('sceneViewNode') private viewNode: ElementRef; // needed to inject the MapView into the DOM
+  sceneView: __esri.SceneView;
   panRequestSubscription: any;
   panCompleteSubscription: any;
 
@@ -35,9 +35,10 @@ export class EsriMapComponent implements OnInit, AfterViewInit {
               private spreadSheetJSONServiceVariable: SpreadsheetService,
               private route: ActivatedRoute) {}
 
-  panMap(coordinates){
-    console.log("panning to " + coordinates)
-    this.mapView.goTo(coordinates)
+  panMap(coordinates) {
+    console.log('panning to ' + coordinates)
+
+    this.sceneView.goTo(coordinates)
     .then(() => {
       this.mapService.panToDestinationComplete();
     });
@@ -59,19 +60,19 @@ export class EsriMapComponent implements OnInit, AfterViewInit {
       'esri/views/SceneView',
       'esri/Graphic'
     ])
-      .then(([Map, MapView, Graphic]) => {
+      .then(([Map, SceneView, Graphic]) => {
         const map: __esri.Map = new Map({
           basemap: 'hybrid',
-          ground: "world-elevation"
+          ground: 'world-elevation'
         });
 
-        this.mapView = new MapView({
+        this.sceneView = new SceneView({
           container: this.viewNode.nativeElement,
           zoom: 18,
           map: map
         });
 
-        this.mapView.when(() => { //all the resources in the mapbiew and the map have loaded
+        this.sceneView.when(() => { // all the resources in the mapbiew and the map have loaded
           this.mapService.panToDestination(0);
         }, (err) => console.log(err));
 
