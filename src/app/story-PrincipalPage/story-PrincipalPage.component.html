@@ -1,7 +1,7 @@
 <app-header></app-header>
 
-  <!--CAROUSEL-->
-  <div class="header">
+<!--CAROUSEL-->
+<div class="header">
     <ngb-carousel [keyboard]="true" [pauseOnHover]="true">
       <ng-template ngbSlide>
           <div class="wrapper" style="background-image: url('assets/img/tirpitz/Fleet_Air_Arm_attack_the_battleship_Tirpitz_crop.jpg');"></div>
@@ -17,11 +17,10 @@
     </ng-template>
     </ngb-carousel>
     <h1 class="title" id="titleCarousel">HISTORIER</h1>
-  </div>
+</div>
 
-  <div class="container">
-    <div class="section">
-      <br />
+<div class="section">
+    <div class="container">
       <div class="row">
         <div *ngFor="let item of tableStories" class="col-md-5">
           <div _ngcontent-c1="" class="col">
@@ -48,6 +47,6 @@
         </div>
       </div>
     </div>
-  </div>
+</div>
 
 <app-footer></app-footer>
