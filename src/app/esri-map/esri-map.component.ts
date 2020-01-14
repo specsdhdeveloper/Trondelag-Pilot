@@ -27,6 +27,7 @@ export class EsriMapComponent implements OnInit, AfterViewInit {
   @ViewChild('mapViewNode') private viewNode: ElementRef; // needed to inject the MapView into the DOM
   mapView: __esri.MapView;
   panRequestSubscription: any;
+  panCompleteSubscription: any;
 
   row: any;
 
@@ -38,19 +39,19 @@ export class EsriMapComponent implements OnInit, AfterViewInit {
     console.log("panning to " + coordinates)
     this.mapView.goTo(coordinates)
     .then(() => {
-      this.mapView.zoom = 18;
-      setTimeout(() => {
-        this.mapService.panToDestinationComplete();
-      }, 2000);
+      this.mapService.panToDestinationComplete();
     });
   }
 
   public ngOnInit() {
-    //this.row = this.spreadSheetJSONServiceVariable.GetRowByID(this.route.snapshot.paramMap.get('id'));
 
     this.panRequestSubscription = this.mapService.panRequest.subscribe(() => {
       this.panMap(this.mapService.destinationCoordinates);
     });
+
+    this.panCompleteSubscription = this.mapService.panComplete.subscribe(() => {
+      this.panMap(this.mapService.destinationCoordinates);
+    })
 
     // use esri-loader to load JSAPI modules
     return loadModules([
@@ -69,6 +70,10 @@ export class EsriMapComponent implements OnInit, AfterViewInit {
           zoom: 18,
           map: map
         });
+
+        this.mapView.when(() => { //all the resources in the mapbiew and the map have loaded
+          this.mapService.panToDestination(0);
+        }, (err) => console.log(err));
 
       })
         .catch(err => {
