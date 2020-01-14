@@ -37,8 +37,7 @@ export class EsriMapComponent implements OnInit, AfterViewInit {
 
   panMap(coordinates) {
     console.log('panning to ' + coordinates)
-
-    this.sceneView.goTo(coordinates)
+    this.sceneView.goTo({center: coordinates, heading: Math.random() * 360, tilt: 75, zoom: 18}, {speedFactor: 0.1} )
     .then(() => {
       this.mapService.panToDestinationComplete();
     });
@@ -62,7 +61,7 @@ export class EsriMapComponent implements OnInit, AfterViewInit {
     ])
       .then(([Map, SceneView, Graphic]) => {
         const map: __esri.Map = new Map({
-          basemap: 'hybrid',
+          basemap: 'satellite',
           ground: 'world-elevation'
         });
 
