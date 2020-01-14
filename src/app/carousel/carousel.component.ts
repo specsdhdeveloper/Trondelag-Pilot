@@ -20,11 +20,12 @@ export class CarouselComponent implements OnInit {
     
     try {
       const path = this.route.snapshot.routeConfig.path.split('/')[0]
-    const id = this.route.snapshot.paramMap.get('id')
-    this.carouselImages = this.spreadSheetJSONServiceVariable.GetRowByID(id, path)
-        .carouselimages.split(',')
-    console.log(this.carouselImages)
-    } catch (error) {
+      const id = this.route.snapshot.paramMap.get('id')
+      this.carouselImages = this.spreadSheetJSONServiceVariable.GetRowByID(id, path)
+          .carouselimages.split(',')
+      console.log(this.carouselImages)
+    } 
+    catch (error) {
       
     }
     

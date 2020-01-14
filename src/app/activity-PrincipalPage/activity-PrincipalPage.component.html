@@ -1,45 +1,23 @@
-<div class="main">
-
   <app-header></app-header>
 
-  <!--NEW CAROUSEL-->
+  <!--CAROUSEL-->
   <div class="header">
-    <ngb-carousel>
+    <ngb-carousel [keyboard]="true" [pauseOnHover]="true">
       <ng-template ngbSlide>
-        <img class="img-responsive" src="assets/img/tours/sailing5.jpg" alt="Random first slide" class="w-100">
-        <!--<div class="carousel-caption">
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </div>-->
+          <div class="wrapper" style="background-image: url('assets/img/tours/sailing5.jpg');"></div>
+          <!--<div class="carousel-caption">
+            <h3>TURER OG AKTIVITETER</h3>
+          </div>-->
       </ng-template>
       <ng-template ngbSlide>
-        <img class="img-responsive" src="assets/img/tours/bombed.jpg" alt="Random second slide" class="w-100">
+          <div class="wrapper" style="background-image: url('assets/img/tours/bombed.jpg');"></div>
       </ng-template>
       <ng-template ngbSlide>
-        <img class="img-responsive" src="assets/img/skatval/Skatval-museum_fb1.jpg" alt="Random third slide" class="w-100">
+          <div class="wrapper" style="background-image: url('assets/img/skatval/Skatval-museum_fb1.jpg');"></div>
       </ng-template>
     </ngb-carousel>
+    <h1 class="title" id="titleCarousel">TURER OG AKTIVITETER</h1>
   </div>
-
-    <!--<div class="header-3">
-      <ngb-carousel>
-        <ng-template ngbSlide >
-          <div class="page-header header-filter">
-              <div class="page-header-image" [style.backgroundImage] = "'url(assets/img/tours/sailing5.jpg)'"> </div>
-          </div>
-        </ng-template>
-        <ng-template ngbSlide >
-          <div class="page-header header-filter">
-            <div class="page-header-image" [style.backgroundImage] = "'url(assets/img/tours/bombed.jpg)'"> </div>
-          </div>
-        </ng-template>
-        <ng-template ngbSlide >
-          <div class="page-header header-filter">
-              <div class="page-header-image" [style.backgroundImage] = "'url(assets/img/skatval/Skatval-museum_fb1.jpg)'"> </div>
-          </div>
-        </ng-template>
-      </ngb-carousel>
-    </div>-->
 
   <div _ngcontent-c1="" class="container-fluid h-1" style="background-color:#b8d4e4;">
     <br _ngcontent-c1="">
@@ -240,4 +218,3 @@
   </div>
 
   <app-footer></app-footer>
-</div>
