@@ -55,20 +55,20 @@ export class EsriMapComponent implements OnInit, AfterViewInit {
 
     // use esri-loader to load JSAPI modules
     return loadModules([
-      'esri/Map',
-      'esri/views/SceneView',
-      'esri/Graphic'
+      'esri/WebScene',
+      'esri/views/SceneView'
     ])
-      .then(([Map, SceneView, Graphic]) => {
-        const map: __esri.Map = new Map({
-          basemap: 'satellite',
-          ground: 'world-elevation'
+      .then(([WebScene, SceneView]) => {
+        const scene = new WebScene({
+          portalItem: {
+            id: "d303baeccc274ed788a439a9c2248255"
+          }
         });
 
         this.sceneView = new SceneView({
           container: this.viewNode.nativeElement,
           zoom: 18,
-          map: map
+          map: scene
         });
 
         this.sceneView.when(() => { // all the resources in the mapbiew and the map have loaded
