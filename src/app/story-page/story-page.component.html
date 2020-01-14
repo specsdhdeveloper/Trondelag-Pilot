@@ -1,50 +1,49 @@
 <app-header></app-header>
 
-<div class="page-header page-header-small">
-    <div *ngIf="!haveImagesCarousel">
-        <div class="page-header-image rellax-header" data-rellax-speed="-8" [style.backgroundImage] = "'url(assets/img/' + row.cardimg + ')'"></div>        
-    </div>
-    
+<div class="page-header page-header-small" *ngIf="!haveImagesCarousel">
+    <div class="page-header-image rellax-header" data-rellax-speed="-8" [style.backgroundImage] = "'url(assets/img/' + row.cardimg + ')'"></div>
     <div class="content-center">
-        <h1 class="title">{{row.cardtitle}}</h1>      
+        <h1 class="title">{{row.cardtitle}}</h1>
     </div>
-    <app-carousel *ngIf="haveImagesCarousel"></app-carousel>
 </div>
 
-<div class="main">
-    <div class="container">
-        <div class="section">
-            <div class="section section-about-us">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8 ml-auto mr-auto text-center">
-                            <!--<h2 class="title">{{row.cardtitle}}</h2>-->
-                            <h5 class="description">{{row.carddescription}}</h5>
-                        </div>
+<div *ngIf="haveImagesCarousel"> 
+    <app-carousel></app-carousel>
+    <h1 class="title" id="titleCarousel">{{row.cardtitle}}</h1>
+</div>
+
+<div class="container">
+    <div class="section">
+        <div class="section section-about-us">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 ml-auto mr-auto text-center">
+                        <!--<h2 class="title">{{row.cardtitle}}</h2>-->
+                        <h5 class="description">{{row.carddescription}}</h5>
                     </div>
-                    <div class="separator separator-primary"></div>
-                    <div class="section-story-overview">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <!-- First image on the left side -->
-                                <div class="image-container image-left" [style.backgroundImage] = "'url(assets/img/' + row.imgleft + ')'">
-                                    <p class="blockquote blockquote-primary">{{row.blockquote}}
-                                        <br>
-                                        <br>
-                                        <small></small>
-                                    </p>
-                                </div>
-                                <!-- Second image on the left side of the article -->
-                                <div class="image-container image-left-bottom" [style.backgroundImage] = "'url(assets/img/' + row.imgleftbottom + ')'"></div>
+                </div>
+                <div class="separator separator-primary"></div>
+                <div class="section-story-overview">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- First image on the left side -->
+                            <div class="image-container image-left" [style.backgroundImage] = "'url(assets/img/' + row.imgleft + ')'">
+                                <p class="blockquote blockquote-primary">{{row.blockquote}}
+                                    <br>
+                                    <br>
+                                    <small></small>
+                                </p>
                             </div>
-                            <div class="col-md-5">
-                                <!-- First image on the right side, above the article -->
-                                <div class="image-container image-right" [style.backgroundImage] = "'url(assets/img/' + row.imgright + ')'"></div>
-                                <!--<h3>So what does the new record for the lowest level of winter ice actually mean</h3>-->
-                                <p>{{row.p1}}</p>
-                                <p>{{row.p2}}</p>
-                                <p>{{row.p3}}</p>
-                            </div>
+                            <!-- Second image on the left side of the article -->
+                            <div class="image-container image-left-bottom" [style.backgroundImage] = "'url(assets/img/' + row.imgleftbottom + ')'"></div>
+                        </div>
+                        <div class="col-md-5">
+                            <!-- First image on the right side, above the article -->
+                            <div class="image-container image-right" [style.backgroundImage] = "'url(assets/img/' + row.imgright + ')'"></div>
+                            <!--<h3>So what does the new record for the lowest level of winter ice actually mean</h3>-->
+                            <p>{{row.p1}}</p>
+                            <p>{{row.p2}}</p>
+                            <p>{{row.p3}}</p>
                         </div>
                     </div>
                 </div>
@@ -52,5 +51,7 @@
         </div>
     </div>
 </div>
+
+
 
 <app-footer></app-footer>

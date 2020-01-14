@@ -10,9 +10,6 @@ import { ActivatedRoute } from "@angular/router";
 export class StoryPrincipalPage implements OnInit {
 
   tableStories : Array<any> = [];
-  tableBlock1 : Array<any> = [];
-  tableBlock2 : Array<any> = [];
-  tableBlock3 : Array<any> = [];
 
   constructor(private spreadSheetServiceVariable: SpreadsheetService, private route: ActivatedRoute) {
 

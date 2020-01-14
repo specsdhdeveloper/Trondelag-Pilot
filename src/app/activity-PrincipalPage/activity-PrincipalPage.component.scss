@@ -1,0 +1,19 @@
+.wrapper {
+    position:relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 50% ; /* % of width, defines aspect ratio*/
+    
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+  #titleCarousel {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 40%;
+    color: white;
+}
