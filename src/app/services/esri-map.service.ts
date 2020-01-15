@@ -20,27 +20,27 @@ export class EsriMapService {
   panComplete = new Subject<void>();
 
   currentAutoDestinationIndex = 0;
+  destinationPosition;
 
   destinations = [
-    {id: 0, name: 'Strafgefangenenlager Falstad', coordinates: [11.0415781, 63.6913426]},
-    {id: 1, name: 'Dora, ubåtbunker', coordinates: [10.4215368, 63.4399374]},
-    {id: 2, name: 'Austrått fort', coordinates: [9.7221092, 63.7084133]},
-    {id: 3, name: 'Skatval krigshistoriske museum', coordinates: [10.8302098, 63.5399489]},
-    {id: 4, name: 'Tirpitz', coordinates: [10.9361328, 63.5638626]}
+    {id: 0, name: 'Strafgefangenenlager Falstad',   position: {latitude: 63.68929569223207, longitude: 11.035968872768855, z: 122.86971442960203}, heading: 49.007836679324285, tilt: 66.68518842115758, zoom: 18},
+    {id: 1, name: 'Dora, ubåtbunker',               position: {latitude: 63.44396886756406, longitude: 10.42104052312348, z: 268.8250433485955}, heading: 174.42516383966532, tilt: 59.71439944826535, zoom: 18},
+    {id: 2, name: 'Austrått fort',                  position: {latitude: 63.70931396085764, longitude: 9.711146899323365, z: 110.1026583276689}, heading: 102.70529673533983, tilt: 82.73763903128187, zoom: 18},
+    {id: 3, name: 'Skatval krigshistoriske museum', position: {latitude: 63.54791555970363, longitude: 10.837491647793206, z: 307.8825095668435}, heading: 188.43130246821258, tilt: 70.18149023768319, zoom: 18},
+    {id: 4, name: 'Tirpitz',                        position: {latitude: 63.55520988144179, longitude: 10.930176664058006, z: 199.50864784419537}, heading: 21.225734678617805, tilt: 78.50222563040889, zoom: 18}
   ];
 
-  destinationCoordinates;
 
   panToDestination(index) {
     this.currentAutoDestinationIndex = index
-    this.destinationCoordinates = this.destinations[this.currentAutoDestinationIndex].coordinates;
+    this.destinationPosition = this.destinations[this.currentAutoDestinationIndex].position;
     this.panRequest.next();
   }
 
   panToDestinationComplete() {
     this.currentAutoDestinationIndex = (this.currentAutoDestinationIndex  + 1) % this.destinations.length
-    this.destinationCoordinates = this.destinations[this.currentAutoDestinationIndex].coordinates;
-    this.panComplete.next();
+    this.destinationPosition = this.destinations[this.currentAutoDestinationIndex].position;
+    //this.panComplete.next();
   }
 
   constructor() { }

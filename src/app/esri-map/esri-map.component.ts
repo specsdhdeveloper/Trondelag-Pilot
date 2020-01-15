@@ -35,9 +35,22 @@ export class EsriMapComponent implements OnInit, AfterViewInit {
               private spreadSheetJSONServiceVariable: SpreadsheetService,
               private route: ActivatedRoute) {}
 
-  panMap(coordinates) {
-    console.log('panning to ' + coordinates)
-    this.sceneView.goTo({center: coordinates, heading: Math.random() * 360, tilt: 75, zoom: 18}, {speedFactor: 0.1} )
+  printViewpoint() {
+
+    const camera = this.sceneView.viewpoint.camera
+    console.log({position :
+          { latitude:  camera.position.latitude,
+            longitude: camera.position.longitude,
+            z:         camera.position.z
+          },
+          heading: camera.heading,
+          tilt:    camera.tilt
+    })
+  }
+
+  panMap(viewpoint) {
+    console.log('panning')
+    this.sceneView.goTo(viewpoint, {speedFactor: 0.1})
     .then(() => {
       this.mapService.panToDestinationComplete();
     });
@@ -46,11 +59,11 @@ export class EsriMapComponent implements OnInit, AfterViewInit {
   public ngOnInit() {
 
     this.panRequestSubscription = this.mapService.panRequest.subscribe(() => {
-      this.panMap(this.mapService.destinationCoordinates);
+      this.panMap(this.mapService.destinationPosition);
     });
 
     this.panCompleteSubscription = this.mapService.panComplete.subscribe(() => {
-      this.panMap(this.mapService.destinationCoordinates);
+      this.panMap(this.mapService.destinationPosition);
     })
 
     // use esri-loader to load JSAPI modules
@@ -61,18 +74,19 @@ export class EsriMapComponent implements OnInit, AfterViewInit {
       .then(([WebScene, SceneView]) => {
         const scene = new WebScene({
           portalItem: {
-            id: "d303baeccc274ed788a439a9c2248255"
-          }
+            id: 'd303baeccc274ed788a439a9c2248255'
+          },
         });
 
         this.sceneView = new SceneView({
           container: this.viewNode.nativeElement,
-          zoom: 18,
-          map: scene
+          zoom: 9,
+          map: scene,
+          center: [10.659398, 63.919525]
         });
 
         this.sceneView.when(() => { // all the resources in the mapbiew and the map have loaded
-          this.mapService.panToDestination(0);
+          // this.mapService.panToDestination(0);
         }, (err) => console.log(err));
 
       })
