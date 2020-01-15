@@ -23,22 +23,22 @@
     <div class="container">
       <div class="row">
         <div *ngFor="let item of tableStories" class="col-md-5">
-          <div _ngcontent-c1="" class="col">
+          <div class="col">
               <br _ngcontent-c1="">
-              <div _ngcontent-c1="" class="card card-plain card-blog">
-                <div _ngcontent-c1="" class="row">
-                  <div _ngcontent-c1="" class="col">
-                    <div _ngcontent-c1="" class="card-image">
+              <div class="card card-plain card-blog">
+                <div class="row">
+                  <div class="col">
+                    <div class="card-image" id="imgCard">
                       <a [routerLink]="['/story/', item.id]">
-                        <img _ngcontent-c1="" class="img img-raised rounded" src="{{'assets/img/'+item.cardimg}}">
+                        <img class="img img-raised rounded" src="{{'assets/img/'+item.cardimg}}">
                       </a>
                     </div>
                   </div>
-                  <div _ngcontent-c1="" class="col">
-                    <h3 _ngcontent-c1="" class="card-title">
-                      <a _ngcontent-c1="" [routerLink]="['/story/', item.id]">{{item.cardtitle}}</a>
+                  <div class="col">
+                    <h3 class="card-title">
+                      <a [routerLink]="['/story/', item.id]">{{item.cardtitle}}</a>
                     </h3>
-                    <p _ngcontent-c1="" class="card-description"> {{item.carddescription}} 
+                    <p class="card-description"> {{item.carddescription}} 
                     </p>
                   </div>
                 </div>
