@@ -19,8 +19,6 @@ import { EsriMapComponent } from './esri-map/esri-map.component';
 import { EsriMapService } from './services/esri-map.service';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { ControlPanelComponent } from './control-panel/control-panel.component';
 import { BackgroundVideoComponent } from './background-video/background-video.component';
 import { ModelViewerComponent } from './model-viewer/model-viewer.component';
 import { PrincipalLandingPageComponent } from './principalLanding-page/principalLanding-page.component';
@@ -45,8 +43,6 @@ import { CarouselComponent } from './carousel/carousel.component';
         NavbarComponent,
         EsriMapComponent,
         HeaderComponent,
-        DashboardComponent,
-        ControlPanelComponent,
         CarouselComponent,
         BackgroundVideoComponent,
         ModelViewerComponent,
