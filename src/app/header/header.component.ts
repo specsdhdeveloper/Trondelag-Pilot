@@ -11,6 +11,8 @@
   limitations under the License.
 */
 import { Component, OnInit } from '@angular/core';
+import {SpreadsheetService} from '../services/spreadsheet.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -24,10 +26,16 @@ export class HeaderComponent implements OnInit {
                ' Once complete, the map component notifies the service.  The service in turn then notifies ' +
                'all subscribed observers that the map is finished panning.';
 
-  constructor() { }
+  destinations : any;
+  activities : any;
+
+  constructor(private spreadSheetJSONServiceVariable: SpreadsheetService, private route: ActivatedRoute) {
+    }
 
   ngOnInit() {
 
+    this.destinations = this.spreadSheetJSONServiceVariable.DBDestination;
+    this.activities = this.spreadSheetJSONServiceVariable.DBActivity;
   }
 
 }

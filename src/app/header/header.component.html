@@ -34,5 +34,25 @@
         </li>
       </ul>
     </div>
+    <div>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <mat-form-field>
+            <mat-label>destinations</mat-label>
+            <mat-select disableRipple>
+              <mat-option *ngFor="let dest of destinations" value="dest">{{dest.cardtitle}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </li>
+        <li class="nav-item">
+          <mat-form-field>
+            <mat-label>Actvitites</mat-label>
+            <mat-select disableRipple>
+              <mat-option *ngFor="let act of activities" value="act">{{act.cardtitle}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
