@@ -18,8 +18,7 @@ export class DestinationComponentLandingPage implements OnInit {
   }
 
   ngOnInit() {
-
-      this.tableDestinations = this.spreadSheetJSONServiceVariable.DBDestination;
+      this.tableDestinations = this.spreadSheetJSONServiceVariable.tables.destination;
       this.tableDestinations.pop();
   }
 }

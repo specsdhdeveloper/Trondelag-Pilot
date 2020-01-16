@@ -1,6 +1,6 @@
 import {Component, OnInit, ViewChild, AfterViewInit} from '@angular/core';
 import { SpreadsheetService } from '../services/spreadsheet.service';
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute } from '@angular/router';
 import {ModelViewerComponent} from '../model-viewer/model-viewer.component';
 
 @Component({
@@ -16,8 +16,8 @@ export class StoryPageComponent implements OnInit, AfterViewInit {
 
   row: any;
   table: Array<any> = [];
-  haveImagesCarousel : boolean = false;
-  haveVideo : boolean = false;
+  haveImagesCarousel = false;
+  haveVideo = false;
 
   constructor(private spreadSheetJSONServiceVariable: SpreadsheetService,
               private route: ActivatedRoute) {
@@ -25,13 +25,15 @@ export class StoryPageComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     window.scrollTo(0, 0);
-      this.row = this.spreadSheetJSONServiceVariable.GetRowByStoryID(this.route.snapshot.paramMap.get('id'));
+    this.row = this.spreadSheetJSONServiceVariable.tables.story[this.route.snapshot.paramMap.get('id')];
 
-      if(this.row.carouselimages != "" && this.row.carouselimages != undefined)
-          this.haveImagesCarousel = true;
+    if (this.row.carouselimages != '' && this.row.carouselimages != undefined) {
+        this.haveImagesCarousel = true;
+    }
 
-      if(this.row.videofile != "" && this.row.videofile != undefined)
-          this.haveVideo = true;
+    if (this.row.videofile != '' && this.row.videofile != undefined) {
+        this.haveVideo = true;
+    }
   }
 
   ngAfterViewInit() {

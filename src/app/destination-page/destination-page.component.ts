@@ -29,7 +29,7 @@ export class DestinationPageComponent implements OnInit {//, AfterViewInit {
     ngOnInit() {
         
         window.scrollTo(0, 0);
-        this.row = this.spreadSheetJSONServiceVariable.GetRowByDestinationID(this.route.snapshot.paramMap.get('id'));
+        this.row = this.spreadSheetJSONServiceVariable.tables.destination[this.route.snapshot.paramMap.get('id')];
 
         if(this.row.carouselimages != "" && this.row.carouselimages != undefined)
             this.haveImagesCarousel = true;

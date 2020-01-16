@@ -22,7 +22,7 @@ export class ActivityPageComponent implements OnInit {
   ngOnInit() {
 
     window.scrollTo(0, 0);
-    this.row = this.spreadSheetJSONServiceVariable.GetRowByActivityID(this.route.snapshot.paramMap.get('id'));
+    this.row = this.spreadSheetJSONServiceVariable.tables.activity[this.route.snapshot.paramMap.get('id')];
 
     if(this.row.carouselimages != "" && this.row.carouselimages != undefined)
       this.haveImagesCarousel = true;
