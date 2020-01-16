@@ -38,6 +38,8 @@ import { StoryPrincipalPage } from './story-PrincipalPage/story-PrincipalPage.co
 import { ActivityPrincipalPage } from './activity-PrincipalPage/activity-PrincipalPage.component';
 import { SafePipe } from './safe.pipe';
 import { CarouselComponent } from './carousel/carousel.component';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatSelectModule, MatFormFieldModule, MatInputModule } from '@angular/material';
 
 @NgModule({
     declarations: [
@@ -75,7 +77,16 @@ import { CarouselComponent } from './carousel/carousel.component';
         SectionsModule,
         ComponentsModule,
         ExamplesModule,
-        HttpClientModule
+        HttpClientModule,
+        MatSliderModule,
+        MatSelectModule,
+        MatFormFieldModule,
+        MatInputModule
+    ],
+    exports: [
+        MatSelectModule,
+        MatFormFieldModule,
+        MatInputModule
     ],
     providers: [EsriMapService, SpreadsheetService, SpreadsheetResolver],
     bootstrap: [AppComponent]

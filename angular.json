@@ -75,7 +75,8 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
             "scripts": [
-              "node_modules/rellax/rellax.min.js"
+              "node_modules/rellax/rellax.min.js",
+              "./node_modules/hammerjs/hammer.min.js"
             ],
             "styles": [
               "node_modules/animate.css/animate.min.css",
