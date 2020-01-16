@@ -21,6 +21,7 @@
               "src/favicon.ico"
             ],
             "styles": [
+              "node_modules/animate.css/animate.min.css",
               "src/styles.scss",
               "src/assets/sass/app-styles.scss",
               "src/assets/sass/demo.scss"
@@ -77,6 +78,7 @@
               "node_modules/rellax/rellax.min.js"
             ],
             "styles": [
+              "node_modules/animate.css/animate.min.css",
               "src/styles.scss",
               "src/assets/sass/now-ui-kit.scss",
               "src/assets/sass/demo.scss"
