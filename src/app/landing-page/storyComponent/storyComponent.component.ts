@@ -18,6 +18,6 @@ export class StoryComponentLandingPage implements OnInit {
   }
 
   ngOnInit() {
-      this.tableStories = this.spreadSheetJSONServiceVariable.tables.story
+      this.tableStories = this.spreadSheetJSONServiceVariable.tables.stories
   }
 }
