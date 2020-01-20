@@ -12,7 +12,8 @@
 */
 import { Component, OnInit } from '@angular/core';
 import {SpreadsheetService} from '../services/spreadsheet.service';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
+import { HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -29,7 +30,32 @@ export class HeaderComponent implements OnInit {
   destinations : any;
   activities : any;
 
-  constructor(private spreadSheetJSONServiceVariable: SpreadsheetService, private route: ActivatedRoute) {
+  constructor(private spreadSheetJSONServiceVariable: SpreadsheetService, private route: ActivatedRoute, public router: Router) {
+    }
+
+  selectDropDown()
+  {
+    console.log("entra");
+  }
+
+  /*selectDropDown(id : any, routeName : any)
+  {
+    console.log("entra");
+    this.router.navigate(['/' + routeName + '/' + id]);
+  }*/
+
+  @HostListener('window:scroll', ['$event'])
+
+  onWindowScroll(e) {
+    
+      let element = document.querySelector('.navbar');
+      //console.log("element.clientHeight " + element.clientHeight);
+      //console.log("window.pageYOffset " + window.pageYOffset);
+      if (window.pageYOffset < 450) {
+        element.classList.add('navbar-transparent');
+      } else {
+        element.classList.remove('navbar-transparent');
+      }
     }
 
   ngOnInit() {
