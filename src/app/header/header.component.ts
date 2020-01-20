@@ -53,7 +53,7 @@ export class HeaderComponent implements OnInit {
       let element = document.querySelector('.navbar');
       //console.log("element.clientHeight " + element.clientHeight);
       //console.log("window.pageYOffset " + window.pageYOffset);
-      if (window.pageYOffset < 450) {
+      if (window.pageYOffset < 350) {
         element.classList.add('navbar-transparent');
       } else {
         element.classList.remove('navbar-transparent');
