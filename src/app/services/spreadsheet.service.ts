@@ -7,7 +7,7 @@ import { map, mergeMap } from 'rxjs/operators';
 @Injectable({
     providedIn: 'root'
   })
-export class SpreadsheetService {
+export class SpreadsheetService { //TODO rename to API service
 
     // the sheets in the spreadsheet must be in that order
     tables = {
@@ -30,10 +30,12 @@ export class SpreadsheetService {
                         data.forEach(entry => {
                             const obj = {};
                             for (const x in entry) {
-                                if (x == 'cardImg' && entry['cardImg'] != null) { //replaces cardImg field with the url of the image
-                                    obj[x] = this.apiUrl + entry['cardImg'].url
-                                } else {
-                                    obj[x] = entry[x]
+                                for (let field of this.imgFields) {
+                                    if (x == field && entry[field] != null) { //replaces cardImg field with the url of the image TODO HACK until we can get S3 buckets working
+                                        obj[field + 'Url'] = 'http://54.228.244.252:1337' + entry[field].url //TODO HACK because this.apiURL is not accessible from here
+                                    } else {
+                                        obj[x] = entry[x]
+                                    }
                                 }
                             }
                             returnArray.push(obj);
