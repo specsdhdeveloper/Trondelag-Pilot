@@ -74,7 +74,7 @@ export class EsriMapComponent implements OnInit, AfterViewInit {
     ])
       .then(([Map, SceneView, SceneLayer]) => {
           var map = new Map({
-              basemap: "dark-gray",
+              basemap: "satellite",
               ground: "world-elevation"
           });
 
@@ -86,9 +86,26 @@ export class EsriMapComponent implements OnInit, AfterViewInit {
         });
 
           // Create SceneLayer and add to the map
-          const sceneLayer = new SceneLayer({
+          let sceneLayer = new SceneLayer({
               portalItem: {
                   id: "0cb2a926f28b47a09a90d1845e2937c0"
+              },
+              popupEnabled: false
+          });
+          map.add(sceneLayer);
+
+          sceneLayer = new SceneLayer({
+              portalItem: {
+                  id: "72b449d8a22448d2ac93f49dbd687804"
+              },
+              popupEnabled: false
+          });
+          map.add(sceneLayer);
+
+
+          sceneLayer = new SceneLayer({
+              portalItem: {
+                  id: "70f6bf1b1cda437ea413dc86d2bc4703"
               },
               popupEnabled: false
           });
