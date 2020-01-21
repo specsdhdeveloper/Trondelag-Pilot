@@ -83,7 +83,7 @@
                   <div class="col">
                     <div class="card-image">
                       <a [routerLink]="['/activity/', item.id]">
-                        <img class="img img-raised rounded" src="{{'assets/img/'+item.cardimg}}">
+                        <img class="img img-raised rounded" src="{{item.cardImgUrl}}">
                       </a>
                     </div>
                   </div>
@@ -121,7 +121,7 @@
                   <div class="col">
                     <div class="card-image">
                       <a [routerLink]="['/activity/', item.id]">
-                        <img class="img img-raised rounded" src="{{'assets/img/'+ item.cardimg}}">
+                        <img class="img img-raised rounded" src="{{item.cardImgUrl}}">
                       </a>
                     </div>
                   </div>
