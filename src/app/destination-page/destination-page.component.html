@@ -2,11 +2,11 @@
 
 <div class="page-header page-header-small">
     <div *ngIf="!haveVideo">
-        <div class="page-header-image rellax-header" data-rellax-speed="-8" [style.backgroundImage] = "row.cardimgUrl"></div>
+        <div class="page-header-image rellax-header" data-rellax-speed="-8" [style.backgroundImage] = "'url(' + row.cardImgUrl + ')'"></div>
     </div>
     
     <div class="content-center">
-        <h1 class="title">{{row.cardtitle}}</h1>      
+        <h1 class="title">{{row.cardTitle}}</h1>
     </div>
     <app-background-video *ngIf="haveVideo"></app-background-video>
 </div>
@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col-md-8 ml-auto mr-auto text-center">
                 <!--<h2 class="title">{{row.cardtitle}}</h2>-->
-                <h5 class="description">{{row.carddescription}}</h5>
+                <h5 class="description">{{row.cardDescription}}</h5>
             </div>
         </div>
         <div class="separator separator-primary"></div>

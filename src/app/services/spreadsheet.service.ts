@@ -18,7 +18,7 @@ export class SpreadsheetService { //TODO rename to API service
 
     apiUrl = 'http://54.228.244.252:1337/'
 
-    imgFields = ['cardImg', 'imgLeft', 'imgRight', 'imgLeftBottom']
+    imgFields = ['cardImg', 'imgLeft', 'imgRight', 'imgLeftBottom','mapImg']
 
     public getJSON(url, table): Observable<any> {
         return this.http.get(url + table)
@@ -42,6 +42,7 @@ export class SpreadsheetService { //TODO rename to API service
                         });
                     }
                     this.tables[table] = returnArray;
+                    console.log(returnArray)
                     return returnArray;
                 }
                 )

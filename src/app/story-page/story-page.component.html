@@ -3,13 +3,13 @@
 <div class="page-header page-header-small" *ngIf="!haveImagesCarousel">
     <div class="page-header-image rellax-header" data-rellax-speed="-8" [style.backgroundImage] = "'url(' + row.cardImgUrl + ')'"></div>
     <div class="content-center">
-        <h1 class="title">{{row.cardtitle}}</h1>
+        <h1 class="title">{{row.cardTitle}}</h1>
     </div>
 </div>
 
 <div *ngIf="haveImagesCarousel"> 
     <app-carousel></app-carousel>
-    <h1 class="title" id="titleCarousel">{{row.cardtitle}}</h1>
+    <h1 class="title" id="titleCarousel">{{row.cardTitle}}</h1>
 </div>
 
 <div class="section section-about-us">
@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col-md-8 ml-auto mr-auto text-center">
                 <!--<h2 class="title">{{row.cardtitle}}</h2>-->
-                <h5 class="description">{{row.carddescription}}</h5>
+                <h5 class="description">{{row.cardDescription}}</h5>
             </div>
         </div>
         <div class="separator separator-primary"></div>

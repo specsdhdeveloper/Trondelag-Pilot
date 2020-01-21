@@ -10,8 +10,8 @@ import { ActivatedRoute } from "@angular/router";
 
 export class DestinationComponentLandingPage implements OnInit {
 
-  row : any;
-  tableDestinations : Array<any> = [];
+  row: any;
+  tableDestinations: Array<any> = [];
 
   constructor(private spreadSheetJSONServiceVariable: SpreadsheetService, private route: ActivatedRoute) {
 
