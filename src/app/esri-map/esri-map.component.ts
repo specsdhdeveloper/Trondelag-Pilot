@@ -68,22 +68,50 @@ export class EsriMapComponent implements OnInit, AfterViewInit {
 
     // use esri-loader to load JSAPI modules
     return loadModules([
-      'esri/WebScene',
-      'esri/views/SceneView'
+        'esri/Map',
+        'esri/views/SceneView',
+        'esri/layers/SceneLayer'
     ])
-      .then(([WebScene, SceneView]) => {
-        const scene = new WebScene({
-          portalItem: {
-            id: 'd303baeccc274ed788a439a9c2248255'
-          },
-        });
+      .then(([Map, SceneView, SceneLayer]) => {
+          var map = new Map({
+              basemap: "dark-gray",
+              ground: "world-elevation"
+          });
 
         this.sceneView = new SceneView({
           container: this.viewNode.nativeElement,
           zoom: 9,
-          map: scene,
+          map: map,
           center: [10.659398, 63.919525]
         });
+
+          // Create SceneLayer and add to the map
+          const sceneLayer = new SceneLayer({
+              portalItem: {
+                  id: "0cb2a926f28b47a09a90d1845e2937c0"
+              },
+              popupEnabled: false
+          });
+          map.add(sceneLayer);
+
+          // Create MeshSymbol3D for symbolizing SceneLayer
+          var symbol = {
+              type: "mesh-3d", // autocasts as new MeshSymbol3D()
+              symbolLayers: [
+                  {
+                      type: "fill", // autocasts as new FillSymbol3DLayer()
+                      // If the value of material is not assigned, the default color will be grey
+                      material: {
+                          color: [244, 247, 134]
+                      }
+                  }
+              ]
+          };
+          // Add the renderer to sceneLayer
+          sceneLayer.renderer = {
+              type: "simple", // autocasts as new SimpleRenderer()
+              symbol: symbol
+          };
 
         this.sceneView.when(() => { // all the resources in the mapbiew and the map have loaded
           // this.mapService.panToDestination(0);
