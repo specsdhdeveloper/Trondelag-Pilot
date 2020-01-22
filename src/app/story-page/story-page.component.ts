@@ -25,16 +25,12 @@ export class StoryPageComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     window.scrollTo(0, 0);
-    //TODO find more elegant way than substracting 1
-    this.row = this.spreadSheetJSONServiceVariable.tables.stories[this.route.snapshot.paramMap.get('id')-1];
 
-    if (this.row.carouselimages != '' && this.row.carouselimages != undefined) {
-        this.haveImagesCarousel = true;
-    }
+    const myID = parseInt(this.route.snapshot.paramMap.get('id'))
+    this.row = this.spreadSheetJSONServiceVariable.tables.stories.find(i => i.id === myID)
 
-    if (this.row.videofile != '' && this.row.videofile != undefined) {
-        this.haveVideo = true;
-    }
+    this.haveImagesCarousel = (this.row.carouselimages != '' && this.row.carouselimages != undefined);
+    this.haveVideo = this.row.videofile != '' && this.row.videofile != undefined;
   }
 
   ngAfterViewInit() {

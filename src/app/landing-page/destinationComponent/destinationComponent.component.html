@@ -8,13 +8,13 @@
         <div class="col-md-3" *ngFor="let item of tableDestinations">
           <div class="card card-plain card-blog">
             <div class="card-image">
-              <a [routerLink]="['/destinations/', item.id]">
+              <a [routerLink]="['/destination/', item.id]">
                 <img class="img rounded img-raised" style="width: 250px;height: 200px;" src="{{item.cardImgUrl}}" />
               </a>
             </div>
             <div class="card-body">
               <h4 class="card-title">
-                <a [routerLink]="['/destinations/', item.id]">{{item.cardTitle}}</a>
+                <a [routerLink]="['/destination/', item.id]">{{item.cardTitle}}</a>
               </h4>
               <p class="card-description">
                 {{item.cardDescription}}
