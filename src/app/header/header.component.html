@@ -9,7 +9,7 @@
 
       <div class="navbar-nav-scroll ml-md-auto ">
         <ul class="navbar-nav bd-navbar-nav flex-row" style="margin-top: 2%;">
-          <li class="nav-item">
+          <!--<li class="nav-item">
             <a class="nav-link" [routerLink]="['/destinations']">
               <p>Destinasjoner</p>
             </a>
@@ -18,34 +18,30 @@
             <a class="nav-link" [routerLink]="['/activities']">
               <p>Turer og aktiviteter</p>
             </a>
+          </li>-->
+          <li class="nav-item dropdown">
+            <a class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Destinasjoner
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" *ngFor="let item of destinations">{{item.cardtitle}}</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" [routerLink]="['/destinations']">All</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Turer og aktiviteter
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" *ngFor="let item of activities">{{item.cardtitle}}</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" [routerLink]="['/activities']">All</a>
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['/stories']">
               <p >Historier</p>
-            </a>
-          </li>
-          <!--<li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown link
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>-->
-          <li class="nav-item">
-            <a class="nav-link">
-              <select class="dropdown">
-                <option *ngFor = "let item of destinations"> {{item.cardtitle}} </option>
-                </select>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link">
-              <select class="dropdown">
-                <option *ngFor = "let item of activities"> {{item.cardtitle}} </option>
-              </select>
             </a>
           </li>
         </ul>
