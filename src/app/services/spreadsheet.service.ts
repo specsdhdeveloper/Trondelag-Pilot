@@ -18,7 +18,7 @@ export class SpreadsheetService { //TODO rename to API service
 
     apiUrl = 'http://54.228.244.252:1337/'
 
-    imgFields = ['cardImg', 'imgLeft', 'imgRight', 'imgLeftBottom','mapImg']
+    imgFields = ['cardImg', 'imgLeft', 'imgRight', 'imgLeftBottom', 'mapImg']
 
     public getJSON(url, table): Observable<any> {
         return this.http.get(url + table)
@@ -31,8 +31,8 @@ export class SpreadsheetService { //TODO rename to API service
                             const obj = {};
                             for (const x in entry) {
                                 for (let field of this.imgFields) {
-                                    if (x == field && entry[field] != null) { //replaces cardImg field with the url of the image TODO HACK until we can get S3 buckets working
-                                        obj[field + 'Url'] = 'http://54.228.244.252:1337' + entry[field].url //TODO HACK because this.apiURL is not accessible from here
+                                    if (x == field && entry[field] != null) {
+                                        obj[field + 'Url'] = entry[field].url
                                     } else {
                                         obj[x] = entry[x]
                                     }
@@ -42,7 +42,6 @@ export class SpreadsheetService { //TODO rename to API service
                         });
                     }
                     this.tables[table] = returnArray;
-                    console.log(returnArray)
                     return returnArray;
                 }
                 )
