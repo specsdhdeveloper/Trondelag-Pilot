@@ -30,15 +30,15 @@
                   <div class="col">
                     <div class="card-image" id="imgCard">
                       <a [routerLink]="['/story/', item.id]">
-                        <img class="img img-raised rounded" src="{{'assets/img/'+item.cardimg}}">
+                        <img class="img img-raised rounded" src="{{item.cardImgUrl}}">
                       </a>
                     </div>
                   </div>
                   <div class="col">
                     <h3 class="card-title">
-                      <a [routerLink]="['/story/', item.id]">{{item.cardtitle}}</a>
+                      <a [routerLink]="['/story/', item.id]">{{item.cardTitle}}</a>
                     </h3>
-                    <p class="card-description"> {{item.carddescription}} 
+                    <p class="card-description"> {{item.cardDescription}}
                     </p>
                   </div>
                 </div>

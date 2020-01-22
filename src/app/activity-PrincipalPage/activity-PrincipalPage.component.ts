@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SpreadsheetService } from '../services/spreadsheet.service';
-import { ActivatedRoute } from "@angular/router"
+import { ActivatedRoute } from '@angular/router'
 
 @Component({
   selector: 'app-activity-PrincipalPage',
@@ -9,10 +9,10 @@ import { ActivatedRoute } from "@angular/router"
 })
 export class ActivityPrincipalPage implements OnInit {
 
-  tableActivities : Array<any> = [];
-  tableBlock1 : Array<any> = [];
-  tableBlock2 : Array<any> = [];
-  tableBlock3 : Array<any> = [];
+  tableActivities: Array<any> = [];
+  tableBlock1: Array<any> = [];
+  tableBlock2: Array<any> = [];
+  tableBlock3: Array<any> = [];
 
   constructor(private spreadSheetServiceVariable: SpreadsheetService, private route: ActivatedRoute) {
 
@@ -21,23 +21,17 @@ export class ActivityPrincipalPage implements OnInit {
   ngOnInit() {
 
     window.scrollTo(0, 0);
-    this.tableActivities = this.spreadSheetServiceVariable.DBActivity;
+    this.tableActivities = this.spreadSheetServiceVariable.tables.activities;
 
-    for(let i = 0; i < this.tableActivities.length; i++)
-    {      
-      if(this.tableActivities[i].inblockact == "1") 
-      {        
+    for (let i = 0; i < this.tableActivities.length; i++) {
+      if (this.tableActivities[i].inBlockAct == '1') {
         this.tableBlock1.push(this.tableActivities[i]);
-      }
-      else if(this.tableActivities[i].inblockact == "2")
-      {
+      } else if (this.tableActivities[i].inBlockAct == '2') {
         this.tableBlock2.push(this.tableActivities[i]);
-      }
-      else if(this.tableActivities[i].inblockact == "3")
-      {
+      } else if (this.tableActivities[i].inBlockAct == '3') {
         this.tableBlock3.push(this.tableActivities[i]);
       }
-    }  
+    }
   }
 
 }

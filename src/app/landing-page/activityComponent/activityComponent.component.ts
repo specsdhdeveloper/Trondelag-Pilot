@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SpreadsheetService } from '../../services/spreadsheet.service';
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-activityComponent',
@@ -10,8 +10,8 @@ import { ActivatedRoute } from "@angular/router";
 
 export class ActivityComponentLandingPage implements OnInit {
 
-  row : any;
-  tableActivities : Array<any> = [];
+  row: any;
+  tableActivities: Array<any> = [];
 
   constructor(private spreadSheetJSONServiceVariable: SpreadsheetService, private route: ActivatedRoute) {
 
@@ -19,6 +19,6 @@ export class ActivityComponentLandingPage implements OnInit {
 
   ngOnInit() {
 
-      this.tableActivities = this.spreadSheetJSONServiceVariable.DBActivity;
+      this.tableActivities = this.spreadSheetJSONServiceVariable.tables.activities;
   }
 }

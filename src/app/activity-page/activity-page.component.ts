@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SpreadsheetService} from '../services/spreadsheet.service';
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-activity-page',
@@ -10,24 +10,21 @@ import { ActivatedRoute } from "@angular/router";
 
 export class ActivityPageComponent implements OnInit {
 
-  row : any;
-  table : Array<any> = [];
-  haveImagesCarousel : boolean = false;
-  haveVideo : boolean = false;
+  row: any;
+  table: Array<any> = [];
+  haveImagesCarousel = false;
+  haveVideo = false;
 
   constructor(private spreadSheetJSONServiceVariable: SpreadsheetService, private route: ActivatedRoute) {
 
   }
 
   ngOnInit() {
-
     window.scrollTo(0, 0);
-    this.row = this.spreadSheetJSONServiceVariable.GetRowByActivityID(this.route.snapshot.paramMap.get('id'));
+    const myID = parseInt(this.route.snapshot.paramMap.get('id'))
+    this.row = this.spreadSheetJSONServiceVariable.tables.activities.find(i => i.id === myID)
 
-    if(this.row.carouselimages != "" && this.row.carouselimages != undefined)
-      this.haveImagesCarousel = true;
-
-    if(this.row.videofile != "" && this.row.videofile != undefined)
-      this.haveVideo = true;
+    this.haveImagesCarousel = (this.row.carouselimages != '' && this.row.carouselimages != undefined);
+    this.haveVideo = (this.row.videofile != '' && this.row.videofile != undefined);
   }
 }

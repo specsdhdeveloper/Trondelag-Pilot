@@ -18,7 +18,7 @@ export class StoryPrincipalPage implements OnInit {
   ngOnInit() {
     
     window.scrollTo(0, 0);
-    this.tableStories = this.spreadSheetServiceVariable.DBStory;
+    this.tableStories = this.spreadSheetServiceVariable.tables.stories
   }
 
 }
