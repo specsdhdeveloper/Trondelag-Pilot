@@ -35,6 +35,7 @@
     "esri-loader": "^2.12.0",
     "font-awesome": "4.7.0",
     "hammerjs": "^2.0.8",
+    "hover.css": "^2.3.2",
     "jquery": "3.3.1",
     "jw-bootstrap-switch-ng2": "2.0.5",
     "ng2-nouislider": "1.7.13",
