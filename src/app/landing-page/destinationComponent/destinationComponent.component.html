@@ -7,16 +7,16 @@
       <div class="row">
         <div class="col-md-3" *ngFor="let item of tableDestinations">
           <div class="card card-plain card-blog">
-            <div class="card-image" id="animationSlideInTop1s">
+            <div class="card-image" id="animationFadeIn06">
               <a [routerLink]="['/destination/', item.id]">
                 <img class="img rounded img-raised" style="width: 250px;height: 200px;" src="{{'assets/img/'+item.cardimg}}" />
               </a>
             </div>
             <div class="card-body">
-              <h4 class="card-title" id="animationSlideInTop1smedio">
+              <h4 class="card-title" id="animationFadeIn08">
                 <a [routerLink]="['/destination/', item.id]">{{item.cardtitle}}</a>
               </h4>
-              <p class="card-description" id="animationSlideInTop2s">
+              <p class="card-description" id="animationFadeIn1">
                 {{item.carddescription}}
               </p>
             </div>
