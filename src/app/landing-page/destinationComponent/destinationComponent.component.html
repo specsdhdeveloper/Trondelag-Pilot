@@ -1,4 +1,4 @@
-<div class="section" id="animationSlideInLeft">
+<div class="section">
   <div class="container">
       <a [routerLink]="['/destinations']">
         <h2 _ngcontent-c4="" class="text-black">Destinasjoner</h2>
@@ -7,16 +7,16 @@
       <div class="row">
         <div class="col-md-3" *ngFor="let item of tableDestinations">
           <div class="card card-plain card-blog">
-            <div class="card-image">
+            <div class="card-image" id="animationSlideInTop1s">
               <a [routerLink]="['/destination/', item.id]">
                 <img class="img rounded img-raised" style="width: 250px;height: 200px;" src="{{'assets/img/'+item.cardimg}}" />
               </a>
             </div>
             <div class="card-body">
-              <h4 class="card-title">
+              <h4 class="card-title" id="animationSlideInTop1smedio">
                 <a [routerLink]="['/destination/', item.id]">{{item.cardtitle}}</a>
               </h4>
-              <p class="card-description">
+              <p class="card-description" id="animationSlideInTop2s">
                 {{item.carddescription}}
               </p>
             </div>
