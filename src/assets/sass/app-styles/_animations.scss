@@ -90,6 +90,9 @@ body {margin: 0;font-family: "Segoe UI", Arial, Helvetica, Sans Serif;} a {text-
 #animationFadeIn12 {
   animation: fadein 1.2s;
 }
+#animationFadeIn14 {
+  animation: fadein 1.4s;
+}
 
 @keyframes fadein {
   from { opacity: 0}
