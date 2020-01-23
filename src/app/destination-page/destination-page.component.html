@@ -1,6 +1,6 @@
 <app-header></app-header>
 
-<div class="page-header page-header-small">
+<div class="page-header page-header-small" id="animationFadeIn02">
     <div *ngIf="!haveVideo">
         <div class="page-header-image rellax-header" data-rellax-speed="-8" [style.backgroundImage] = "'url(assets/img/' + row.cardimg + ')'"></div>        
     </div>
@@ -11,18 +11,18 @@
     <app-background-video *ngIf="haveVideo"></app-background-video>
 </div>
 
-<div class="section section-about-us" id="animationSlideInLeft">
+<div class="section section-about-us">
     <div class="container">
         <div class="row">
             <div class="col-md-8 ml-auto mr-auto text-center">
                 <!--<h2 class="title">{{row.cardtitle}}</h2>-->
-                <h5 class="description">{{row.carddescription}}</h5>
+                <h5 class="description" id="animationFadeIn06">{{row.carddescription}}</h5>
             </div>
         </div>
         <div class="separator separator-primary"></div>
         <div class="section-story-overview">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6" id="animationFadeIn1">
                     <!-- First image on the left side -->
                     <div class="image-container image-left" [style.backgroundImage] = "'url(assets/img/' + row.imgleft + ')'">
                         <p class="blockquote blockquote-primary">{{row.blockquote}}
@@ -34,7 +34,7 @@
                     <!-- Second image on the left side of the article -->
                     <div class="image-container image-left-bottom" [style.backgroundImage] = "'url(assets/img/' + row.imgright + ')'"></div>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-5" id="animationFadeIn14">
                     <!-- First image on the right side, above the article -->
                     <div class="image-container image-right" [style.backgroundImage] = "'url(assets/img/' + row.imgleftbottom + ')'"></div>
                     <!--<h3>So what does the new record for the lowest level of winter ice actually mean</h3>-->
