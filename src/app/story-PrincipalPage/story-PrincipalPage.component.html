@@ -1,7 +1,7 @@
 <app-header></app-header>
 
 <!--CAROUSEL-->
-<div class="header">
+<div class="header" id="animationFadeIn02">
     <ngb-carousel [keyboard]="true" [pauseOnHover]="true">
       <ng-template ngbSlide>
           <div class="wrapper" style="background-image: url('assets/img/tirpitz/Fleet_Air_Arm_attack_the_battleship_Tirpitz_crop.jpg');"></div>
@@ -19,7 +19,7 @@
     <h1 class="title" id="titleCarousel">HISTORIER</h1>
 </div>
 
-<div class="section" id="animationSlideInLeft">
+<div class="section">
     <div class="container">
       <div class="row">
         <div *ngFor="let item of tableStories" class="col-md-5">
@@ -28,17 +28,17 @@
               <div class="card card-plain card-blog">
                 <div class="row">
                   <div class="col">
-                    <div class="card-image" id="imgCard">
+                    <div class="card-image" id="imgCard" id="animationFadeIn06">
                       <a [routerLink]="['/story/', item.id]">
                         <img class="img img-raised rounded" src="{{'assets/img/'+item.cardimg}}">
                       </a>
                     </div>
                   </div>
                   <div class="col">
-                    <h3 class="card-title">
+                    <h3 class="card-title" id="animationFadeIn1">
                       <a [routerLink]="['/story/', item.id]">{{item.cardtitle}}</a>
                     </h3>
-                    <p class="card-description"> {{item.carddescription}} 
+                    <p class="card-description" id="animationFadeIn14"> {{item.carddescription}} 
                     </p>
                   </div>
                 </div>

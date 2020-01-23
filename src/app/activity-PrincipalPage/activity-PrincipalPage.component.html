@@ -1,7 +1,7 @@
 <app-header></app-header>
 
 <!--CAROUSEL-->
-<div class="header">
+<div class="header" id="animationFadeIn02">
     <ngb-carousel [keyboard]="true" [pauseOnHover]="true">
         <ng-template ngbSlide>
             <div class="wrapper" style="background-image: url('assets/img/tours/sailing5.jpg');"></div>
@@ -19,7 +19,7 @@
       <h1 class="title" id="titleCarousel">TURER OG AKTIVITETER</h1>
 </div>
 
-<div class="container-fluid h-1" style="background-color:#b8d4e4;" id="animationSlideInLeft">
+<div class="container-fluid h-1" style="background-color:#b8d4e4;" id="animationFadeIn06">
     <br >
     <div class="row align-items-center text-black text-center font-weight-border">
         <div class="col">
@@ -66,13 +66,13 @@
     <br _ngcontent-c1="">
 </div>
   
-<div class="container-fluid h-1" style="background-color:rgb(238, 238, 238);" id="animationSlideInLeft">
+<div class="container-fluid h-1" style="background-color:rgb(238, 238, 238);" id="animationFadeIn1">
     <br _ngcontent-c1="">
     <h1 _ngcontent-c1="" class="description text-black text-center font-weight-border">Turer i og fra Trondheim</h1>
     <br _ngcontent-c1="">
 </div>
 
-<div class="section" id="animationSlideInLeft">
+<div class="section">
   <div class="container">
       <div class="row">
         <div *ngFor="let item of tableBlock1" class="col-md-5">
@@ -81,18 +81,18 @@
               <div class="card card-plain card-blog">
                 <div class="row">
                   <div class="col">
-                    <div class="card-image">
+                    <div class="card-image" id="animationFadeIn14">
                       <a [routerLink]="['/activity/', item.id]">
                         <img class="img img-raised rounded" src="{{'assets/img/'+item.cardimg}}">
                       </a>
                     </div>
                   </div>
                   <div class="col">
-                    <h3 class="card-title">
+                    <h3 class="card-title" id="animationFadeIn18">
                       <a [routerLink]="['/activity/', item.id]">{{item.cardtitle}}</a>
                     </h3>
                     <p class="card-description"> {{item.carddescription}} </p>
-                    <h6 class="card-description">
+                    <h6 class="card-description" id="animationFadeIn22">
                       <a>{{item.itin1}}</a>
                     </h6>
                   </div>
@@ -104,7 +104,7 @@
     </div>
 </div>
 
-<div class="container-fluid h-1" style="background-color:rgb(238, 238, 238);" id="animationSlideInLeft">
+<div class="container-fluid h-1" style="background-color:rgb(238, 238, 238);">
     <br _ngcontent-c1="">
     <h1 _ngcontent-c1="" class="description text-black text-center font-weight-border">Historiske Trondheimsfjorden</h1>
     <br _ngcontent-c1="">
@@ -142,7 +142,7 @@
     </div>
 </div>
 
-<div class="container-fluid h-1" style="background-color:rgb(238, 238, 238);" id="animationSlideInLeft">
+<div class="container-fluid h-1" style="background-color:rgb(238, 238, 238);">
     <br _ngcontent-c1="">
     <h1 class="description text-black text-center font-weight-border">Museer og opplevelser</h1>
     <br _ngcontent-c1="">
