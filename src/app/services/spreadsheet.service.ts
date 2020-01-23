@@ -3,6 +3,7 @@ import { Observable, Subscription, forkJoin  } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { map, mergeMap } from 'rxjs/operators';
+import {environment} from '../../environments/environment';
 
 @Injectable({
     providedIn: 'root'
@@ -15,8 +16,6 @@ export class SpreadsheetService { //TODO rename to API service
         stories: [],
         activities: []
     }
-
-    apiUrl = 'http://54.228.244.252:1337/'
 
     imgFields = ['cardImg', 'imgLeft', 'imgRight', 'imgLeftBottom', 'mapImg']
 
@@ -32,7 +31,11 @@ export class SpreadsheetService { //TODO rename to API service
                             for (const x in entry) {
                                 for (let field of this.imgFields) {
                                     if (x == field && entry[field] != null) {
-                                        obj[field + 'Url'] = entry[field].url
+                                        if(environment.prependImageURL) {
+                                            obj[field + 'Url'] = environment.apiUrl + entry[field].url
+                                        } else {
+                                            obj[field + 'Url'] = entry[field].url
+                                        }
                                     } else {
                                         obj[x] = entry[x]
                                     }
@@ -52,7 +55,7 @@ export class SpreadsheetService { //TODO rename to API service
 
         const calls = [];
         Object.keys(this.tables).forEach(table => {
-            calls.push( this.getJSON(this.apiUrl, table));
+            calls.push( this.getJSON(environment.apiUrl + '/', table));
         })
 
         return forkJoin(calls);
