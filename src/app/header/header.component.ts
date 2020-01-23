@@ -47,12 +47,7 @@ export class HeaderComponent implements OnInit {
   onWindowScroll(e) {
     
       let element = document.querySelector('.navbar');
-      console.log("window.screen.width " + window.screen.width);
-      //console.log("element.clientHeight " + element.clientHeight);
-      //console.log("window.pageYOffset " + window.pageYOffset);
-
       this.offsetScroll = window.screen.width * 1/3;
-      console.log("Rage" + this.offsetScroll);
 
       if (window.pageYOffset < this.offsetScroll) {
         element.classList.add('navbar-transparent');
