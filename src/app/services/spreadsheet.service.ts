@@ -17,8 +17,6 @@ export class SpreadsheetService { //TODO rename to API service
         activities: []
     }
 
-    imgFields = ['cardImg', 'imgLeft', 'imgRight', 'imgLeftBottom', 'mapImg']
-
     public getJSON(url, table): Observable<any> {
         return this.http.get(url + table)
             .pipe(
@@ -29,16 +27,11 @@ export class SpreadsheetService { //TODO rename to API service
                         data.forEach(entry => {
                             const obj = {};
                             for (const x in entry) {
-                                for (let field of this.imgFields) {
-                                    if (x == field && entry[field] != null) {
-                                        if(environment.prependImageURL) {
-                                            obj[field + 'Url'] = environment.apiUrl + entry[field].url
-                                        } else {
-                                            obj[field + 'Url'] = entry[field].url
-                                        }
-                                    } else {
-                                        obj[x] = entry[x]
-                                    }
+                                if(entry[x] != null){
+                                    obj[x] = entry[x];
+                                    if (obj[x].url != null && environment.prependImageURL) {
+                                        obj[x].url = environment.apiUrl + obj[x].url;
+                                    };
                                 }
                             }
                             returnArray.push(obj);

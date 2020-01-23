@@ -1,7 +1,7 @@
 <app-header></app-header>
 
 <div class="page-header page-header-small" *ngIf="!haveImagesCarousel">
-    <div class="page-header-image rellax-header" data-rellax-speed="-8" [style.backgroundImage] = "'url(' + row.cardImgUrl + ')'"></div>
+    <div class="page-header-image rellax-header" data-rellax-speed="-8" [style.backgroundImage] = "'url(' + row.cardImg.url + ')'"></div>
     <div class="content-center">
         <h1 class="title">{{row.cardTitle}}</h1>
     </div>
@@ -25,7 +25,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <!-- First image on the left side -->
-                    <div class="image-container image-left" [style.backgroundImage] = "'url(' + row.imgLeftUrl + ')'">
+                    <div class="image-container image-left" [style.backgroundImage] = "'url(' + row.imgLeft.url + ')'">
                         <p class="blockquote blockquote-primary">{{row.blockquote}}
                             <br>
                             <br>
@@ -33,11 +33,11 @@
                         </p>
                     </div>
                     <!-- Second image on the left side of the article -->
-                    <div class="image-container image-left-bottom" [style.backgroundImage] = "'url(' + row.imgLeftBottomUrl + ')'"></div>
+                    <div class="image-container image-left-bottom" [style.backgroundImage] = "'url(' + row.imgLeftBottom.url + ')'"></div>
                 </div>
                 <div class="col-md-5">
                     <!-- First image on the right side, above the article -->
-                    <div class="image-container image-right" [style.backgroundImage] = "'url(' + row.imgRightUrl + ')'"></div>
+                    <div class="image-container image-right" [style.backgroundImage] = "'url(' + row.imgRight.url + ')'"></div>
                     <!--<h3>So what does the new record for the lowest level of winter ice actually mean</h3>-->
                     <p>{{row.p1}}</p>
                     <p>{{row.p2}}</p>
