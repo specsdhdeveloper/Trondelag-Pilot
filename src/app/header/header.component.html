@@ -19,8 +19,23 @@
               <p>Turer og aktiviteter</p>
             </a>
           </li>-->
+          <div class="btn-group" dropdown>
+            <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+                    aria-controls="dropdown-basic">
+              Button dropdown <span class="caret"></span>
+            </button>
+            <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+                role="menu" aria-labelledby="button-basic">
+              <li role="menuitem"><a href="#" class="dropdown-item" href="#">Action</a></li>
+              <li role="menuitem"><a href="#" class="dropdown-item" href="#">Another action</a></li>
+              <li role="menuitem"><a href="#" class="dropdown-item" href="#">Something else here</a></li>
+              <li class="divider dropdown-divider"></li>
+              <li role="menuitem"><a href="#" class="dropdown-item" href="#">Separated link</a>
+              </li>
+            </ul>
+          </div>
           <li class="nav-item dropdown">
-            <a class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a href="#" class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Destinasjoner
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -30,7 +45,7 @@
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a href="#" class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Turer og aktiviteter
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -45,24 +60,5 @@
             </a>
         </ul>
     </div>
-  </div>
-  <div class="btn-group" dropdown>
-    <button type="button" class="btn btn-danger">Action</button>
-    <button id="button-split" type="button" dropdownToggle class="btn btn-danger dropdown-toggle dropdown-toggle-split"
-            aria-controls="dropdown-split">
-      <span class="caret"></span>
-      <span class="sr-only">Split button!</span>
-    </button>
-    <ul id="dropdown-split" *dropdownMenu class="dropdown-menu"
-        role="menu" aria-labelledby="button-split">
-      <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
-      <li role="menuitem"><a class="dropdown-item" href="#">Another action</a>
-      </li>
-      <li role="menuitem"><a class="dropdown-item" href="#">Something else
-        here</a></li>
-      <li class="divider dropdown-divider"></li>
-      <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
-      </li>
-    </ul>
   </div>
 </nav>
