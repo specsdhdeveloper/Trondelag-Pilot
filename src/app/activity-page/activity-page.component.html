@@ -58,20 +58,74 @@
 <div class="section" style="background-color:#e4e1db;">
     <br _ngcontent-c1="">
     <div class="container">
-        <h3>Reiserute</h3>
-        <div class="row">            
-            <div class="col">                
-                <p class="description text-black text-left font-weight-border" style="padding: 0 40px">{{row.itin2}}</p>
-                <p class="description text-black text-left font-weight-border" style="padding: 0 40px" *ngIf="row.itin2">{{row.itin2}}</p>
+        <div class="row">
+            <div class="col-7" style="padding: 0 60px;">
+                <h3 class="" style="font: bold;">Reiserute (Itinerary, full)</h3>
+                <p class="">{{row.itin2}}</p>
+                <hr class="style1">
+                <h4>What's included</h4>
+                <p>{{row.itin2}}</p>
+                <h4 *ngIf="row.itin2" style="font: bold;">What's not included</h4>
+                <p *ngIf="row.itin2">{{row.itin2}}</p>
+                <hr class="style1">
+                <h4>Practical information</h4>
+                <hr class="style1">
+                <h4>FAQ</h4>
             </div>
-            <div class="col">
-                <div class="container" style="background-color:#e4e1db;">
-                    <h4>Pricing</h4>
-                    <p class="description text-black text-left font-weight-border" style="padding: 0 40px">{{row.itin2}}</p>
-                </div>
-                <div class="container" style="background-color:#e4e1db;">
-                    <h4>Booking</h4>
-                    <p class="description text-black text-left font-weight-border" style="padding: 0 40px">{{row.itin2}}</p>
+            <div class="col" style="background-color:white;width: 100%;height: 800px;padding-top: 5em;margin-right: 60px;margin-left: 0;">
+                <div class="container">
+                    <div class="row" style="margin-bottom: 10%;">
+                        <div class="col-md-7">
+                            <p style="float: left;"><img class="img img-raised rounded" src="assets/img/icons/open-book_black.png" style="width: 30px;height: 30px;background-color: transparent;background-repeat: no-repeat;background-position: center center;background-size: cover;overflow: hidden;margin-right: 20px; margin-left: 20px;align-content: left;"/></p>
+                            <p>Stardato</p>
+                        </div>
+                        <div class="col-md-5 text-right">                            
+                            <p class="form-control text-info text-left" type="text">23 Mai 2020</p>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 10%;">
+                        <div class="col-md-7">
+                            <p style="float: left;"><img class="img img-raised rounded" src="assets/img/icons/clock_black.png" style="width: 30px;height: 30px;background-color: transparent;background-repeat: no-repeat;background-position: center center;background-size: cover;overflow: hidden;margin-right: 20px; margin-left: 20px;align-content: left;"/></p>
+                            <p>Starttid</p>
+                        </div>
+                        <div class="col-md-5 text-right">
+                            <p class="form-control text-info text-left" type="text">09:15</p>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 10%;">
+                        <div class="col-md-7">
+                            <p style="float: left;"><img class="img img-raised rounded" src="assets/img/icons/parent-child1_black.png" style="width: 30px;height: 30px;background-color: transparent;background-repeat: no-repeat;background-position: center center;background-size: cover;overflow: hidden;margin-right: 20px; margin-left: 20px;align-content: left;"/></p>
+                            <p>Personer</p>
+                        </div>
+                        <div class="col-md-5 text-right">
+                            <p class="form-control text-info text-left" type="text">2 voksne, 3 barn</p>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 10%;">
+                        <div class="col-md-7">
+                            <p style="float: left;"><img class="img img-raised rounded" src="assets/img/icons/open-book_black.png" style="width: 30px;height: 30px;background-color: transparent;background-repeat: no-repeat;background-position: center center;background-size: cover;overflow: hidden;margin-right: 20px; margin-left: 20px;align-content: left;"/></p>
+                            <p>Sprak</p>
+                        </div>
+                        <div class="col-md-5 text-right">
+                            <p class="form-control text-info text-left" type="text">Norsk</p>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 10%;">
+                        <div class="col-md-7">
+                            <p style="float: left;"><img class="img img-raised rounded" src="assets/img/icons/access-person_black.png" style="width: 30px;height: 30px;background-color: transparent;background-repeat: no-repeat;background-position: center center;background-size: cover;overflow: hidden;margin-right: 20px; margin-left: 20px;align-content: left;"/></p>
+                            <p>Spesialieter</p>
+                        </div>
+                        <div class="col-md-5 text-right">
+                            <p class="form-control text-info text-left" type="text">5 x lydguide</p>
+                        </div>
+                    </div>
+                    <hr class="style1">
+                    <p class="text-right text-info" style="font-size: 25pt;"><b>NOK 350</b></p>
+                    <p class="text-right text-info" style="font-size: 25pt;"><b>Euros 35</b></p>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-simple btn-round float-right" type="button" style="border-color: #2CA8FF;background-color: #2CA8FF;color: white;">Reservere</button>
+                        <button class="btn btn-primary btn-simple btn-round float-right " type="button" style="border-color: #2CA8FF;color: #2CA8FF;border: 2px solid;margin-right: 10px;">Sporre</button>
+                    </div>
                 </div>
             </div>
         </div>        
