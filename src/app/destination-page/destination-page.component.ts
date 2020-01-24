@@ -9,7 +9,7 @@ import { CarouselComponent } from '../carousel/carousel.component';
 @Component({
   selector: 'app-destination-page',
   templateUrl: './destination-page.component.html',
-  styleUrls: ['./destination-page.component.css']
+  styleUrls: ['./destination-page.component.scss']
 })
 
 export class DestinationPageComponent implements OnInit {//, AfterViewInit {

@@ -4,16 +4,16 @@
 <div class="header" id="animationFadeIn02">
     <ngb-carousel [keyboard]="true" [pauseOnHover]="true">
       <ng-template ngbSlide>
-          <div class="wrapper" style="background-image: url('assets/img/tirpitz/Fleet_Air_Arm_attack_the_battleship_Tirpitz_crop.jpg');"></div>
+          <div class="wrapperCar" style="background-image: url('assets/img/tirpitz/Fleet_Air_Arm_attack_the_battleship_Tirpitz_crop.jpg');"></div>
       </ng-template>
       <ng-template ngbSlide>
-          <div class="wrapper" style="background-image: url('assets/img/saami/Saami_Family_1900_crop1.jpg');"></div>
+          <div class="wrapperCar" style="background-image: url('assets/img/saami/Saami_Family_1900_crop1.jpg');"></div>
       </ng-template>
       <ng-template ngbSlide>
-          <div class="wrapper" style="background-image: url('assets/img/stiklestad/stiklestad_killing_crop.jpg');"></div>
+          <div class="wrapperCar" style="background-image: url('assets/img/stiklestad/stiklestad_killing_crop.jpg');"></div>
       </ng-template>
       <ng-template ngbSlide>
-        <div class="wrapper" style="background-image: url('assets/img/tours/bombed.jpg');"></div>
+        <div class="wrapperCar" style="background-image: url('assets/img/tours/bombed.jpg');"></div>
     </ng-template>
     </ngb-carousel>
     <h1 class="title" id="titleCarousel">HISTORIER</h1>
@@ -22,17 +22,18 @@
 <div class="section">
     <div class="container">
       <div class="row">
-        <div *ngFor="let item of tableStories" class="col-md-5">
+        <div *ngFor="let item of tableStories" class="col-md-6">
           <div class="col">
               <br _ngcontent-c1="">
               <div class="card card-plain card-blog">
                 <div class="row">
                   <div class="col">
-                    <div class="card-image" id="imgCard" id="animationFadeIn06">
+                    <!--<div class="card-image" id="imgCard" id="animationFadeIn06">
                       <a [routerLink]="['/story/', item.id]">
                         <img class="img img-raised rounded" src="{{'assets/img/'+item.cardimg}}">
                       </a>
-                    </div>
+                    </div>-->
+                    <div class="card-image img rounded img-raised wrapper" [style.backgroundImage] = "'url(assets/img/' + item.cardimg + ')'" [routerLink]="['/story/', item.id]"></div>
                   </div>
                   <div class="col">
                     <h3 class="card-title" id="animationFadeIn1">

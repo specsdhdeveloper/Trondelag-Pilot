@@ -4,16 +4,16 @@
 <div class="header" id="animationFadeIn02">
     <ngb-carousel [keyboard]="true" [pauseOnHover]="true">
         <ng-template ngbSlide>
-            <div class="wrapper" style="background-image: url('assets/img/tours/sailing5.jpg');"></div>
+            <div class="wrapperCarousel" style="background-image: url('assets/img/tours/sailing5.jpg');"></div>
             <!--<div class="carousel-caption">
               <h3>TURER OG AKTIVITETER</h3>
             </div>-->
         </ng-template>
         <ng-template ngbSlide>
-            <div class="wrapper" style="background-image: url('assets/img/tours/bombed.jpg');"></div>
+            <div class="wrapperCarousel" style="background-image: url('assets/img/tours/bombed.jpg');"></div>
         </ng-template>
         <ng-template ngbSlide>
-            <div class="wrapper" style="background-image: url('assets/img/skatval/Skatval-museum_fb1.jpg');"></div>
+            <div class="wrapperCarousel" style="background-image: url('assets/img/skatval/Skatval-museum_fb1.jpg');"></div>
         </ng-template>
       </ngb-carousel>
       <h1 class="title" id="titleCarousel">TURER OG AKTIVITETER</h1>
@@ -75,17 +75,17 @@
 <div class="section">
   <div class="container">
       <div class="row">
-        <div *ngFor="let item of tableBlock1" class="col-md-5">
+        <div *ngFor="let item of tableBlock1" class="col-md-6">
           <div class="col">
-              <br>
               <div class="card card-plain card-blog">
                 <div class="row">
                   <div class="col">
-                    <div class="card-image" id="animationFadeIn14">
+                    <!--<div class="card-image" id="animationFadeIn14">
                       <a [routerLink]="['/activity/', item.id]">
                         <img class="img img-raised rounded" src="{{'assets/img/'+item.cardimg}}">
                       </a>
-                    </div>
+                    </div>-->
+                    <div class="card-image img rounded img-raised wrapper" id="animationFadeIn14" [style.backgroundImage] = "'url(assets/img/' + item.cardimg + ')'" [routerLink]="['/activity/', item.id]"></div>
                   </div>
                   <div class="col">
                     <h3 class="card-title" id="animationFadeIn18">
@@ -110,20 +110,21 @@
     <br _ngcontent-c1="">
 </div>
 
-<div class="section" id="animationSlideInLeft">
+<div class="section">
     <div class="container">
       <div class="row">
-        <div *ngFor="let item of tableBlock2" class="col-md-5">
+        <div *ngFor="let item of tableBlock2" class="col-md-6">
           <div class="col">
               <br _ngcontent-c1="">
               <div class="card card-plain card-blog">
                 <div class="row">
                   <div class="col">
-                    <div class="card-image">
+                    <!--<div class="card-image">
                       <a [routerLink]="['/activity/', item.id]">
                         <img class="img img-raised rounded" src="{{'assets/img/'+ item.cardimg}}">
                       </a>
-                    </div>
+                    </div>-->
+                    <div class="card-image img rounded img-raised wrapper" [style.backgroundImage] = "'url(assets/img/' + item.cardimg + ')'" [routerLink]="['/activity/', item.id]"></div>
                   </div>
                   <div class="col">
                     <h3 class="card-title">
@@ -148,17 +149,18 @@
     <br _ngcontent-c1="">
 </div>
 
-<div class="section" id="animationSlideInLeft">
+<div class="section">
     <div class="container">
       <br />
       <div class="row">
-        <div class="col-lg">
+        <div class="col-md">
           <div class="card card-plain card-blog">
-            <div class="card-image">
+            <!--<div class="card-image">
               <a href="https://www.jodiskmuseum.org/index.html">
-                <img class="img rounded img-raised" style="width: 250px;height: 200px;" src="{{'assets/img/museums/JewishMuseum3_crop.jpg'}}" />
+                <img class="img rounded img-raised" src="{{'assets/img/museums/JewishMuseum3_crop.jpg'}}" />
               </a>
-            </div>
+            </div>-->
+            <div class="card-image img rounded img-raised wrapper" [style.backgroundImage] = "'url(assets/img/museums/JewishMuseum3_crop.jpg)'" href="https://www.jodiskmuseum.org/index.html"></div>
             <div class="card-body">
               <h4 class="card-title text-center">
                 <a href="https://www.jodiskmuseum.org/index.html">Jødisk museum</a>
@@ -167,13 +169,9 @@
           </div>
         </div>
 
-        <div class="col-lg">
+        <div class="col-md">
           <div class="card card-plain card-blog">
-            <div class="card-image">
-              <a href="https://justismuseet.no/">
-                <img class="img rounded img-raised" style="width: 250px;height: 200px;" src="{{'assets/img/museums/JusticeMuseum2_sq.jpg'}}" />
-              </a>
-            </div>
+            <div class="card-image img rounded img-raised wrapper" [style.backgroundImage] = "'url(assets/img/museums/JusticeMuseum2_sq.jpg)'" href="https://justismuseet.no/"></div>
             <div class="card-body">
               <h4 class="card-title text-center">
                 <a href="https://justismuseet.no/">Justismuseet</a>
@@ -182,13 +180,9 @@
           </div>
         </div>
 
-        <div class="col-lg">
+        <div class="col-md">
           <div class="card card-plain card-blog">
-            <div class="card-image">
-              <a href="https://falstadsenteret.no/">
-                <img class="img rounded img-raised" style="width: 250px;height: 200px;" src="{{'assets/img/falstad/Falstad_crop2.jpg'}}" />
-              </a>
-            </div>
+            <div class="card-image img rounded img-raised wrapper" [style.backgroundImage] = "'url(assets/img/falstad/Falstad_crop2.jpg)'" href="https://falstadsenteret.no/"></div>
             <div class="card-body">
               <h4 class="card-title text-center">
                 <a href="https://falstadsenteret.no/">Falstadsenteret</a>
@@ -197,13 +191,9 @@
           </div>
         </div>
 
-        <div class="col-lg">
+        <div class="col-md">
           <div class="card card-plain card-blog">
-            <div class="card-image">
-              <a href="https://www.facebook.com/Skatval-Krigshistoriske-Museum-426882890847369/">
-                <img class="img rounded img-raised" style="width: 250px;height: 200px;" src="{{'assets/img/skatval/Skatval-museum_fb1.jpg'}}" />
-              </a>
-            </div>
+            <div class="card-image img rounded img-raised wrapper" [style.backgroundImage] = "'url(assets/img/skatval/Skatval-museum_fb1.jpg)'" href="https://www.facebook.com/Skatval-Krigshistoriske-Museum-426882890847369/"></div>
             <div class="card-body">
               <h4 class="card-title text-center">
                 <a href="https://www.facebook.com/Skatval-Krigshistoriske-Museum-426882890847369/">Skatval krigshistoriske museum</a>
