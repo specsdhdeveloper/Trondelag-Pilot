@@ -68,20 +68,23 @@ export class EsriMapComponent implements OnInit, AfterViewInit {
 
     // use esri-loader to load JSAPI modules
     return loadModules([
-        'esri/Map',
+        'esri/WebScene',
         'esri/views/SceneView',
         'esri/layers/SceneLayer'
     ])
-      .then(([Map, SceneView, SceneLayer]) => {
-          var map = new Map({
+      .then(([WebScene, SceneView, SceneLayer]) => {
+          const scene = new WebScene({
               basemap: "satellite",
-              ground: "world-elevation"
+              ground: "world-elevation",
+              portalItem: {
+                  id: "ece859ba1e0a4668940c5f10bb3fe4e3"
+              }
           });
 
         this.sceneView = new SceneView({
           container: this.viewNode.nativeElement,
           zoom: 9,
-          map: map,
+          map: scene,
           center: [10.659398, 63.919525]
         });
 
@@ -92,7 +95,7 @@ export class EsriMapComponent implements OnInit, AfterViewInit {
               },
               popupEnabled: false
           });
-          map.add(sceneLayer);
+          scene.add(sceneLayer);
 
           sceneLayer = new SceneLayer({
               portalItem: {
@@ -100,7 +103,7 @@ export class EsriMapComponent implements OnInit, AfterViewInit {
               },
               popupEnabled: false
           });
-          map.add(sceneLayer);
+          scene.add(sceneLayer);
 
 
           sceneLayer = new SceneLayer({
@@ -109,7 +112,7 @@ export class EsriMapComponent implements OnInit, AfterViewInit {
               },
               popupEnabled: false
           });
-          map.add(sceneLayer);
+          scene.add(sceneLayer);
 
           // Create MeshSymbol3D for symbolizing SceneLayer
           var symbol = {
