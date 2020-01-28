@@ -114,7 +114,7 @@ export class EsriMapComponent implements OnInit {
         scene.add(sceneLayer);
 
         // Create MeshSymbol3D for symbolizing SceneLayer
-        let symbol = {
+        const symbol = {
           type: 'mesh-3d', // autocasts as new MeshSymbol3D()
             symbolLayers: [
               {
@@ -132,14 +132,25 @@ export class EsriMapComponent implements OnInit {
             symbol: symbol
         };
 
+        // It's necessary to overwrite the default click for the popup behavior in order to display your own popup
+        this.sceneView.popup.autoOpenEnabled = false;
+
         this.sceneView.when(() => { // all the resources in the mapbiew and the map have loaded
           // this.mapService.panToDestination(0);
         }, (err) => console.log(err));
 
-        // triggers when popup opens or closes
-        this.sceneView.popup.watch('selectedFeature', function(e) {
-          console.log('selected feature : ')
-          console.log(e.attributes)
+        const myView = this.sceneView
+
+        //if a feature was clicked, print its id within its layer
+        myView.on('pointer-down', function(event) {
+          myView.hitTest(event).then(function(response) {
+            if (response) {
+              console.log('map click')
+              const myPath = response.results[0].graphic.layer.parsedUrl.path
+              const splitPath = myPath.split('/')
+              console.log(splitPath[splitPath.length - 1])
+            }
+          });
         });
 
       }).catch(err => {
