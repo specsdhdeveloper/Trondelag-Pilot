@@ -28,14 +28,16 @@ import { ActivityPageComponent } from './activity-page/activity-page.component';
 import { DestinationPrincipalPage } from './destination-PrincipalPage/destination-PrincipalPage.component';
 import { StoryPrincipalPage } from './story-PrincipalPage/story-PrincipalPage.component';
 import { ActivityPrincipalPage } from './activity-PrincipalPage/activity-PrincipalPage.component';
+import {EsriMapComponent} from './esri-map/esri-map.component';
 
-const routes: Routes =[
+const routes: Routes = [
     { path: '', redirectTo: 'landing', pathMatch: 'full'},
+    { path: 'map',                  component: EsriMapComponent,                resolve: { esriMap : SpreadsheetResolver}},
     { path: 'principalLanding',     component: PrincipalLandingPageComponent,   resolve: { principalLanding : SpreadsheetResolver}},
     { path: 'destinations',         component: DestinationPrincipalPage,        resolve: { principalDestination : SpreadsheetResolver}},
     { path: 'destination/:id',      component: DestinationPageComponent,        resolve: { destinations : SpreadsheetResolver}},
     { path: 'stories',              component: StoryPrincipalPage,              resolve: { principalStory : SpreadsheetResolver}},
-    { path: 'story/:id',            component: StoryPageComponent,              resolve: { story : SpreadsheetResolver}},    
+    { path: 'story/:id',            component: StoryPageComponent,              resolve: { story : SpreadsheetResolver}},
     { path: 'activities',           component: ActivityPrincipalPage,           resolve: { principalActivity : SpreadsheetResolver}},
     { path: 'activity/:id',         component: ActivityPageComponent,           resolve: { activity : SpreadsheetResolver}},
     { path: 'landing',              component: LandingPageComponent,            resolve: { landing : SpreadsheetResolver}},
@@ -60,7 +62,7 @@ const routes: Routes =[
     imports: [
         CommonModule,
         BrowserModule,
-        RouterModule.forRoot(routes,{
+        RouterModule.forRoot(routes, {
           useHash: true,
           onSameUrlNavigation : 'reload'
         })
