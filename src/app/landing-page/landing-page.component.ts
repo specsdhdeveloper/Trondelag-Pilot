@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { SpreadsheetService } from '../services/spreadsheet.service';
 import { ActivatedRoute } from "@angular/router";
 import { BsDropdownConfig } from 'ngx-bootstrap/dropdown';
+import { Observable, Subscription, forkJoin  } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { map, mergeMap } from 'rxjs/operators';
+import { LocalStorage } from '@ngx-pwa/local-storage';
 
 @Component({
   selector: 'app-landinghome-page',
@@ -11,11 +15,12 @@ import { BsDropdownConfig } from 'ngx-bootstrap/dropdown';
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor(private spreadSheetServiceVariable: SpreadsheetService, private route: ActivatedRoute) {
+  constructor(private spreadSheetServiceVariable: SpreadsheetService, private route: ActivatedRoute, private http: HttpClient) {
 
   }
 
   ngOnInit() {
+    //"https://specs.owncube.com/index.php/s/dCM64UvY79Fj1vr/download?path=%2F&files=Overview-cropped_h264-800p.mp4"
     this.route.data.subscribe((data:any) => console.log(data));
     window.scrollTo(0, 0);
   }
