@@ -1,9 +1,29 @@
 <app-header></app-header>
 
-<div class="header embed-responsive" id="animationFadeIn02">
-    <video autoplay muted loop oncanplay="this.play()" onloadedmetadata="this.muted = true" id="myVideo">
-        <source src="https://specs.owncube.com/index.php/s/dCM64UvY79Fj1vr/download?path=%2F&files=Overview-cropped_h264-800p.mp4" type="video/mp4">
+<div class="header embed-responsive" id="animationFadeIn02">    
+
+        <!--<video id="video" preload="metadata"></video>-->
+
+        <script>
+        // Later on, after some condition has been met, set video source to the
+        // preloaded video URL.
+        /*video.src = 'https://specs.owncube.com/index.php/s/dCM64UvY79Fj1vr/download?path=%2F&files=Overview-cropped_h264-800p.mp4';
+        video.play().then(_ => {
+            // If preloaded video URL was already cached, playback started immediately.
+            console.log('entra')
+        });*/
+        </script>
+    <video autoplay muted loop oncanplay="this.play()" onloadedmetadata="this.muted = true" id="myVideo" preload="metadata">
+        <source src="https://specs.owncube.com/index.php/s/dCM64UvY79Fj1vr/download?path=%2F&files=Overview-cropped_h264-800p.mp4" type="video/mp4" poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217">
     </video>
+    <!--<script>
+        video.addEventListener('loadedmetadata', function() {
+          if (video.buffered.length === 0) return;
+      
+          var bufferedSeconds = video.buffered.end(0) - video.buffered.start(0);
+          console.log(bufferedSeconds + ' seconds of video are ready to play!');
+        });
+      </script>-->
     <!--<div class="container-fluid text-center" id="textVideo">
         <h2 class="title">Destinasjoner</h2>
     </div>-->
