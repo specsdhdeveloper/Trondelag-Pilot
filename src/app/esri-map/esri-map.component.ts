@@ -24,9 +24,10 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class EsriMapComponent implements OnInit, AfterViewInit {
 
-  @ViewChild('mapViewNode') private viewNode: ElementRef; // needed to inject the MapView into the DOM
-  mapView: __esri.MapView;
+  @ViewChild('sceneViewNode') private viewNode: ElementRef; // needed to inject the MapView into the DOM
+  sceneView: __esri.SceneView;
   panRequestSubscription: any;
+  panCompleteSubscription: any;
 
   row: any;
 
@@ -34,44 +35,107 @@ export class EsriMapComponent implements OnInit, AfterViewInit {
               private spreadSheetJSONServiceVariable: SpreadsheetService,
               private route: ActivatedRoute) {}
 
-  panMap(coordinates){
-    console.log("panning to " + coordinates)
-    this.mapView.goTo(coordinates)
+  printViewpoint() {
+
+    const camera = this.sceneView.viewpoint.camera
+    console.log({position :
+          { latitude:  camera.position.latitude,
+            longitude: camera.position.longitude,
+            z:         camera.position.z
+          },
+          heading: camera.heading,
+          tilt:    camera.tilt
+    })
+  }
+
+  panMap(viewpoint) {
+    console.log('panning')
+    this.sceneView.goTo(viewpoint, {speedFactor: 0.1})
     .then(() => {
-      this.mapView.zoom = 18;
-      setTimeout(() => {
-        this.mapService.panToDestinationComplete();
-      }, 2000);
+      this.mapService.panToDestinationComplete();
     });
   }
 
   public ngOnInit() {
-    //this.row = this.spreadSheetJSONServiceVariable.GetRowByID(this.route.snapshot.paramMap.get('id'));
 
     this.panRequestSubscription = this.mapService.panRequest.subscribe(() => {
-      this.panMap(this.mapService.destinationCoordinates);
+      this.panMap(this.mapService.destinationPosition);
     });
+
+    this.panCompleteSubscription = this.mapService.panComplete.subscribe(() => {
+      this.panMap(this.mapService.destinationPosition);
+    })
 
     // use esri-loader to load JSAPI modules
     return loadModules([
-      'esri/Map',
-      'esri/views/SceneView',
-      'esri/Graphic'
+        'esri/WebScene',
+        'esri/views/SceneView',
+        'esri/layers/SceneLayer'
     ])
-      .then(([Map, MapView, Graphic]) => {
-        const map: __esri.Map = new Map({
-          basemap: 'hybrid',
-          ground: "world-elevation"
+      .then(([WebScene, SceneView, SceneLayer]) => {
+          const scene = new WebScene({
+              basemap: "satellite",
+              ground: "world-elevation",
+              portalItem: {
+                  id: "ece859ba1e0a4668940c5f10bb3fe4e3"
+              }
+          });
+
+        this.sceneView = new SceneView({
+          container: this.viewNode.nativeElement,
+          zoom: 9,
+          map: scene,
+          center: [10.659398, 63.919525]
         });
 
-        this.mapView = new MapView({
-          container: this.viewNode.nativeElement,
-          //TODO use regexp instead of calling replace twice
-          center: [ Number(this.row.longi.replace('"', '').replace('"', '') ),
-                    Number(this.row.latitud.replace('"', '').replace('"', '') )],
-          zoom: 18,
-          map: map
-        });
+          // Create SceneLayer and add to the map
+          let sceneLayer = new SceneLayer({
+              portalItem: {
+                  id: "0cb2a926f28b47a09a90d1845e2937c0"
+              },
+              popupEnabled: false
+          });
+          scene.add(sceneLayer);
+
+          sceneLayer = new SceneLayer({
+              portalItem: {
+                  id: "72b449d8a22448d2ac93f49dbd687804"
+              },
+              popupEnabled: false
+          });
+          scene.add(sceneLayer);
+
+
+          sceneLayer = new SceneLayer({
+              portalItem: {
+                  id: "70f6bf1b1cda437ea413dc86d2bc4703"
+              },
+              popupEnabled: false
+          });
+          scene.add(sceneLayer);
+
+          // Create MeshSymbol3D for symbolizing SceneLayer
+          var symbol = {
+              type: "mesh-3d", // autocasts as new MeshSymbol3D()
+              symbolLayers: [
+                  {
+                      type: "fill", // autocasts as new FillSymbol3DLayer()
+                      // If the value of material is not assigned, the default color will be grey
+                      material: {
+                          color: [244, 247, 134]
+                      }
+                  }
+              ]
+          };
+          // Add the renderer to sceneLayer
+          sceneLayer.renderer = {
+              type: "simple", // autocasts as new SimpleRenderer()
+              symbol: symbol
+          };
+
+        this.sceneView.when(() => { // all the resources in the mapbiew and the map have loaded
+          // this.mapService.panToDestination(0);
+        }, (err) => console.log(err));
 
       })
         .catch(err => {
