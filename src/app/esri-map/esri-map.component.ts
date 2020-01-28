@@ -11,7 +11,7 @@
   limitations under the License.
 */
 
-import { Component, OnInit, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { loadModules } from 'esri-loader';
 import { EsriMapService } from '../services/esri-map.service';
 import { SpreadsheetService } from '../services/spreadsheet.service';
@@ -22,7 +22,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './esri-map.component.html',
   styleUrls: ['./esri-map.component.css']
 })
-export class EsriMapComponent implements OnInit, AfterViewInit {
+export class EsriMapComponent implements OnInit {
 
   @ViewChild('sceneViewNode') private viewNode: ElementRef; // needed to inject the MapView into the DOM
   sceneView: __esri.SceneView;
@@ -70,16 +70,16 @@ export class EsriMapComponent implements OnInit, AfterViewInit {
     return loadModules([
         'esri/WebScene',
         'esri/views/SceneView',
-        'esri/layers/SceneLayer'
+        'esri/layers/SceneLayer',
     ])
       .then(([WebScene, SceneView, SceneLayer]) => {
-          const scene = new WebScene({
-              basemap: "satellite",
-              ground: "world-elevation",
-              portalItem: {
-                  id: "ece859ba1e0a4668940c5f10bb3fe4e3"
-              }
-          });
+        const scene = new WebScene({
+          basemap: 'satellite',
+          ground: 'world-elevation',
+          portalItem: {
+            id: 'ece859ba1e0a4668940c5f10bb3fe4e3'
+          }
+        });
 
         this.sceneView = new SceneView({
           container: this.viewNode.nativeElement,
@@ -88,64 +88,63 @@ export class EsriMapComponent implements OnInit, AfterViewInit {
           center: [10.659398, 63.919525]
         });
 
-          // Create SceneLayer and add to the map
-          let sceneLayer = new SceneLayer({
+        // Create SceneLayer and add to the map
+        let sceneLayer = new SceneLayer({
               portalItem: {
-                  id: "0cb2a926f28b47a09a90d1845e2937c0"
+                  id: '0cb2a926f28b47a09a90d1845e2937c0'
               },
               popupEnabled: false
           });
-          scene.add(sceneLayer);
+        scene.add(sceneLayer);
 
-          sceneLayer = new SceneLayer({
+        sceneLayer = new SceneLayer({
               portalItem: {
-                  id: "72b449d8a22448d2ac93f49dbd687804"
+                  id: '72b449d8a22448d2ac93f49dbd687804'
               },
               popupEnabled: false
           });
-          scene.add(sceneLayer);
+        scene.add(sceneLayer);
 
-
-          sceneLayer = new SceneLayer({
+        sceneLayer = new SceneLayer({
               portalItem: {
-                  id: "70f6bf1b1cda437ea413dc86d2bc4703"
+                  id: '70f6bf1b1cda437ea413dc86d2bc4703'
               },
               popupEnabled: false
           });
-          scene.add(sceneLayer);
+        scene.add(sceneLayer);
 
-          // Create MeshSymbol3D for symbolizing SceneLayer
-          var symbol = {
-              type: "mesh-3d", // autocasts as new MeshSymbol3D()
-              symbolLayers: [
-                  {
-                      type: "fill", // autocasts as new FillSymbol3DLayer()
-                      // If the value of material is not assigned, the default color will be grey
-                      material: {
-                          color: [244, 247, 134]
-                      }
+        // Create MeshSymbol3D for symbolizing SceneLayer
+        let symbol = {
+          type: 'mesh-3d', // autocasts as new MeshSymbol3D()
+            symbolLayers: [
+              {
+                type: 'fill', // autocasts as new FillSymbol3DLayer()
+                  // If the value of material is not assigned, the default color will be grey
+                  material: {
+                    color: [244, 247, 134]
                   }
-              ]
+              }
+            ]
           };
-          // Add the renderer to sceneLayer
-          sceneLayer.renderer = {
-              type: "simple", // autocasts as new SimpleRenderer()
-              symbol: symbol
-          };
+        // Add the renderer to sceneLayer
+        sceneLayer.renderer = {
+          type: 'simple', // autocasts as new SimpleRenderer()
+            symbol: symbol
+        };
 
         this.sceneView.when(() => { // all the resources in the mapbiew and the map have loaded
           // this.mapService.panToDestination(0);
         }, (err) => console.log(err));
 
-      })
-        .catch(err => {
+        // triggers when popup opens or closes
+        this.sceneView.popup.watch('selectedFeature', function(e) {
+          console.log('selected feature : ')
+          console.log(e.attributes)
+        });
+
+      }).catch(err => {
         console.log(err);
       });
-
-  }
-
-  ngAfterViewInit() {
-
   }
 
 }
