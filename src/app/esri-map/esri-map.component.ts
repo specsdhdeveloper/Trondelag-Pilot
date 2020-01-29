@@ -50,7 +50,7 @@ export class EsriMapComponent implements OnInit {
 
   panMap(viewpoint) {
     console.log('panning')
-    this.sceneView.goTo(viewpoint, {speedFactor: 0.1})
+    this.sceneView.goTo(viewpoint, {speedFactor: 0.5})
     .then(() => {
       this.mapService.panToDestinationComplete();
     });
@@ -146,9 +146,10 @@ export class EsriMapComponent implements OnInit {
           myView.hitTest(event).then(function(response) {
             if (response) {
               console.log('map click')
-              const myPath = response.results[0].graphic.layer.parsedUrl.path
+              //this is how you get the feature ID to link it to our content
+              /*const myPath = response.results[0].graphic.layer.parsedUrl.path
               const splitPath = myPath.split('/')
-              console.log(splitPath[splitPath.length - 1])
+              console.log(splitPath[splitPath.length - 1])*/
             }
           });
         });
