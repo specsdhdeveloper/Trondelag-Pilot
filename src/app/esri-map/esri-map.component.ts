@@ -77,7 +77,7 @@ export class EsriMapComponent implements OnInit {
           basemap: 'satellite',
           ground: 'world-elevation',
           portalItem: {
-            id: 'ece859ba1e0a4668940c5f10bb3fe4e3'
+            id: 'cbe9cc2c28ae4015b953670b30ce464c'
           }
         });
 
@@ -133,7 +133,7 @@ export class EsriMapComponent implements OnInit {
         };
 
         // It's necessary to overwrite the default click for the popup behavior in order to display your own popup
-        this.sceneView.popup.autoOpenEnabled = false;
+        //this.sceneView.popup.autoOpenEnabled = false;
 
         this.sceneView.when(() => { // all the resources in the mapbiew and the map have loaded
           // this.mapService.panToDestination(0);
