@@ -14,6 +14,8 @@ export class ActivityPageComponent implements OnInit {
   table : Array<any> = [];
   haveImagesCarousel : boolean = false;
   haveVideo : boolean = false;
+  itin2Array : Array<any> = [];
+  splits : any;
 
   constructor(private spreadSheetJSONServiceVariable: SpreadsheetService, private route: ActivatedRoute) {
 
@@ -26,6 +28,8 @@ export class ActivityPageComponent implements OnInit {
 
     this.route.paramMap.subscribe(params => {
       this.row = this.spreadSheetJSONServiceVariable.GetRowByActivityID(params.get('id'));
+      this.splits = this.row.itin2.split("--")
+      console.log(this.splits);
     });
 
     if(this.row.carouselimages != "" && this.row.carouselimages != undefined)

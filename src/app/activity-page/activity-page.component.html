@@ -61,7 +61,10 @@
         <div class="row">
             <div class="col-7" style="padding: 0 50px;">
                 <h3 class="" style="font: bold;">Reiserute (Itinerary, full)</h3>
-                <p class="">{{row.itin2}}</p>
+                <!--<p class="">{{row.itin2}}</p>-->
+                <ul style="padding-left: 20px;">
+                    <li *ngFor="let split of splits">{{split}}</li>
+                </ul>
                 <hr class="style1">
                 <h4>What's included</h4>
                 <p>{{row.itin2}}</p>
@@ -75,7 +78,7 @@
             <div class="col">
                 <div class="row" style="margin-top: 3em;width:100%;margin-right: 0%;">
                     <div class="container" style="padding-left: 0%;background-color:white;">
-                        <div class="row" style="margin-bottom: 10%;margin-top: 2%;">
+                        <div class="row" style="margin-bottom: 10%;margin-top: 20px;">
                             <div class="col-md-7">
                                 <p style="float: left;"><img class="img rounded" src="assets/img/icons/open-book_black.png" style="width: 30px;height: 30px;background-color: transparent;background-repeat: no-repeat;background-position: center center;background-size: cover;overflow: hidden;margin-right: 20px; margin-left: 20px;align-content: left;"/></p>
                                 <p>Startdato</p>
