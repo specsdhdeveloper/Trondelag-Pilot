@@ -29,6 +29,13 @@ export class EsriMapComponent implements OnInit {
   panRequestSubscription: any;
   panCompleteSubscription: any;
 
+  buildings =    [  '70f6bf1b1cda437ea413dc86d2bc4703',
+                    '72b449d8a22448d2ac93f49dbd687804',
+                    'a530f31f08c34be9acbe621e34233887',
+                    '87e69ddcdd0f4b44bd6dc7edfbffaffc',
+                    'cc3b9ebc17f549b8b5eb0e916a9484ab',
+                    '0cb2a926f28b47a09a90d1845e2937c0'  ]
+
   row: any;
 
   constructor(private mapService: EsriMapService,
@@ -66,7 +73,11 @@ export class EsriMapComponent implements OnInit {
       this.panMap(this.mapService.destinationPosition);
     })
 
-    // use esri-loader to load JSAPI modules
+    /** use esri-loader to load JSAPI modules
+     * We enumerate the modules one by one in the loadModules block, and instantiate the types just loaded in the
+     * 'then' block. Once we are done with initialization this all gets injected in the 'viewNode' DOM element
+     */
+
     return loadModules([
         'esri/WebScene',
         'esri/views/SceneView',
@@ -77,7 +88,7 @@ export class EsriMapComponent implements OnInit {
           basemap: 'satellite',
           ground: 'world-elevation',
           portalItem: {
-            id: 'cbe9cc2c28ae4015b953670b30ce464c'
+            id: 'cbe9cc2c28ae4015b953670b30ce464c' // we get his idea from the webscene Milad exports
           }
         });
 
@@ -88,32 +99,23 @@ export class EsriMapComponent implements OnInit {
           center: [10.659398, 63.919525]
         });
 
-        // Create SceneLayer and add to the map
-        let sceneLayer = new SceneLayer({
-              portalItem: {
-                  id: '0cb2a926f28b47a09a90d1845e2937c0'
-              },
-              popupEnabled: false
-          });
-        scene.add(sceneLayer);
+        // Create SceneLayer and add to the map. We are using scene layers to load 3D buildings because ArcGIS wouldn't let us do otherwise
+        // Each one of these IDs correspond to a 3D layer, that contains one building
 
-        sceneLayer = new SceneLayer({
-              portalItem: {
-                  id: '72b449d8a22448d2ac93f49dbd687804'
-              },
-              popupEnabled: false
-          });
-        scene.add(sceneLayer);
+        let sceneLayer = new SceneLayer()
 
-        sceneLayer = new SceneLayer({
-              portalItem: {
-                  id: '70f6bf1b1cda437ea413dc86d2bc4703'
-              },
-              popupEnabled: false
+        this.buildings.forEach(value => {
+          sceneLayer = new SceneLayer({
+            portalItem: {
+              id: value
+            },
+            popupEnabled: false
           });
-        scene.add(sceneLayer);
+          scene.add(sceneLayer);
+        })
 
         // Create MeshSymbol3D for symbolizing SceneLayer
+        // This is necessary to display the 3D models. it adds a renderer to the scene
         const symbol = {
           type: 'mesh-3d', // autocasts as new MeshSymbol3D()
             symbolLayers: [
@@ -133,7 +135,7 @@ export class EsriMapComponent implements OnInit {
         };
 
         // It's necessary to overwrite the default click for the popup behavior in order to display your own popup
-        //this.sceneView.popup.autoOpenEnabled = false;
+        // this.sceneView.popup.autoOpenEnabled = false;
 
         this.sceneView.when(() => { // all the resources in the mapbiew and the map have loaded
           // this.mapService.panToDestination(0);
@@ -141,12 +143,12 @@ export class EsriMapComponent implements OnInit {
 
         const myView = this.sceneView
 
-        //if a feature was clicked, print its id within its layer
+        // if a feature was clicked, print its id within its layer
         myView.on('pointer-down', function(event) {
           myView.hitTest(event).then(function(response) {
             if (response) {
               console.log('map click')
-              //this is how you get the feature ID to link it to our content
+              // this is how you get the feature ID to link it to our content
               /*const myPath = response.results[0].graphic.layer.parsedUrl.path
               const splitPath = myPath.split('/')
               console.log(splitPath[splitPath.length - 1])*/
