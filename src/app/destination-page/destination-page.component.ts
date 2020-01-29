@@ -1,10 +1,7 @@
 import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { SpreadsheetService } from '../services/spreadsheet.service';
 import { ActivatedRoute } from '@angular/router';
-import { BackgroundVideoComponent } from 'app/background-video/background-video.component';
-import { EsriMapComponent } from 'app/esri-map/esri-map.component';
 import { ModelViewerComponent } from 'app/model-viewer/model-viewer.component';
-import { CarouselComponent } from '../carousel/carousel.component';
 
 @Component({
   selector: 'app-destination-page',
@@ -21,6 +18,7 @@ export class DestinationPageComponent implements OnInit {// , AfterViewInit {
     table: Array<any> = [];
     haveImagesCarousel = false;
     haveVideo = false;
+    haveModel = false;
 
     constructor(private spreadSheetJSONServiceVariable: SpreadsheetService,
                 private route: ActivatedRoute) {
@@ -34,6 +32,8 @@ export class DestinationPageComponent implements OnInit {// , AfterViewInit {
 
         this.haveImagesCarousel = (this.row.carouselimages != '' && this.row.carouselimages != undefined)
         this.haveVideo = (this.row.videofile != '' && this.row.videofile != undefined)
+        this.haveModel = (this.row.sketchfabModel != '' && this.row.sketchfabModel != undefined)
+
     }
 
 }
