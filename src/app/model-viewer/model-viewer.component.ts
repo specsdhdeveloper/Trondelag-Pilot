@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
+import {SpreadsheetService} from '../services/spreadsheet.service';
+import {ActivatedRoute} from '@angular/router';
 
 
 @Component({
@@ -9,11 +10,19 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class ModelViewerComponent implements OnInit {
 
-  @Input() sketchfab_id: string;
+  @Input() sketchfabId: string;
 
-  constructor(public sanitizer: DomSanitizer){}
+  constructor(private spreadSheetJSONServiceVariable: SpreadsheetService, private route: ActivatedRoute) {
+  }
 
   ngOnInit() {
+    const destinationID = parseInt(this.route.snapshot.paramMap.get('id'))
+    this.sketchfabId = this.spreadSheetJSONServiceVariable.tables.destinations.find(i => i.id === destinationID).sketchfabModel
+    console.log(this.sketchfabId)
+
+    //hardcode it for now
+    this.sketchfabId = "b2afbc447a8b443d84fa0e54358fe716"
+    console.log("sketchfab")
   }
 
 }
