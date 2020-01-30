@@ -28,7 +28,7 @@ export class ActivityPageComponent implements OnInit {
 
     this.route.paramMap.subscribe(params => {
       this.row = this.spreadSheetJSONServiceVariable.GetRowByActivityID(params.get('id'));
-
+      this.splits = [];
       try {
         this.splits = this.row.itin2.split("--");
         console.log(this.splits);
