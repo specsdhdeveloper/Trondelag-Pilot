@@ -25,3 +25,13 @@
   background-size: cover;
   overflow: hidden;
 }
+
+#titleCarousel {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 20%;
+  color: white;
+  font-size: 4.5em;
+  text-shadow: 0px 2px 20px #000;
+}
