@@ -14,7 +14,7 @@
               Destinasjoner
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: white;">              
-              <a class="dropdown-item" [routerLink]="['/destinations']">All</a>
+              <a class="dropdown-item" href="#" [routerLink]="['/destinations']">All</a>
               <div class="dropdown-divider"></div>
               <a href="#" class="dropdown-item" *ngFor="let item of destinations" [routerLink]="['/destination/', item.id]">{{item.cardtitle}}</a>
             </div>
@@ -24,7 +24,7 @@
               Turer og aktiviteter
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: white;">
-              <a class="dropdown-item" [routerLink]="['/activities']">All</a>
+              <a class="dropdown-item" href="#" [routerLink]="['/activities']">All</a>
               <div class="dropdown-divider"></div>
               <a href="#" class="dropdown-item" *ngFor="let item of activities" [routerLink]="['/activity/', item.id]">{{item.cardtitle}}</a>
             </div>
