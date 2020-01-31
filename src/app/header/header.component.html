@@ -2,7 +2,7 @@
   <div class="container">
 
       <div style="height: 50px;min-width: 285px;max-width: 285px;">
-        <a class="navbar-brand ml-auto" [routerLink]="['/landing']">
+        <a class="navbar-brand ml-auto" href="#" [routerLink]="['/landing']">
           <img class="img-thumbnail" alt="Responsive image" style="background: transparent;" src="{{'assets/img/logo_Historiske-Trondelag_H.png'}}" />
         </a>
       </div>
@@ -13,7 +13,7 @@
             <a href="#" class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding-left: 0em;">
               Destinasjoner
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: white;">              
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: white;">
               <a class="dropdown-item" href="#" [routerLink]="['/destinations']">All</a>
               <div class="dropdown-divider"></div>
               <a href="#" class="dropdown-item" *ngFor="let item of destinations" [routerLink]="['/destination/', item.id]">{{item.cardtitle}}</a>
