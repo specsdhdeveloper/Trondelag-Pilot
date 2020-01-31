@@ -24,6 +24,7 @@ export class ActivityPrincipalPage implements OnInit {
     this.tableActivities = this.spreadSheetServiceVariable.tables.activities;
 
     for (let i = 0; i < this.tableActivities.length; i++) {
+      console.log(this.tableActivities[i]);
       if (this.tableActivities[i].inBlockAct == '1') {
         this.tableBlock1.push(this.tableActivities[i]);
       } else if (this.tableActivities[i].inBlockAct == '2') {
