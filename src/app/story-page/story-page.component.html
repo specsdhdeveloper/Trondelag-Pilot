@@ -1,24 +1,24 @@
 <app-header></app-header>
 
 <div class="page-header page-header-small embed-responsive" *ngIf="!haveImagesCarousel" id="animationFadeIn02" >
-    <div class="page-header-image rellax-header" data-rellax-speed="-8" [style.backgroundImage] = "'url(assets/img/' + row.CardImg + ')'"></div>
+    <div class="page-header-image rellax-header" data-rellax-speed="-8" [style.backgroundImage] = "'url(assets/img/' + row.cardImg + ')'"></div>
     <div class="content-center">
-        <h1 class="title">{{row.CardTitle}}</h1>
+        <h1 class="title">{{row.cardTitle}}</h1>
     </div>
 </div>
 
 <div *ngIf="haveImagesCarousel" id="animationFadeIn02"> 
     <app-carousel></app-carousel>
-    <h1 class="title" id="titleCarousel">{{row.CardTitle}}</h1>
+    <h1 class="title" id="titleCarousel">{{row.cardTitle}}</h1>
 </div>
 
 <div class="section section-about-us">
     <div class="container">
         <div class="row">
             <div class="col-md-8 ml-auto mr-auto text-center">
-                <h4 class="description" id="animationFadeIn06">{{row.CardDescription}}</h4>
+                <h4 class="description" id="animationFadeIn06">{{row.cardDescription}}</h4>
                 <div>
-                    <p class="title" id="animationFadeIn1"> {{row.Itin1}}</p>
+                    <p class="title" id="animationFadeIn1"> {{row.itin1}}</p>
                 </div>
             </div>
         </div>
@@ -32,23 +32,23 @@
                 <div class="row">
                     <div class="col-md-6" id="animationFadeIn1">
                         <!-- First image on the left side -->
-                        <div class="image-container image-left" [style.backgroundImage] = "'url(assets/img/' + row.ImgLeft + ')'">
-                            <p class="blockquote blockquote-primary">{{row.Blockquote}}
+                        <div class="image-container image-left" [style.backgroundImage] = "'url(assets/img/' + row.imgLeft + ')'">
+                            <p class="blockquote blockquote-primary">{{row.blockquote}}
                                 <br>
                                 <br>
                                 <small></small>
                             </p>
                         </div>
                         <!-- Second image on the left side of the article -->
-                        <div class="image-container image-left-bottom" [style.backgroundImage] = "'url(assets/img/' + row.ImgLeftBottom + ')'"></div>
+                        <div class="image-container image-left-bottom" [style.backgroundImage] = "'url(assets/img/' + row.imgLeftBottom + ')'"></div>
                     </div>
                     <div class="col-md-5" id="animationFadeIn14">
                         <!-- First image on the right side, above the article -->
-                        <div class="image-container image-right" [style.backgroundImage] = "'url(assets/img/' + row.ImgRight + ')'"></div>
+                        <div class="image-container image-right" [style.backgroundImage] = "'url(assets/img/' + row.imgRight + ')'"></div>
                         <!--<h3>So what does the new record for the lowest level of winter ice actually mean</h3>-->
-                        <p>{{row.P1}}</p>
-                        <p>{{row.P2}}</p>
-                        <p>{{row.P3}}</p>
+                        <p>{{row.p1}}</p>
+                        <p>{{row.p2}}</p>
+                        <p>{{row.p3}}</p>
                     </div>
                 </div>
             </div>

@@ -33,13 +33,13 @@
                         <img class="img img-raised rounded" src="{{'assets/img/'+item.cardimg}}">
                       </a>
                     </div>-->
-                    <div class="card-image img rounded img-raised wrapper" [style.backgroundImage] = "'url(assets/img/' + item.CardImg + ')'" [routerLink]="['/story/', item.Id]"></div>
+                    <div class="card-image img rounded img-raised wrapper" [style.backgroundImage] = "'url(assets/img/' + item.cardImg + ')'" [routerLink]="['/story/', item.id]"></div>
                   </div>
                   <div class="col">
                     <h3 class="card-title" id="animationFadeIn1">
-                      <a [routerLink]="['/story/', item.id]">{{item.CardTitle}}</a>
+                      <a [routerLink]="['/story/', item.id]">{{item.cardTitle}}</a>
                     </h3>
-                    <p class="card-description" id="animationFadeIn14"> {{item.CardDescription}} 
+                    <p class="card-description" id="animationFadeIn14"> {{item.cardDescription}} 
                     </p>
                   </div>
                 </div>
