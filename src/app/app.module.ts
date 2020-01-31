@@ -38,7 +38,7 @@ import { SafePipe } from './safe.pipe';
 import { CarouselComponent } from './carousel/carousel.component';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSelectModule, MatFormFieldModule, MatInputModule } from '@angular/material';
-import { BsDropdownModule } from 'ngx-bootstrap';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 @NgModule({
     declarations: [

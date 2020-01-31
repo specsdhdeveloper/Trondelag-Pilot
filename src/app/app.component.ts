@@ -4,6 +4,7 @@ import { Subscription } from 'rxjs/Subscription';
 import 'rxjs/add/operator/filter';
 import { DOCUMENT } from '@angular/platform-browser';
 import { LocationStrategy, PlatformLocation, Location } from '@angular/common';
+import { setTheme } from 'ngx-bootstrap/utils';
 
 @Component({
     selector: 'app-root',
@@ -14,7 +15,9 @@ export class AppComponent implements OnInit {
 
     private _router: Subscription;
 
-    constructor( private renderer : Renderer, private router: Router, @Inject(DOCUMENT,) private document: any, private element : ElementRef, public location: Location) {}
+    constructor( private renderer : Renderer, private router: Router, @Inject(DOCUMENT,) private document: any, private element : ElementRef, public location: Location) {
+        setTheme('bs4'); // or 'bs3'
+    }
     ngOnInit() {
         
         this._router = this.router.events.filter(event => event instanceof NavigationEnd).subscribe((event: NavigationEnd) => {

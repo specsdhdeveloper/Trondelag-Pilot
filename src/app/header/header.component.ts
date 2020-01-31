@@ -31,29 +31,25 @@ export class HeaderComponent implements OnInit {
 
   destinations : any;
   activities : any;
+  offsetScroll : any;
 
   constructor(private spreadSheetJSONServiceVariable: SpreadsheetService, private route: ActivatedRoute, public router: Router) {
-    }
+    
+  }
 
   selectDropDown()
   {
     console.log("entra");
   }
 
-  /*selectDropDown(id : any, routeName : any)
-  {
-    console.log("entra");
-    this.router.navigate(['/' + routeName + '/' + id]);
-  }*/
-
   @HostListener('window:scroll', ['$event'])
 
   onWindowScroll(e) {
     
       let element = document.querySelector('.navbar');
-      //console.log("element.clientHeight " + element.clientHeight);
-      //console.log("window.pageYOffset " + window.pageYOffset);
-      if (window.pageYOffset < 450) {
+      this.offsetScroll = window.screen.width * 1/3;
+
+      if (window.pageYOffset < this.offsetScroll) {
         element.classList.add('navbar-transparent');
       } else {
         element.classList.remove('navbar-transparent');
