@@ -6,7 +6,7 @@ import { ModelViewerComponent } from 'app/model-viewer/model-viewer.component';
 @Component({
   selector: 'app-destination-page',
   templateUrl: './destination-page.component.html',
-  styleUrls: ['./destination-page.component.css']
+  styleUrls: ['./destination-page.component.scss']
 })
 
 export class DestinationPageComponent implements OnInit {// , AfterViewInit {
