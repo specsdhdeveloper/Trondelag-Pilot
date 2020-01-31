@@ -89,7 +89,8 @@ export class EsriMapComponent implements OnInit {
           ground: 'world-elevation',
           portalItem: {
             //id: 'cbe9cc2c28ae4015b953670b30ce464c' // we get this ID from the webscene Milad exports
-            id: '12431ae66e5d4aa5857105c9713df440' // we get this ID from the webscene Milad exports
+            //id: '12431ae66e5d4aa5857105c9713df440' // we get this ID from the webscene Milad exports
+            id: '46bb6407aebe4f6887eee44d2bfd1426' // we get this ID from the webscene Milad exports
           }
         });
 
