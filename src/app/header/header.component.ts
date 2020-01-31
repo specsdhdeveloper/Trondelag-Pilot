@@ -48,18 +48,30 @@ export class HeaderComponent implements OnInit {
     
       let element = document.querySelector('.navbar');
       this.offsetScroll = window.screen.width * 1/3;
-
-      if (window.pageYOffset < this.offsetScroll) {
-        element.classList.add('navbar-transparent');
-      } else {
-        element.classList.remove('navbar-transparent');
+      
+      if(this.route.snapshot.routeConfig.path != "map")
+      {
+        if (window.pageYOffset < this.offsetScroll) {
+          element.classList.add('navbar-transparent');
+        } else {
+          element.classList.remove('navbar-transparent');
+        }
       }
     }
 
   ngOnInit() {
 
+    if(this.route.snapshot.routeConfig.path == "map")
+    {
+      console.log(this.route.snapshot.routeConfig.path);
+      let element = document.querySelector('.navbar');
+      element.classList.remove('navbar-transparent');
+      element.classList.remove('bg-primary');
+      element.setAttribute("style", "background-image: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.5));");
+    }
+    //this.route.data.subscribe((data:any) => console.log(data));
+    
     this.destinations = this.spreadSheetJSONServiceVariable.tables.destinations;
-    console.log(this.destinations);
     this.activities = this.spreadSheetJSONServiceVariable.tables.activities;
   }
 
