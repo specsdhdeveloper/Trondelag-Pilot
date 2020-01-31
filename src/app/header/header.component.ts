@@ -58,6 +58,9 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
 
+    this.destinations = this.spreadSheetJSONServiceVariable.tables.destinations;
+    console.log(this.destinations);
+    this.activities = this.spreadSheetJSONServiceVariable.tables.activities;
   }
 
 }
