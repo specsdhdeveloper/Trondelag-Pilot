@@ -14,7 +14,9 @@ export class ActivityPageComponent implements OnInit {
   table: Array<any> = [];
   haveImagesCarousel = false;
   haveVideo = false;
-  splits = [];
+  splitsItin2 = [];
+  splitWhatsIncluded = [];
+  splitWhatsNotIncluded = [];
 
   constructor(private spreadSheetJSONServiceVariable: SpreadsheetService, private route: ActivatedRoute) {
 
@@ -29,8 +31,12 @@ export class ActivityPageComponent implements OnInit {
     this.haveVideo = (this.row.videofile != '' && this.row.videofile != undefined);
 
     try {
-      this.splits = this.row.itin2.split("--");
-      console.log(this.splits);
+      this.splitsItin2 = [];
+      this.splitWhatsIncluded = [];
+      this.splitWhatsNotIncluded = [];
+      this.splitsItin2 = this.row.itin2.split("--");
+      this.splitWhatsIncluded = this.row.itinIncluded.split("--");
+      this.splitWhatsNotIncluded = this.row.itinNotIncluded.split("--");
     }
     catch(e)
     {}

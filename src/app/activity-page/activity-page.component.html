@@ -59,15 +59,18 @@
         <div class="row">
             <div class="col-7" style="padding: 0 50px;">
                 <h3 class="" style="font: bold;">Reiserute (Itinerary, full)</h3>
-                <!--<p class="">{{row.itin2}}</p>-->
                 <ul style="padding-left: 20px;">
-                    <li *ngFor="let split of splits">{{split}}</li>
+                    <li *ngFor="let split of splitsItin2">{{split}}</li>
                 </ul>
                 <hr class="style1">
                 <h4>What's included</h4>
-                <p>{{row.itin2}}</p>
+                <ul style="padding-left: 20px;">
+                    <li *ngFor="let split of splitWhatsIncluded">{{split}}</li>
+                </ul>
                 <h4 *ngIf="row.itin2" style="font: bold;">What's not included</h4>
-                <p *ngIf="row.itin2">{{row.itin2}}</p>
+                <ul style="padding-left: 20px;">
+                    <li *ngFor="let split of splitWhatsNotIncluded">{{split}}</li>
+                </ul>
                 <hr class="style1">
                 <h4>Practical information</h4>
                 <hr class="style1">
@@ -82,7 +85,7 @@
                                 <p>Startdato</p>
                             </div>
                             <div class="col-md-5 text-right">                            
-                                <p class="form-control text-info text-left" type="text">23 Mai 2020</p>
+                                <p class="form-control text-info text-left" type="text">{{row.itinStartDate}}</p>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 10%;">
@@ -91,7 +94,7 @@
                                 <p>Starttid</p>
                             </div>
                             <div class="col-md-5 text-right">
-                                <p class="form-control text-info text-left" type="text">09:15</p>
+                                <p class="form-control text-info text-left" type="text">{{row.itinStartTime}}</p>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 10%;">
@@ -100,7 +103,7 @@
                                 <p>Personer</p>
                             </div>
                             <div class="col-md-5 text-right">
-                                <p class="form-control text-info text-left" type="text">2 voksne, 3 barn</p>
+                                <p class="form-control text-info text-left" type="text">{{row.itinPersons}}</p>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 10%;">
@@ -109,7 +112,7 @@
                                 <p>Sprak</p>
                             </div>
                             <div class="col-md-5 text-right">
-                                <p class="form-control text-info text-left" type="text">Norsk</p>
+                                <p class="form-control text-info text-left" type="text">{{row.itinLanguage}}</p>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 10%;">
@@ -118,7 +121,7 @@
                                 <p>Spesialieter</p>
                             </div>
                             <div class="col-md-5 text-right">
-                                <p class="form-control text-info text-left" type="text">5 x lydguide</p>
+                                <p class="form-control text-info text-left" type="text">{{row.itinSpecialities}}</p>
                             </div>
                         </div>
                         <hr class="style1">
