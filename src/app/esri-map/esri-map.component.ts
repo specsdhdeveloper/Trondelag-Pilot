@@ -29,13 +29,19 @@ export class EsriMapComponent implements OnInit {
   panRequestSubscription: any;
   panCompleteSubscription: any;
 
-  buildings =    [  '70f6bf1b1cda437ea413dc86d2bc4703',
-                    '72b449d8a22448d2ac93f49dbd687804',
-                    'a530f31f08c34be9acbe621e34233887',
+  //buildings =    [  '70f6bf1b1cda437ea413dc86d2bc4703',
+    //                '72b449d8a22448d2ac93f49dbd687804',
+    //                'a530f31f08c34be9acbe621e34233887',
+    //               '87e69ddcdd0f4b44bd6dc7edfbffaffc',
+    //                'cc3b9ebc17f549b8b5eb0e916a9484ab',
+    //                '0cb2a926f28b47a09a90d1845e2937c0'  ]
+
+  buildings =    [  'd055f56b08144e9597ddd49b654cdcd4', //Dora
+                    '258ad2daa69c4c1390412c464b3a13b2', //Skatval
+                    '2437a909678f447ab9769ba58b36efb3', //Austratt fort
                     '87e69ddcdd0f4b44bd6dc7edfbffaffc',
                     'cc3b9ebc17f549b8b5eb0e916a9484ab',
-                    '0cb2a926f28b47a09a90d1845e2937c0'  ]
-
+                    '956c8648214f494db6cb6a664ccf8bb7' ]//Austratt manor house  ]
   row: any;
 
   constructor(private mapService: EsriMapService,
@@ -82,7 +88,7 @@ export class EsriMapComponent implements OnInit {
         'esri/WebScene',
         'esri/views/SceneView',
         'esri/layers/SceneLayer',
-    ])
+    ])  
       .then(([WebScene, SceneView, SceneLayer]) => {
         const scene = new WebScene({
           basemap: 'satellite',
