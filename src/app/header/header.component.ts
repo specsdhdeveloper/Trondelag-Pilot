@@ -65,9 +65,9 @@ export class HeaderComponent implements OnInit {
     {
       console.log(this.route.snapshot.routeConfig.path);
       let element = document.querySelector('.navbar');
+      element.setAttribute("style", "background-image: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.1));");
       element.classList.remove('navbar-transparent');
       element.classList.remove('bg-primary');
-      element.setAttribute("style", "background-image: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.5));");
     }
     //this.route.data.subscribe((data:any) => console.log(data));
     
