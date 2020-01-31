@@ -7,7 +7,9 @@
       <div class="row">
         <div class="col-md-3" *ngFor="let item of tableDestinations">
           <div class="card card-plain card-blog">
-            <div class="card-image img rounded img-raised wrapper" id="animationFadeIn08" [style.backgroundImage] = "'url(assets/img/' + item.cardImg + ')'" [routerLink]="['/destination/', item.id]"></div>
+            <a [routerLink]="['/destination/', item.id]">
+              <img class="card-image img rounded img-raised wrapper" id="animationFadeIn08" src="{{item.cardImg.url}}" />
+            </a>
             <div class="card-body">
               <h4 class="card-title" id="animationFadeIn12">
                 <a [routerLink]="['/destination/', item.id]">{{item.cardTitle}}</a>
