@@ -5,7 +5,6 @@ import { BsDropdownConfig } from 'ngx-bootstrap/dropdown';
 import { Observable, Subscription, forkJoin  } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { map, mergeMap } from 'rxjs/operators';
-import { LocalStorage } from '@ngx-pwa/local-storage';
 
 @Component({
   selector: 'app-landinghome-page',
