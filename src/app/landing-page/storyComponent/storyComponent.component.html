@@ -7,13 +7,13 @@
         <div class="row">
           <div class="col-md-3" *ngFor="let item of tableStories">
             <div class="card card-plain card-blog">
-              <div class="card-image img rounded img-raised wrapper" id="animationFadeIn08" [style.backgroundImage] = "'url(assets/img/' + item.cardimg + ')'" [routerLink]="['/story/', item.id]"></div>
+              <div class="card-image img rounded img-raised wrapper" id="animationFadeIn08" [style.backgroundImage] = "'url(assets/img/' + item.cardImg + ')'" [routerLink]="['/story/', item.id]"></div>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a [routerLink]="['/story/', item.id]">{{item.cardtitle}}</a>
+                  <a [routerLink]="['/story/', item.id]">{{item.cardTitle}}</a>
                 </h4>
                 <p class="card-description">
-                  {{item.carddescription}}
+                  {{item.cardDescription}}
                 </p>
               </div>
             </div>
