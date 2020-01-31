@@ -29,10 +29,10 @@ export class DestinationPageComponent implements OnInit {// , AfterViewInit {
         window.scrollTo(0, 0);
         const myID = parseInt(this.route.snapshot.paramMap.get('id'))
         this.row = this.spreadSheetJSONServiceVariable.tables.destinations.find(i => i.id === myID);
-
-        this.haveImagesCarousel = (this.row.carouselimages != '' && this.row.carouselimages != undefined)
-        this.haveVideo = (this.row.videofile != '' && this.row.videofile != undefined)
-        this.haveModel = (this.row.sketchfabModel != '' && this.row.sketchfabModel != undefined)
+        console.log(this.row);
+        this.haveImagesCarousel = (this.row.carouselImages != '' && this.row.carouselImages != undefined)
+        this.haveVideo = (this.row.sketchfabModel != '' && this.row.sketchfabModel != undefined)
+        //this.haveModel = (this.row.sketchfabModel != '' && this.row.sketchfabModel != undefined)
 
     }
 
