@@ -21,7 +21,7 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: white;">
               <a class="dropdown-item" href="#" [routerLink]="['/destinations']">All</a>
               <div class="dropdown-divider"></div>
-              <a href="#" class="dropdown-item" *ngFor="let item of destinations" [routerLink]="['/destination/', item.id]">{{item.cardTitle}}</a>
+              <a class="dropdown-item" *ngFor="let item of destinations" href="#" [routerLink]="['/destination/', item.id]">{{item.cardTitle}}</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -29,13 +29,13 @@
               Turer og aktiviteter
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: white;">
-              <a class="dropdown-item" href="#" [routerLink]="['/activities']">All</a>
+              <a class="dropdown-item" [routerLink]="['/activities']" href="#">All</a>
               <div class="dropdown-divider"></div>
-              <a href="#" class="dropdown-item" *ngFor="let item of activities" [routerLink]="['/activity/', item.id]">{{item.cardTitle}}</a>
+              <a class="dropdown-item" *ngFor="let item of activities"  href="#/activity/{{item.id}}">{{item.cardTitle}}</a>
             </div>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" [routerLink]="['/stories']" style="padding-left: 0em;">
+            <a class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" [routerLink]="['/stories']" href="#" style="padding-left: 0em;">
               Historier
             </a>
           </li>

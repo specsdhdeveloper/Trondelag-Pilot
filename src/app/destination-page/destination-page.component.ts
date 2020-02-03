@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { SpreadsheetService } from '../services/spreadsheet.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ModelViewerComponent } from 'app/model-viewer/model-viewer.component';
 
 @Component({
@@ -20,8 +20,8 @@ export class DestinationPageComponent implements OnInit {// , AfterViewInit {
     haveVideo = false;
     haveModel = false;
 
-    constructor(private spreadSheetJSONServiceVariable: SpreadsheetService,
-                private route: ActivatedRoute) {
+    constructor(private spreadSheetJSONServiceVariable: SpreadsheetService, private route: ActivatedRoute,  private router: Router) {
+      this.router.routeReuseStrategy.shouldReuseRoute = () => false;
     }
 
     ngOnInit() {

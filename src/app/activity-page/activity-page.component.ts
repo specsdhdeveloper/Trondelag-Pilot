@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SpreadsheetService} from '../services/spreadsheet.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router, ParamMap, RouterEvent, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-activity-page',
@@ -18,8 +19,8 @@ export class ActivityPageComponent implements OnInit {
   splitWhatsIncluded = [];
   splitWhatsNotIncluded = [];
 
-  constructor(private spreadSheetJSONServiceVariable: SpreadsheetService, private route: ActivatedRoute) {
-
+  constructor(private spreadSheetJSONServiceVariable: SpreadsheetService, private route: ActivatedRoute, private router: Router) {
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
   }
 
   ngOnInit() {
@@ -40,6 +41,5 @@ export class ActivityPageComponent implements OnInit {
     }
     catch(e)
     {}
-
   }
 }

@@ -34,7 +34,7 @@ import {ModelViewerComponent} from './model-viewer/model-viewer.component';
 const routes: Routes = [
     { path: '', redirectTo: 'landing', pathMatch: 'full'},
     { path: 'map',                  component: EsriMapComponent,                resolve: { esriMap : SpreadsheetResolver}},
-    { path: 'model/:id',                component: ModelViewerComponent,            resolve: { modelViewer : SpreadsheetResolver}},
+    { path: 'model/:id',            component: ModelViewerComponent,            resolve: { modelViewer : SpreadsheetResolver}},
     { path: 'principalLanding',     component: PrincipalLandingPageComponent,   resolve: { principalLanding : SpreadsheetResolver}},
     { path: 'destinations',         component: DestinationPrincipalPage,        resolve: { principalDestination : SpreadsheetResolver}},
     { path: 'destination/:id',      component: DestinationPageComponent,        resolve: { destinations : SpreadsheetResolver}},
