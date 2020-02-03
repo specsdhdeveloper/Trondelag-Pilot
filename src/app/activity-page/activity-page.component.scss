@@ -5,6 +5,7 @@
     top: 30%;
     color: white;
     font-size: 4.5em;
+    font-weight: 500;
     text-shadow: 0px 2px 20px #000;
 }
 
@@ -25,5 +26,9 @@ hr.style1{
 }
 
 #sectionDescriptionPage {
-    background-color: #e4e1db;
+    .description {color: #FFF;}
+    .description {margin-top: 10px;}
+    .title {color:#FFF;}
+    background-color: #bdab91;
+
 }
