@@ -22,6 +22,7 @@ export class ActivityPrincipalPage implements OnInit {
 
     window.scrollTo(0, 0);
     this.tableActivities = this.spreadSheetServiceVariable.tables.activities;
+    this.tableActivities = this.tableActivities.sort();
 
     for (let i = 0; i < this.tableActivities.length; i++) {
       console.log(this.tableActivities[i]);
@@ -33,6 +34,11 @@ export class ActivityPrincipalPage implements OnInit {
         this.tableBlock3.push(this.tableActivities[i]);
       }
     }
+
+    this.tableBlock1.sort();
+    this.tableBlock2.sort();
+    this.tableBlock3.sort();
+    
   }
 
 }

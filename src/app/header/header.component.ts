@@ -72,7 +72,9 @@ export class HeaderComponent implements OnInit {
     //this.route.data.subscribe((data:any) => console.log(data));
     
     this.destinations = this.spreadSheetJSONServiceVariable.tables.destinations;
+    this.destinations = this.destinations.sort();
     this.activities = this.spreadSheetJSONServiceVariable.tables.activities;
+    this.activities = this.activities.sort();
+    console.log(this.activities);
   }
-
 }
