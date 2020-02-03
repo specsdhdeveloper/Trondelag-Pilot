@@ -35,9 +35,9 @@ export class ActivityPrincipalPage implements OnInit {
       }
     }
 
-    this.tableBlock1.sort();
-    this.tableBlock2.sort();
-    this.tableBlock3.sort();
+    this.tableBlock1 = this.tableBlock1.sort();
+    this.tableBlock2 = this.tableBlock2.sort();
+    this.tableBlock3 =this.tableBlock3.sort();
     
   }
 

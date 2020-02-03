@@ -28,7 +28,7 @@ export class ActivityPageComponent implements OnInit {
     const myID = parseInt(this.route.snapshot.paramMap.get('id'))
     this.row = this.spreadSheetJSONServiceVariable.tables.activities.find(i => i.id === myID)
 
-    this.haveImagesCarousel = (this.row.carouselimages != '' && this.row.carouselimages != undefined);
+    this.haveImagesCarousel = (this.row.carouselImages != '' && this.row.carouselImages != undefined);
     this.haveVideo = (this.row.videofile != '' && this.row.videofile != undefined);
 
     try {
