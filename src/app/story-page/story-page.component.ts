@@ -28,9 +28,9 @@ export class StoryPageComponent implements OnInit, AfterViewInit {
 
     const myID = parseInt(this.route.snapshot.paramMap.get('id'))
     this.row = this.spreadSheetJSONServiceVariable.tables.stories.find(i => i.id === myID)
-
-    this.haveImagesCarousel = (this.row.carouselimages != '' && this.row.carouselimages != undefined);
+    this.haveImagesCarousel = (this.row.carouselImages != '' && this.row.carouselImages != undefined);
     this.haveVideo = this.row.videofile != '' && this.row.videofile != undefined;
+
   }
 
   ngAfterViewInit() {
