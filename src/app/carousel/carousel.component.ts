@@ -37,10 +37,10 @@ export class CarouselComponent implements OnInit {
       {
         for(let i = 0; i < this.spreadSheetJSONServiceVariable.tables.activities.length; i++)
         {
-          if(this.spreadSheetJSONServiceVariable.tables.stories[i].id == id)
+          if(this.spreadSheetJSONServiceVariable.tables.activities[i].id == id)
           {
-            this.row = this.spreadSheetJSONServiceVariable.tables.stories[i];
-            this.carouselImages = this.spreadSheetJSONServiceVariable.tables.stories[i].carouselImages;
+            this.row = this.spreadSheetJSONServiceVariable.tables.activities[i];
+            this.carouselImages = this.spreadSheetJSONServiceVariable.tables.activities[i].carouselImages;
           }
         }
       }
@@ -48,10 +48,10 @@ export class CarouselComponent implements OnInit {
       {
         for(let i = 0; i < this.spreadSheetJSONServiceVariable.tables.destinations.length; i++)
         {
-          if(this.spreadSheetJSONServiceVariable.tables.stories[i].id == id)
+          if(this.spreadSheetJSONServiceVariable.tables.destinations[i].id == id)
           {
-            this.row = this.spreadSheetJSONServiceVariable.tables.stories[i];
-            this.carouselImages = this.spreadSheetJSONServiceVariable.tables.stories[i].carouselImages;
+            this.row = this.spreadSheetJSONServiceVariable.tables.destinations[i];
+            this.carouselImages = this.spreadSheetJSONServiceVariable.tables.destinations[i].carouselImages;
           }
         }
       }
