@@ -39,8 +39,8 @@ export class EsriMapComponent implements OnInit {
   buildings =    [  'd055f56b08144e9597ddd49b654cdcd4', //Dora
                     '258ad2daa69c4c1390412c464b3a13b2', //Skatval
                     '2437a909678f447ab9769ba58b36efb3', //Austratt fort
-                    '87e69ddcdd0f4b44bd6dc7edfbffaffc',
-                    'cc3b9ebc17f549b8b5eb0e916a9484ab',
+                    '9f13157ae65a43b58377a9baf975dade', //Falstad -
+                    '1b3e8a35a028442993804c73a0123f3c', //Tirpitz
                     '956c8648214f494db6cb6a664ccf8bb7' ]//Austratt manor house  ]
   row: any;
 
@@ -94,9 +94,9 @@ export class EsriMapComponent implements OnInit {
           basemap: 'satellite',
           ground: 'world-elevation',
           portalItem: {
-            //id: 'cbe9cc2c28ae4015b953670b30ce464c' // we get this ID from the webscene Milad exports
-            //id: '12431ae66e5d4aa5857105c9713df440' // we get this ID from the webscene Milad exports
-            id: '46bb6407aebe4f6887eee44d2bfd1426' // we get this ID from the webscene Milad exports
+            id: 'b0ca2d40e8d04122913857796f41c500' // we get this ID from the webscene Milad exports
+            //id: '745a369356ab42709a6a919fbf37f554' // we get this ID from the webscene Milad exports
+            //id: '46bb6407aebe4f6887eee44d2bfd1426' // we get this ID from the webscene Milad exports
           }
         });
 
