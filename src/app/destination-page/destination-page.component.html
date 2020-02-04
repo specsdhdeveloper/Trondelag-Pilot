@@ -2,14 +2,16 @@
 
 <div class="header embed-responsive" id="animationFadeIn02" style="background-color: #e4e1db;">
     <div *ngIf="!haveVideo">
-        <div class="page-header-image rellax-header" data-rellax-speed="-8" [style.backgroundImage] = "'url(' + row.cardImg?.url + ')'"></div>        
+        <div class="page-header-image rellax-header" data-rellax-speed="-8" [style.backgroundImage] = "'url(' + row.cardImg?.url + ')'"></div>
     </div>
-    
-    <h1 class="title" id="titleCarousel">{{row.cardTitle}}</h1>
-    <!--<app-background-video *ngIf="haveVideo"></app-background-video>-->
     <video autoplay muted loop id="myVideo" oncanplay="this.play()" onloadedmetadata="this.muted = true" preload="auto" *ngIf="haveVideo">
         <source src="{{this.row.sketchfabModel}}" type="video/mp4">
     </video>
+
+    <div class="container-fluid text-center" id="textVideo">
+        <h2 class="title" id="titleCarousel">{{row.cardTitle}}</h2>
+    </div>
+    <!--<app-background-video *ngIf="haveVideo"></app-background-video>-->
 </div>
 
 <div class="section section-about-us" id="sectionDescriptionPage">
