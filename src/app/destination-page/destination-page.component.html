@@ -1,12 +1,13 @@
 <app-header></app-header>
 
 <div class="header embed-responsive" id="animationFadeIn02" style="background-color: #e4e1db;">
-    <div *ngIf="!haveVideo">
-        <div class="page-header-image rellax-header" data-rellax-speed="-8" [style.backgroundImage] = "'url(' + row.cardImg?.url + ')'"></div>
-    </div>
     <video autoplay muted loop id="myVideo" oncanplay="this.play()" onloadedmetadata="this.muted = true" preload="auto" *ngIf="haveVideo">
         <source src="{{this.row.sketchfabModel}}" type="video/mp4">
     </video>
+    
+    <div *ngIf="!haveVideo">
+        <div class="page-header-image rellax-header" data-rellax-speed="-8" [style.backgroundImage] = "'url(' + row.cardImg?.url + ')'"></div>
+    </div>
 
     <div class="container-fluid text-center" id="textVideo">
         <h2 class="title" id="titleCarousel">{{row.cardTitle}}</h2>
