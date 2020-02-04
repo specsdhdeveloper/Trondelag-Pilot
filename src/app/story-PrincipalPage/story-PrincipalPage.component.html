@@ -31,7 +31,7 @@
                     <!--<a [routerLink]="['/story/', item.id]">
                       <img class="card-image img rounded img-raised" id="animationFadeIn08" src="{{item.cardImg.url}}" />
                     </a>-->
-                    <div class="card-image img rounded img-raised wrapper" id="animationFadeIn08" [style.backgroundImage] = "'url(' + item.cardImg.url + ')'" [routerLink]="['/story/', item.id]"></div>
+                    <div class="card-image img rounded img-raised wrapper" id="animationFadeIn08" [style.backgroundImage] = "'url(' + item.cardImg?.url + ')'" [routerLink]="['/story/', item.id]"></div>
                   </div>
                   <div class="col">
                     <h3 class="card-title" id="animationFadeIn1">
