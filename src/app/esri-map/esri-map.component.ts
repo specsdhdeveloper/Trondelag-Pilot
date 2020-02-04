@@ -94,9 +94,8 @@ export class EsriMapComponent implements OnInit {
           basemap: 'satellite',
           ground: 'world-elevation',
           portalItem: {
-            id: 'b0ca2d40e8d04122913857796f41c500' // we get this ID from the webscene Milad exports
-            //id: '745a369356ab42709a6a919fbf37f554' // we get this ID from the webscene Milad exports
-            //id: '46bb6407aebe4f6887eee44d2bfd1426' // we get this ID from the webscene Milad exports
+            id: '6e35da2feaf542da97d0c7e8a8395a8e' // we get this ID from the webscene Milad exports
+            //id: 'd1e51be1a662448dbb56e8c0fa5904a2' // we get this ID from the webscene Milad exports
           }
         });
 
