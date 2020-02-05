@@ -19,7 +19,6 @@ import { RegisterComponent } from './examples/register/register.component';
 import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.component';
 import { PricingComponent } from './examples/pricing/pricing.component';
 
-import { PrincipalLandingPageComponent } from './principalLanding-page/principalLanding-page.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SpreadsheetResolver } from './resolveComponents/spreadsheet.resolve';
 import { DestinationPageComponent } from './destination-page/destination-page.component';
@@ -35,7 +34,6 @@ const routes: Routes = [
     { path: '', redirectTo: 'landing', pathMatch: 'full'},
     { path: 'map',                  component: EsriMapComponent,                resolve: { esriMap : SpreadsheetResolver}},
     { path: 'model/:id',            component: ModelViewerComponent,            resolve: { modelViewer : SpreadsheetResolver}},
-    { path: 'principalLanding',     component: PrincipalLandingPageComponent,   resolve: { principalLanding : SpreadsheetResolver}},
     { path: 'destinations',         component: DestinationPrincipalPage,        resolve: { principalDestination : SpreadsheetResolver}},
     { path: 'destination/:id',      component: DestinationPageComponent,        resolve: { destinations : SpreadsheetResolver}},
     { path: 'stories',              component: StoryPrincipalPage,              resolve: { principalStory : SpreadsheetResolver}},
