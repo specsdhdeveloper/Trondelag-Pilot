@@ -1,0 +1,195 @@
+<app-header></app-header>
+
+<!--CAROUSEL-->
+<div class="header" id="animationFadeIn02">
+    <ngb-carousel [keyboard]="true" [pauseOnHover]="true">
+        <ng-template ngbSlide>
+            <div class="wrapperCarousel" style="background-image: url('assets/img/tours/sailing5.jpg');"></div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="wrapperCarousel" style="background-image: url('assets/img/tours/bombed.jpg');"></div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="wrapperCarousel" style="background-image: url('assets/img/skatval/Skatval-museum_fb1.jpg');"></div>
+        </ng-template>
+      </ngb-carousel>
+      <h1 class="title" id="titleCarousel">Turer og aktiviteter</h1>
+</div>
+
+<div class="container-fluid h-1" style="background-color:#b0c6dc;" id="animationFadeIn06">
+    <br >
+    <div class="row align-items-center text-black text-center font-weight-border">
+        <div class="col">
+          <label for="sel2">Varighet:</label>
+          <select class="form-control">
+            <option selected>1-4 timer</option>
+            <option value="2">4-8 timer</option>
+            <option value="3">1-3 dager</option>
+            <option value="4">3+ dager</option>
+          </select>
+        </div>
+        <div class="col">
+          <label for="sel2">Gruppestørrelse:</label>
+          <select class="form-control">
+            <option selected>1 person</option>
+            
+            <option value="2">2-6 personer</option>
+            <option value="3">6-12 personer</option>
+            <option value="4">12+ personer</option>
+          </select>
+        </div>
+        <div class="col">
+          <label for="sel2">Tilgjengelighet:</label>
+          <select class="form-control">
+            <option selected>egnet for små barn</option>
+            
+            <option value="2">egnet for unge voksne</option>
+            <option value="3">egnet for tunghørte</option>
+            <option value="4">egnet for blinde</option>
+            <option value="5">egnet for mobilitet</option>
+          </select>
+        </div>
+        <div class="col">
+          <label for="sel2">Prisklasse:</label>
+          <select class="form-control">
+            <option selected>Gratis</option>
+            
+            <option value="2">-500 NOK</option>
+            <option value="3">Vis alle priser</option>
+          </select>
+        </div>
+    </div>
+    <br _ngcontent-c1="">
+    <br _ngcontent-c1="">
+</div>
+  
+<div class="container-fluid h-1" style="background-color:#e4e1db;" id="animationFadeIn1">
+    <br _ngcontent-c1="">
+    <h1 _ngcontent-c1="" class="description text-black text-center font-weight-border">Turer i og fra Trondheim</h1>
+    <br _ngcontent-c1="">
+</div>
+
+<div class="section">
+  <div class="container">
+      <div class="row">
+        <div *ngFor="let item of tableBlock1" class="col-md-6">
+          <div class="col">
+              <div class="card card-plain card-blog">
+                <div class="row">
+                  <div class="col">
+                    <div class="card-image img rounded img-raised wrapper" id="animationFadeIn14" [style.backgroundImage] = "'url(' + item.cardImg?.url + ')'" [routerLink]="['/activity/', item.id]"></div>
+                  </div>
+                  <div class="col">
+                    <h3 class="card-title" id="animationFadeIn18">
+                      <a [routerLink]="['/activity/', item.id]">{{item.cardTitle}}</a>
+                    </h3>
+                    <p class="card-description"> {{item.cardDescription}} </p>
+                    <h6 class="card-description" id="animationFadeIn22">
+                      <a>{{item.itin1}}</a>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+            </div>      
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="container-fluid h-1" style="background-color:#e4e1db;">
+    <br _ngcontent-c1="">
+    <h1 _ngcontent-c1="" class="description text-black text-center font-weight-border">Historiske Trondheimsfjorden</h1>
+    <br _ngcontent-c1="">
+</div>
+
+<div class="section">
+    <div class="container">
+      <div class="row">
+        <div *ngFor="let item of tableBlock2" class="col-md-6">
+          <div class="col">
+              <br _ngcontent-c1="">
+              <div class="card card-plain card-blog">
+                <div class="row">
+                  <div class="col">
+                    <div class="card-image img rounded img-raised wrapper" [style.backgroundImage] = "'url(' + item.cardImg?.url + ')'" [routerLink]="['/activity/', item.id]"></div>
+                  </div>
+                  <div class="col">
+                    <h3 class="card-title">
+                      <a [routerLink]="['/activity/', item.id]">{{item.cardTitle}}</a>
+                    </h3>
+                    <p class="card-description"> {{item.cardDescription}}</p>
+                    <h6 class="card-description">
+                      <a >{{item.itin1}}</a>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="container-fluid h-1" style="background-color:#e4e1db;">
+    <br _ngcontent-c1="">
+    <h1 class="description text-black text-center font-weight-border">Museer og opplevelser</h1>
+    <br _ngcontent-c1="">
+</div>
+
+<div class="section">
+    <div class="container">
+      <br />
+      <div class="row">
+        <div class="col-md">
+          <div class="card card-plain card-blog">
+            <!--<div class="card-image">
+              <a href="https://www.jodiskmuseum.org/index.html">
+                <img class="img rounded img-raised" src="{{'assets/img/museums/JewishMuseum3_crop.jpg'}}" />
+              </a>
+            </div>-->
+            <div class="card-image img rounded img-raised wrapper" [style.backgroundImage] = "'url(assets/img/museums/JewishMuseum3_crop.jpg)'" href="https://www.jodiskmuseum.org/index.html"></div>
+            <div class="card-body">
+              <h4 class="card-title text-center">
+                <a href="https://www.jodiskmuseum.org/index.html">Jødisk museum</a>
+              </h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md">
+          <div class="card card-plain card-blog">
+            <div class="card-image img rounded img-raised wrapper" [style.backgroundImage] = "'url(assets/img/museums/JusticeMuseum2_sq.jpg)'" href="https://justismuseet.no/"></div>
+            <div class="card-body">
+              <h4 class="card-title text-center">
+                <a href="https://justismuseet.no/">Justismuseet</a>
+              </h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md">
+          <div class="card card-plain card-blog">
+            <div class="card-image img rounded img-raised wrapper" [style.backgroundImage] = "'url(assets/img/falstad/Falstad_crop2.jpg)'" href="https://falstadsenteret.no/"></div>
+            <div class="card-body">
+              <h4 class="card-title text-center">
+                <a href="https://falstadsenteret.no/">Falstadsenteret</a>
+              </h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md">
+          <div class="card card-plain card-blog">
+            <div class="card-image img rounded img-raised wrapper" [style.backgroundImage] = "'url(assets/img/skatval/Skatval-museum_fb1.jpg)'" href="https://www.facebook.com/Skatval-Krigshistoriske-Museum-426882890847369/"></div>
+            <div class="card-body">
+              <h4 class="card-title text-center">
+                <a href="https://www.facebook.com/Skatval-Krigshistoriske-Museum-426882890847369/">Skatval krigshistoriske museum</a>
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

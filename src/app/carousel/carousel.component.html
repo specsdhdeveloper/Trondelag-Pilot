@@ -1,0 +1,10 @@
+<!--CAROUSEL-->
+<div class="header">
+    <ngb-carousel [keyboard]="true" [pauseOnHover]="true">
+        <ng-template ngbSlide ngbSlide *ngFor = "let carouselImage of carouselImages">
+          <div class="wrapper" [style.backgroundImage] = "'url(' + carouselImage?.url + ')'"></div>
+          <!--<div class="wrapper" [style.backgroundImage] = "'url(http://localhost:1337' + carouselImage.url + ')'"></div>-->
+        </ng-template>
+    </ngb-carousel>
+</div>
+

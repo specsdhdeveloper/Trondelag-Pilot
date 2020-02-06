@@ -1,0 +1,61 @@
+<app-header></app-header>
+
+<div class="header embed-responsive" id="animationFadeIn02" style="background-color: #e4e1db;">
+    <video autoplay muted loop id="myVideo" oncanplay="this.play()" onloadedmetadata="this.muted = true" preload="auto" *ngIf="haveVideo">
+        <source src="{{this.row.sketchfabModel}}" type="video/mp4">
+    </video>
+    
+    <div *ngIf="!haveVideo">
+        <div class="page-header-image rellax-header" data-rellax-speed="-8" [style.backgroundImage] = "'url(' + row.cardImg?.url + ')'"></div>
+    </div>
+
+    <div class="container-fluid text-center" id="textVideo">
+        <h2 class="title" id="titleCarousel">{{row.cardTitle}}</h2>
+    </div>
+    <!--<app-background-video *ngIf="haveVideo"></app-background-video>-->
+</div>
+
+<div class="section section-about-us" id="sectionDescriptionPage">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 ml-auto mr-auto text-center">
+                <h4 class="description" id="animationFadeIn06">{{row.cardDescription}}</h4>
+                <div>
+                    <p class="title" id="animationFadeIn1"> {{row.itin1}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section section-about-us">
+    <div class="container">
+        <div class="separator separator-primary"></div>
+        <div class="section-story-overview">
+            <div class="row">
+                <div class="col-md-6" id="animationFadeIn1">
+                    <!-- First image on the left side -->
+                    <div class="image-container image-left" [style.backgroundImage] = "'url(' + row.imgLeft?.url + ')'">
+                        <p class="blockquote blockquote-primary">{{row.blockquote}}
+                            <br>
+                            <br>
+                            <small></small>
+                        </p>
+                    </div>
+                    <!-- Second image on the left side of the article -->
+                    <div class="image-container image-left-bottom" [style.backgroundImage] = "'url(' + row.imgRight?.url + ')'"></div>
+                </div>
+                <div class="col-md-5" id="animationFadeIn14">
+                    <!-- First image on the right side, above the article -->
+                    <div class="image-container image-right" [style.backgroundImage] = "'url(' + row.imgLeftBottom?.url + ')'"></div>
+                    <!--<h3>So what does the new record for the lowest level of winter ice actually mean</h3>-->
+                    <p>{{row.p1}}</p>
+                    <p>{{row.p2}}</p>
+                    <p>{{row.p3}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

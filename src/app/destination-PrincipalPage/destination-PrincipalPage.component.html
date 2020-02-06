@@ -1,0 +1,41 @@
+<app-header></app-header>
+
+<div class="header embed-responsive" id="animationFadeIn02">
+    <video autoplay muted loop oncanplay="this.play()" onloadedmetadata="this.muted = true" id="myVideo" preload="auto" playsinline="true" webkit-playsinline="true">
+        <source src="https://specs.owncube.com/index.php/s/dCM64UvY79Fj1vr/download?path=%2F&files=DestinationsLanding.mp4" type="video/mp4">
+    </video>
+    <div class="container-fluid text-center" id="textVideo">
+        <h2 class="title" id="titleCarousel">Destinasjoner</h2>
+    </div>
+</div>
+
+<app-destinationComponent></app-destinationComponent>
+
+<!--CAROUSEL-->
+<div class="section">
+    <div class="container">
+        <div class="col-md-12 ml-auto mr-auto text-center">
+            <ngb-carousel>
+                <ng-template ngbSlide>
+                    <div class="wrapperCarousel" style="background-image: url('assets/img/skatval/Skatval-museum_fb_tirpitz.jpg');"></div>
+                    <!--<div class="carousel-caption">
+                        <h3>First slide label</h3>
+                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </div>-->
+                </ng-template>
+                <ng-template ngbSlide>
+                    <div class="wrapperCarousel" style="background-image: url('assets/img/skatval/skatval1.jpg');"></div>
+
+                </ng-template>
+                <ng-template ngbSlide>
+                    <div class="wrapperCarousel" style="background-image: url('assets/img/austratt/Austratt_fort.jpg');"></div>
+                </ng-template>
+                <ng-template ngbSlide>
+                    <div class="wrapperCarousel" style="background-image: url('assets/img/dora/VR-Dora2.jpg');"></div>
+                </ng-template>
+            </ngb-carousel>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

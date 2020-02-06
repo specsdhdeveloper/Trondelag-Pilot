@@ -1,0 +1,51 @@
+<app-header></app-header>
+
+<!--CAROUSEL-->
+<div class="header" id="animationFadeIn02">
+    <ngb-carousel [keyboard]="true" [pauseOnHover]="true">
+      <ng-template ngbSlide>
+          <div class="wrapperCar" style="background-image: url('assets/img/tirpitz/Fleet_Air_Arm_attack_the_battleship_Tirpitz_crop.jpg');"></div>
+      </ng-template>
+      <ng-template ngbSlide>
+          <div class="wrapperCar" style="background-image: url('assets/img/saami/Saami_Family_1900_crop1.jpg');"></div>
+      </ng-template>
+      <ng-template ngbSlide>
+          <div class="wrapperCar" style="background-image: url('assets/img/stiklestad/stiklestad_killing_crop.jpg');"></div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="wrapperCar" style="background-image: url('assets/img/tours/bombed.jpg');"></div>
+    </ng-template>
+    </ngb-carousel>
+    <h1 class="title" id="titleCarousel">Historier</h1>
+</div>
+
+<div class="section">
+    <div class="container">
+      <div class="row">
+        <div *ngFor="let item of tableStories" class="col-md-6">
+          <div class="col">
+              <br _ngcontent-c1="">
+              <div class="card card-plain card-blog">
+                <div class="row">
+                  <div class="col">
+                    <!--<a [routerLink]="['/story/', item.id]">
+                      <img class="card-image img rounded img-raised" id="animationFadeIn08" src="{{item.cardImg.url}}" />
+                    </a>-->
+                    <div class="card-image img rounded img-raised wrapper" id="animationFadeIn08" [style.backgroundImage] = "'url(' + item.cardImg?.url + ')'" [routerLink]="['/story/', item.id]"></div>
+                  </div>
+                  <div class="col">
+                    <h3 class="card-title" id="animationFadeIn1">
+                      <a [routerLink]="['/story/', item.id]">{{item.cardTitle}}</a>
+                    </h3>
+                    <p class="card-description" id="animationFadeIn14"> {{item.cardDescription}} 
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>      
+        </div>
+      </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

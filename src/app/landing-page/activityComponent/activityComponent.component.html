@@ -1,0 +1,35 @@
+<div class="main" id="animationSlideInLeft">
+  <div _ngcontent-c4="" class="blogs-3">
+    <div _ngcontent-c4="" class="container">
+      <a [routerLink]="['/activities']">
+        <h2 _ngcontent-c4="" class="text-black">Turer og aktiviteter</h2>
+      </a>
+      <br />
+      <div _ngcontent-c4="" class="row" *ngFor="let item of tableActivities">
+        <div _ngcontent-c4="" class="col-md-10 ml-auto mr-auto">
+          <br _ngcontent-c4="">
+          <div _ngcontent-c4="" class="card card-plain card-blog">
+            <div _ngcontent-c4="" class="row">
+              <div _ngcontent-c4="" class="col-md-4">
+                <div _ngcontent-c4="" class="card-image">
+                  <a [routerLink]="['/activity/', item.id]">
+                    <img _ngcontent-c4="" class="img img-raised rounded" style="width: 250px;height: 200px;" src="{{item.cardImg?.url}}">
+                  </a>
+                </div>
+              </div>
+              <div _ngcontent-c4="" class="col-md-8">
+                <h3 _ngcontent-c4="" class="card-title">
+                  <a _ngcontent-c4="" [routerLink]="['/activity/', item.Id]">{{item.cardTitle}}</a>
+                </h3>
+                <p _ngcontent-c4="" class="card-description"> {{item.cardDescription}} </p>
+                <h6 _ngcontent-c4="" class="card-description">
+                  <a _ngcontent-c4="">{{item.itin1}}</a>
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
