@@ -39,6 +39,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSelectModule, MatFormFieldModule, MatInputModule } from '@angular/material';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { DashboardComponent } from './dashboard/dashboard-page.component';
 
 @NgModule({
     declarations: [
@@ -60,7 +61,8 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
         StoryPrincipalPage,
         ActivityPrincipalPage,
         FooterComponent,
-        SafePipe
+        SafePipe,
+        DashboardComponent
     ],
     imports: [
         BrowserAnimationsModule,

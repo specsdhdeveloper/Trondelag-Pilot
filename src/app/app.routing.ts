@@ -29,6 +29,7 @@ import { StoryPrincipalPage } from './story-PrincipalPage/story-PrincipalPage.co
 import { ActivityPrincipalPage } from './activity-PrincipalPage/activity-PrincipalPage.component';
 import {EsriMapComponent} from './esri-map/esri-map.component';
 import {ModelViewerComponent} from './model-viewer/model-viewer.component';
+import { DashboardComponent } from './dashboard/dashboard-page.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'landing', pathMatch: 'full'},
@@ -55,7 +56,8 @@ const routes: Routes = [
     { path: 'examples/pricing',     component: PricingComponent },
     { path: 'examples/productpage', component: ProductpageComponent },
     { path: 'examples/profile',     component: ProfileComponent },
-    { path: 'examples/register',    component: RegisterComponent }
+    { path: 'examples/register',    component: RegisterComponent },
+    { path: 'dashboard',            component: DashboardComponent,               resolve: { dashboard : SpreadsheetResolver}}
 ];
 
 @NgModule({

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, Subscription, forkJoin  } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
-import { map, mergeMap } from 'rxjs/operators';
+import { map, mergeMap, retry } from 'rxjs/operators';
 import {environment} from '../../environments/environment';
 
 @Injectable({
@@ -16,6 +16,8 @@ export class SpreadsheetService { //TODO rename to API service
         stories: [],
         activities: []
     }
+
+    jsonProves : any;
 
     public getJSON(url, table): Observable<any> {
         return this.http.get(url + table)
@@ -52,6 +54,35 @@ export class SpreadsheetService { //TODO rename to API service
         })
 
         return forkJoin(calls);
+    }
+
+    public getJSON2(url): Observable<any> {
+        return this.http.get(url)
+            .pipe(
+                map((res: any) => {
+                    const data = res;
+                    const returnArray = new Array;
+                    if (data && data.length > 0) {
+                        data.forEach(entry => {
+                            const obj = {};
+                            for (const x in entry) {
+                                if(entry[x] != null){
+                                    obj[x] = entry[x];
+                                }
+                            }
+                            returnArray.push(obj);
+                        });
+                    }
+                    return returnArray;
+                }
+                )
+            );
+    }
+
+    public GetJsonProves(): Observable<any[]>
+    {
+        let array = this.getJSON2('');
+        return forkJoin([array]);
     }
 
     constructor(private http: HttpClient, private route: ActivatedRoute) {
